@@ -10,6 +10,9 @@ import TrustSection from "@/components/TrustSection";
 import LendingPartnersSection from "@/components/partnerSection/LendingPartnersSection";
 import ImpactSection from "@/components/ImpactSection/ImpactSection";
 import ScaleStatsSection from "@/components/ScaleStatsSection";
+import ChallengeSection from "@/components/challengeSection/ChallengeSection";
+import TestimonialSection from "@/components/testimonial/TestimonialSection";
+import WhyPartnerSection from "@/components/whyPartner/WhyPartnerSection";
 
 
 export default function Home() {
@@ -21,6 +24,9 @@ export default function Home() {
       <CreditHero/>
       <div className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <ScaleStatsSection/>
+          <ChallengeSection/>
+          <TestimonialSection/>
+          <WhyPartnerSection/>
           <ImpactSection />
           <LendingPartnersSection />
       </div>

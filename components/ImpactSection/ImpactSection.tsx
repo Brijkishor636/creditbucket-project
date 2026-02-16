@@ -5,7 +5,7 @@ import shopImg from "@/assets/images/shopImg.png";
 
 const ImpactSection: React.FC = () => {
   return (
-    <section className="w-full py-10 px-2 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
+    <section className="w-full py-10 px-2">
       <div className="max-w-7xl mx-auto bg-[#F4F4F4] rounded-2xl p-8 md:p-10 shadow-sm">
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
