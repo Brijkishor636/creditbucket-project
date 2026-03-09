@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#F1F5F9] p-4 md:p-10 lg:p-14">
+    <footer className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] p-4 md:p-10 lg:p-14">
       {/* Main Dark Container */}
       <div className="max-w-7xl mx-auto bg-[#001F33] text-white rounded-[40px] p-10 md:p-16 lg:p-20 shadow-2xl relative overflow-hidden">
         
@@ -52,7 +52,7 @@ const Footer = () => {
               <ul className="space-y-4 text-slate-300 text-sm md:text-base">
                 <li><Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
                 <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/conduct" className="hover:text-white transition-colors">Code of Conduct</Link></li>
+                <li><Link href="/CodeOfConduct" className="hover:text-white transition-colors">Code of Conduct</Link></li>
                 <li><Link href="/lsp" className="hover:text-white transition-colors">RBI-aligned LSP</Link></li>
                 <li><Link href="/fund-flow" className="hover:text-white transition-colors">Bank-to-customer Fund Flow</Link></li>
                 <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>

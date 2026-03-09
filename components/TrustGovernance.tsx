@@ -62,7 +62,7 @@ const TrustGovernance = () => {
         </section>
 
         {/* LSP Roles Section */}
-        <section className="py-24 px-4 bg-pure-white">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="section-padding text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Role as a Lending Service Provider (LSP)</h2>
             <p className="text-slate-600 max-w-2xl mx-auto mb-16">
@@ -136,7 +136,7 @@ const TrustGovernance = () => {
         </section>
 
         {/* Data & Privacy Framework */}
-        <section className="py-24 px-4 bg-ascent">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="section-padding text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Data & Privacy Framework</h2>
             <p className="text-slate-600 max-w-2xl mx-auto mb-16">
@@ -173,7 +173,7 @@ const TrustGovernance = () => {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ y: -10 }}
-                  className="card-interactive flex flex-col items-center text-center group"
+                  className="card-interactive bg-ascent flex flex-col items-center text-center group"
                 >
                   <div className="w-12 h-12 bg-secondary-blue rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-blue transition-colors duration-300">
                     <item.icon className="w-6 h-6 text-primary-blue group-hover:text-white transition-colors duration-300" />

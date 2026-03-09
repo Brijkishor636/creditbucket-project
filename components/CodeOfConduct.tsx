@@ -17,7 +17,7 @@ const CodeOfConduct = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar activeItem="Code of Conduct" />
 
-      <main className="flex-grow">
+      <main className="flex-grow bg-[linear-gradient(135deg,#EAF3FF,#B9D9F6)]">
         {/* Hero Section */}
         <section className="bg-primary-blue py-24 px-4 relative overflow-hidden text-center">
           <div className="section-padding relative z-10 text-white">
@@ -59,7 +59,7 @@ const CodeOfConduct = () => {
         </section>
 
         {/* Our Core Values */}
-        <section className="py-24 px-4 bg-pure-white">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="section-padding text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-20">Our Core Values</h2>
             
@@ -106,7 +106,7 @@ const CodeOfConduct = () => {
         </section>
 
         {/* Professional Conduct Standards */}
-        <section className="py-24 px-4 bg-ascent">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="section-padding">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-20">Professional Conduct Standards</h2>
             
@@ -176,7 +176,7 @@ const CodeOfConduct = () => {
         </section>
 
         {/* Code for Samriddh Sathis */}
-        <section className="py-24 px-4 bg-pure-white">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="section-padding">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-20">Code for Samriddh Sathis</h2>
             
@@ -221,7 +221,7 @@ const CodeOfConduct = () => {
         </section>
 
         {/* Escalation & Reporting */}
-        <section className="py-24 px-4 bg-ascent text-center">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] text-center">
           <div className="section-padding max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-10">Escalation & Reporting</h2>
             <div className="space-y-6 text-slate-600 leading-relaxed">

@@ -193,7 +193,7 @@ const TermsConditions = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar activeItem="Terms & Conditions" />
 
-      <main className="flex-grow">
+      <main className="flex-grow ">
         {/* Hero Section */}
         <section className="bg-primary-blue py-24 px-4 relative overflow-hidden text-center">
           <div className="section-padding relative z-10 text-white">
@@ -233,7 +233,7 @@ const TermsConditions = () => {
         </section>
 
         {/* Content Section */}
-        <section className="py-24 px-4 bg-pure-white">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="section-padding max-w-4xl mx-auto">
             <div className="space-y-16">
               {sections.map((section, index) => (

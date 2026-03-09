@@ -65,7 +65,7 @@ const Partners = () => {
                   whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
                   className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-6 text-left transition-all cursor-default"
                 >
-                  <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shrink-0 text-primary-blue shadow-lg">
+                  <div className="w-14 h-14 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] rounded-xl flex items-center justify-center shrink-0 text-primary-blue shadow-lg">
                     <item.icon size={28} />
                   </div>
                   <div>
@@ -84,7 +84,7 @@ const Partners = () => {
         </section>
 
         {/* Partnership Model Section */}
-        <section className="py-24 px-4 bg-pure-white">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Partnership Model</h2>
             <p className="text-slate-600 max-w-3xl mx-auto mb-20 text-lg">
@@ -162,7 +162,7 @@ const Partners = () => {
         </section>
 
         {/* Why Partner Section */}
-        <section className="py-24 px-4 bg-ascent">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Partner with Creditbucket</h2>
             <p className="text-slate-600 max-w-3xl mx-auto mb-20 text-lg">
@@ -198,7 +198,7 @@ const Partners = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="card-interactive flex flex-col items-start text-left p-10"
+                  className="bg-ascent card-interactive flex flex-col items-start text-left p-10"
                 >
                   <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center mb-6 text-slate-400 group-hover:text-primary-blue transition-colors">
                     <item.icon size={24} />

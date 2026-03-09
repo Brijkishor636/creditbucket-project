@@ -79,7 +79,7 @@ const FundFlow = () => {
         </section>
 
         {/* Loan Disbursal Process */}
-        <section className="py-24 px-4 bg-ascent">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="section-padding text-center">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
@@ -142,7 +142,7 @@ const FundFlow = () => {
         </section>
 
         {/* Core Capabilities */}
-        <section className="py-24 px-4 bg-pure-white">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="section-padding text-center">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
@@ -205,7 +205,7 @@ const FundFlow = () => {
         </section>
 
         {/* Partnership Model */}
-        <section className="py-24 px-4 bg-ascent">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="section-padding">
             <div className="text-center mb-16">
               <motion.h2 

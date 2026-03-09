@@ -61,11 +61,11 @@ const Impact = () => {
         </section>
 
         {/* Operational Scale Indicators */}
-        <section className="py-20 px-4 bg-pure-white border-b border-slate-100">
+        <section className="py-20 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] border-b border-slate-100">
           <div className="section-padding">
             <h2 className="text-3xl font-bold text-slate-900 text-center mb-16">Operational Scale Indicators</h2>
             
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="  grid grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 { label: 'Samriddh Saathis', value: '0 +', icon: UserCircle },
                 { label: 'Pin codes Covered', value: '0 +', icon: MapPin },
@@ -79,7 +79,7 @@ const Impact = () => {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ y: -10 }}
-                  className="card-interactive flex flex-col items-center text-center group"
+                  className="bg-ascent card-interactive flex flex-col items-center text-center group"
                 >
                   <div className="w-14 h-14 bg-secondary-blue rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-blue transition-colors duration-300">
                     <item.icon className="w-6 h-6 text-primary-blue group-hover:text-white transition-colors duration-300" />
@@ -93,7 +93,7 @@ const Impact = () => {
         </section>
 
         {/* Regional Operational Presence */}
-        <section className="py-24 px-4 bg-ascent">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="section-padding text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Regional Operational Presence</h2>
             <p className="text-slate-600 max-w-2xl mx-auto mb-16">
@@ -135,7 +135,7 @@ const Impact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="card-white text-left group hover:border-primary-blue"
+                    className="bg-ascent card-white text-left group hover:border-primary-blue"
                   >
                     <h4 className="text-xl font-bold text-primary-blue mb-3">{state.name}</h4>
                     <p className="text-sm text-slate-600 leading-relaxed">{state.desc}</p>
@@ -147,7 +147,7 @@ const Impact = () => {
         </section>
 
         {/* Ecosystem-Level Impact */}
-        <section className="py-24 px-4 bg-pure-white">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="section-padding text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Ecosystem-Level Impact</h2>
             <p className="text-slate-600 max-w-2xl mx-auto mb-16">

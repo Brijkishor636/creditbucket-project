@@ -18,10 +18,10 @@ import Footer from "@/components/footer/Footer";
 
 const PhygitalModel = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen  flex flex-col">
       <Navbar activeItem="Phygital Model" />
 
-      <main className="flex-grow">
+      <main className="flex-grow ">
         {/* Hero Section */}
         <section className="bg-primary-blue py-20 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -120,7 +120,7 @@ const PhygitalModel = () => {
         </section>
 
         {/* Operational Flow Section */}
-        <section className="py-24 px-4 bg-pure-white">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">End-to-End Operational Flow</h2>
             <p className="text-slate-500 max-w-2xl mx-auto mb-20">
@@ -162,7 +162,7 @@ const PhygitalModel = () => {
         </section>
 
         {/* Why it Works Section */}
-        <section className="py-24 px-4 bg-ascent">
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Why the Phygital Model Works</h2>
             <p className="text-slate-500 max-w-2xl mx-auto mb-16">
@@ -199,7 +199,7 @@ const PhygitalModel = () => {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ y: -5 }}
-                  className="card-interactive flex items-start space-x-6 text-left group"
+                  className="bg-ascent  card-interactive flex items-start space-x-6 text-left group"
                 >
                   <div className="flex-shrink-0 w-12 h-12 bg-secondary-blue rounded-xl flex items-center justify-center group-hover:bg-primary-blue transition-colors duration-300">
                     <item.icon className="w-6 h-6 text-primary-blue group-hover:text-white transition-colors duration-300" />

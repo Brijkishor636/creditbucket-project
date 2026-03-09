@@ -6,7 +6,7 @@ const ScaleStatsSection: React.FC = () => {
   return (
     <section className="w-full">
 
-      <div className="bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] text-center py-6">
+      <div className="text-center py-6">
         <p className="text-gray-800 font-medium">
           Operating at scale across India
         </p>
