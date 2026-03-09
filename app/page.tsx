@@ -15,9 +15,10 @@ import TrustSection from "@/components/TrustSection";
 import LendingPartnersSection from "@/components/partnerSection/LendingPartnersSection";
 import ImpactSection from "@/components/ImpactSection/ImpactSection";
 import ScaleStatsSection from "@/components/ScaleStatsSection";
-import Problem from "@/components/challenge/Problem";
-import Solution from "@/components/solution/solution";
-import WhyPartner from "@/components/whypartner/whypartner";
+import ChallengeSection from "@/components/challengeSection/ChallengeSection";
+import TestimonialSection from "@/components/testimonial/TestimonialSection";
+import WhyPartnerSection from "@/components/whyPartner/WhyPartnerSection";
+
 
 export default function Home() {
   const [showScroll, setShowScroll] = useState(false);
@@ -42,8 +43,12 @@ export default function Home() {
       <Ticker />
       <CreditHero />
       <div className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
-        <ScaleStatsSection />
-       
+          <ScaleStatsSection/>
+          <ChallengeSection/>
+          <TestimonialSection/>
+          <WhyPartnerSection/>
+          <ImpactSection />
+          <LendingPartnersSection />
       </div>
       <Problem />
       <Solution />
