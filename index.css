@@ -1,10 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
 @import "tailwindcss";
-
-
 
 @theme {
   --color-primary-blue: #0C82DD;
-  --color-secondary-blue: linear-gradient(135deg,#E6F3FF,#B9D9F6);
+  --color-secondary-blue: #E6F3FF;
   --color-pure-white: #FFFFFF;
   --color-ascent: #F7FAFC;
   --color-dark-footer: #001529;

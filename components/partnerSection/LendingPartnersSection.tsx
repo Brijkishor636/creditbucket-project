@@ -4,7 +4,7 @@ import PartnerCard from "./PartnerCard";
 
 const LendingPartnersSection: React.FC = () => {
   return (
-    <section className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] py-16 px-6">
+    <section className="w-full py-16 px-6">
       
       <div className="max-w-6xl mx-auto text-center">
 

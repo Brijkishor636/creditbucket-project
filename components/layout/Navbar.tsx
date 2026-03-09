@@ -1,91 +1,89 @@
 "use client";
-import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
-import Button from "../common/Button";
+import React from "react";
+import { Menu } from "lucide-react";
+import Link from "next/link";
 import Logo from "./Logo";
+import Button from "../common/Button";
 
-const Navbar: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+interface NavItem {
+  name: string;
+  path: string;
+}
 
-  const navItems = [
-    "Home",
-    "Solutions",
-    "Partners",
-    "Phygital Model",
-    "Trust & Governance",
-    "Impact",
-    "About Us",
-    "Contact",
+const Navbar = ({ activeItem }: { activeItem: string }) => {
+  const navItems: NavItem[] = [
+    { name: "Home", path: "/" },
+    { name: "Solutions", path: "/solutions" },
+    { name: "Partners", path: "/partners" },
+    { name: "Phygital Model", path: "/phygital" },
+    { name: "Trust & Governance", path: "/trust" },
+    { name: "Impact", path: "/impact" },
+    { name: "About Us", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-blue-200 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="flex items-center justify-between py-2">
-          <div className="flex items-center gap-2">
-            <Logo />
+        {/* Top Row: Logo, Segment Toggle, Join Now */}
+        <div className="flex justify-between items-center py-4">
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center">
+              <Logo />
+            </Link>
           </div>
 
-          <div className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
-            <button className="text-gray-700 font-medium relative group cursor-pointer">
-              Retailer
-              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </button>
-
-            <button className="text-gray-700 font-medium relative group cursor-pointer">
-              Corporate
-              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </button>
-          </div>
-
-          <div className="hidden md:block">
-            <Button name="Join now" />
-          </div>
-
-          <div className="md:hidden">
-            <Button name="Join now" />
-          </div>
-        </div>
-
-        <div className="border-t border-gray-300 py-3">
-          <div className="hidden md:flex justify-center gap-12">
-            {navItems.map((item, i) => (
-              <a
-                key={i}
-                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                className="text-sm font-medium text-gray-700 hover:text-blue-600 cursor-pointer transition"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-
-          <div className="md:hidden flex justify-end">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-gray-800 cursor-pointer"
+          {/* Center Toggle: Retailer / Corporate */}
+          <div className="hidden lg:flex space-x-8 text-sm font-medium">
+            <Link 
+              href="#" 
+              className="text-slate-500 hover:text-blue-600 transition-colors"
             >
-              {menuOpen ? <X size={26} /> : <Menu size={26} />}
-            </button>
+              Retailer
+            </Link>
+            <div className="relative">
+              <Link href="#" className="text-blue-600">
+                Corporate
+              </Link>
+              <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600"></div>
+            </div>
+          </div>
+
+          {/* Right Side: CTA and Mobile Menu Trigger */}
+          <div className="flex items-center space-x-1 md:space-x-4">
+            <Button name="Join Now" />
+            
+            <Link 
+              href="/menu" 
+              className="md:hidden text-slate-600 hover:text-blue-600 transition-colors p-1.5"
+            >
+              <Menu size={22} />
+            </Link>
           </div>
         </div>
-
-        {menuOpen && (
-          <div className="md:hidden w-full border-t border-blue-200 px-6 py-4 space-y-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] shadow-lg">
-            {navItems.map((item, i) => (
-              <a
-                key={i}
-                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                className="block text-gray-700 hover:text-blue-600 cursor-pointer"
-                onClick={() => setMenuOpen(false)}
+        
+        {/* Bottom Row: Main Nav Links - Hidden on mobile */}
+         <div className="border-t border-gray-300 py-3">
+        <div className="hidden md:flex justify-center items-center h-12 pb-2">
+          <div className="flex items-center space-x-6 lg:space-x-8">
+            {navItems.map((item) => (
+              <Link 
+                key={item.name} 
+                href={item.path} 
+                className={`text-sm font-medium transition-all relative group py-2 
+                  ${activeItem === item.name ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'}`}
               >
-                {item}
-              </a>
+                {item.name}
+                <span 
+                  className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transition-transform duration-300 origin-left 
+                  ${activeItem === item.name ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}
+                ></span>
+              </Link>
             ))}
           </div>
-        )}
-
+        </div>
+        </div>
       </div>
     </nav>
   );

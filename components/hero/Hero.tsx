@@ -5,9 +5,7 @@ import HeroContent from "./HeroContent";
 import HeroImage from "./HeroImage";
 
 const Hero: React.FC = () => {
-  const handleScrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+ 
 
   return (
     <section className="relative overflow-hidden pt-24 shadow-lg">
@@ -22,13 +20,7 @@ const Hero: React.FC = () => {
         <HeroImage />
       </div>
 
-      <button
-        onClick={handleScrollTop}
-        className="absolute bottom-6 right-6 flex items-center gap-1 px-3 py-1.5 bg-white/90 backdrop-blur border border-gray-300 rounded-full shadow-md hover:shadow-lg transition cursor-pointer text-sm font-medium text-blue-700"
-      >
-        Scroll to Top
-        <ArrowUp size={16} />
-      </button>
+     
 
     </section>
   );

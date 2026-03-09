@@ -1,6 +1,6 @@
 import React from "react";
 import { IndianRupee, Wifi } from "lucide-react";
-import logoImg from "../../assets/svg/logo.svg";
+import logoImg from "../../assets/svg/logo.png";
 
 const Logo: React.FC = () => {
   return (
@@ -20,23 +20,7 @@ const Logo: React.FC = () => {
         }}
       />
 
-      <div className="text-[13px] font-semibold tracking-[2px] mt-1 flex items-center text-center">
-        <span className="text-[#1F2937]">C</span>
-
-        <IndianRupee
-          size={13}
-          className="text-blue-500 -mx-[2px] relative top-[1px]"
-        />
-
-        <span className="text-[#1F2937]">EDITBUCK</span>
-
-        <Wifi
-          size={13}
-          className="text-blue-500 -mx-[2px] relative top-[1px]"
-        />
-
-        <span className="text-[#1F2937]">T</span>
-      </div>
+      
     </div>
   );
 };
