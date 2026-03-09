@@ -50,7 +50,7 @@ export default function Home() {
           <ImpactSection />
           <LendingPartnersSection />
       </div>
-      <Problem />
+      
       <Solution />
       <WhyPartner />
 
