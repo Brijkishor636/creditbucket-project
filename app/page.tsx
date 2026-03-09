@@ -15,9 +15,9 @@ import TrustSection from "@/components/TrustSection";
 import LendingPartnersSection from "@/components/partnerSection/LendingPartnersSection";
 import ImpactSection from "@/components/ImpactSection/ImpactSection";
 import ScaleStatsSection from "@/components/ScaleStatsSection";
-import ChallengeSection from "@/components/challengeSection/ChallengeSection";
-import TestimonialSection from "@/components/testimonial/TestimonialSection";
-import WhyPartnerSection from "@/components/whyPartner/WhyPartnerSection";
+import Problem from "@/components/challenge/Problem";
+import Solution from "@/components/solution/solution";
+import WhyPartner from "@/components/whypartner/whypartner";
 
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
           <ImpactSection />
           <LendingPartnersSection />
       </div>
-      
+       <Problem />
       <Solution />
       <WhyPartner />
 
