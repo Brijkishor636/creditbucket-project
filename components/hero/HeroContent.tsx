@@ -1,6 +1,6 @@
 import React from "react";
 import HeroBadge from "./HeroBadge";
-import Button from "../common/Button";
+import ArrowRightButton from "../common/ArrowRightButton";
 
 const HeroContent: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const HeroContent: React.FC = () => {
         model.
       </p>
 
-      <Button name="Partner With Creditbucket →" />
+      <ArrowRightButton name="Partner With Creditbucket" />
     </div>
   );
 };

@@ -1,16 +1,13 @@
 "use client";
-import React from 'react';
 import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] p-4 md:p-10 lg:p-14">
-      {/* Main Dark Container */}
+    <footer className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] p-4 md:p-10 lg:p-10">
       <div className="max-w-7xl mx-auto bg-[#001F33] text-white rounded-[40px] p-10 md:p-16 lg:p-20 shadow-2xl relative overflow-hidden">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-4 relative z-10">
-          
-          {/* Left Section: Branding & Mission */}
+       
           <div className="md:col-span-5 space-y-8">
             <h3 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight">
               Creditbucket <br className="hidden lg:block" />

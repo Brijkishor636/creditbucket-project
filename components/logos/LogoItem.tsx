@@ -8,13 +8,22 @@ interface LogoItemProps {
 
 const LogoItem: React.FC<LogoItemProps> = ({ src, alt }) => {
   return (
-    <div className="flex items-center justify-center w-[60px] sm:w-[75px] md:w-[90px] lg:w-[100px]">
+    <div className="flex items-center justify-center w-full">
+      
       <Image
         src={src}
         alt={alt}
-        className="object-contain h-5 sm:h-6 md:h-7 lg:h-8 w-auto opacity-90"
+        className="
+          object-contain w-auto
+          h-6
+          sm:h-8
+          md:h-10
+          lg:h-14
+          xl:h-18
+        "
         priority
       />
+
     </div>
   );
 };
