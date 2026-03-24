@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import Logo from "./Logo";
@@ -49,7 +48,6 @@ const Navbar = ({ activeItem }: { activeItem: string }) => {
             </div>
           </div>
 
-          {/* Right */}
           <div className="flex items-center space-x-2">
             <Button name="Join Now" />
             <Link href="/menu" className="md:hidden p-1">
@@ -58,7 +56,6 @@ const Navbar = ({ activeItem }: { activeItem: string }) => {
           </div>
         </div>
 
-        {/* Bottom Nav */}
         <div className="border-t border-gray-300">
           <div className="hidden md:flex justify-center items-center h-10">
             <div className="flex items-center space-x-10 lg:space-x-12">
