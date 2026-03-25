@@ -75,7 +75,7 @@ const LayerCard = ({
 }) => {
   return (
     <div className="
-      bg-gradient-to-b from-[#1E73BE] to-[#2B8CD8]
+      bg-[#1B84E7]
       text-white 
       rounded-xl 
       p-5 sm:p-6 

@@ -14,7 +14,7 @@ interface LogoStripProps {
 
 const LogoStrip: React.FC<LogoStripProps> = ({ logos }) => {
   return (
-    <section className="w-full bg-[#ffffff] py-10 px-4 shadow-[0_-4px_10px_rgba(0,0,0,0.2)]">
+    <section className="w-full bg-[#ffffff] py-12 px-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)]">
       
       <div
         className="
