@@ -19,26 +19,30 @@ const ValueSection = () => {
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
 
+          {/* IMPORTANT: 
+              Pass the icon name directly (e.g., icon={TrendingDown}). 
+              ValueCard will handle the size and strokeWidth internally.
+          */}
           <ValueCard
-            icon={<TrendingDown size={20} />}
+            icon={TrendingDown}
             title="Lower Cost of Acquisition"
             text="Reduce per-borrower acquisition costs through assisted on-ground distribution networks."
           />
 
           <ValueCard
-            icon={<ClipboardCheck size={20} />}
+            icon={ClipboardCheck}
             title="Improved Application Quality"
             text="Structured facilitation results in more complete, accurate, and decision-ready applications."
           />
 
           <ValueCard
-            icon={<MapPin size={20} />}
+            icon={MapPin}
             title="Access to Underserved Areas"
             text="Operational reach into semi-urban and rural segments that are otherwise difficult to serve directly."
           />
 
           <ValueCard
-            icon={<ShieldCheck size={20} />}
+            icon={ShieldCheck}
             title="Compliance-Aligned Distribution"
             text="All processes operate within clearly defined institutional and regulatory frameworks."
           />

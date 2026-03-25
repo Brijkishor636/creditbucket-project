@@ -11,7 +11,7 @@ const CoreCapabilities = () => {
           Core Capabilities
         </h2>
 
-        <p className="mt-3 text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
+        <p className="mt-3 text-black-600 text-sm md:text-base max-w-2xl mx-auto">
           Operational modules that support structured credit distribution.
         </p>
 

@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link';
-
+import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy';
 const Footer = () => {
   return (
     <footer className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] p-4 md:p-10 lg:p-10">
@@ -48,12 +48,12 @@ const Footer = () => {
               <h4 className="text-xl font-medium tracking-wide">Legal & Trust</h4>
               <ul className="space-y-4 text-slate-300 text-sm md:text-base">
                 <li><Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
-                <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/PrivacyPolicy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/CodeOfConduct" className="hover:text-white transition-colors">Code of Conduct</Link></li>
                 <li><Link href="/lsp" className="hover:text-white transition-colors">RBI-aligned LSP</Link></li>
                 <li><Link href="/fund-flow" className="hover:text-white transition-colors">Bank-to-customer Fund Flow</Link></li>
                 <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
-                <li><Link href="/faqs" className="hover:text-white transition-colors">FAQs</Link></li>
+                <li><Link href="/FAQ" className="hover:text-white transition-colors">FAQs</Link></li>
               </ul>
             </div>
           </div>

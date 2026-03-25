@@ -15,8 +15,7 @@ export const CapabilityCard = ({
       text-center 
       border border-gray-200
 
-      transition-all duration-300 ease-in-out
-      hover:-translate-y-2 
+      
       hover:shadow-xl
       hover:border-blue-400
     ">
