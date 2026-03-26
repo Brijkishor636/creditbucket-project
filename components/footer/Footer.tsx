@@ -21,29 +21,6 @@ const Footer = () => {
 
           {/* Middle Section: Contact & Legal Identifiers */}
           <div className="md:col-span-3 flex flex-col items-center text-center space-y-12">
-            <div className="space-y-6">
-              <h4 className="text-xl font-medium tracking-wide">Contact</h4>
-              <div className="space-y-4 text-slate-300 text-sm md:text-base">
-                <p className="hover:text-white transition-colors cursor-pointer">Address</p>
-                <p className="hover:text-white transition-colors cursor-pointer">e-mail</p>
-                <p className="hover:text-white transition-colors cursor-pointer">phone number</p>
-              </div>
-            </div>
-
-            <div className="space-y-3">
-              <h4 className="text-lg font-medium tracking-wide">Legal Identifiers</h4>
-              <div className="space-y-1 text-slate-400 text-[11px] md:text-xs uppercase tracking-wider">
-                <p>CIN: To be updated</p>
-                <p>LEI: 3358004BDYJ73J4DJE20</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Section: Legal & Trust with Vertical Divider */}
-          <div className="md:col-span-4 flex">
-            {/* Vertical Divider - Matches the height and color in image */}
-            <div className="hidden md:block w-[1.5px] bg-white/20 h-3/4 my-auto mx-8 lg:mx-14"></div>
-            
             <div className="flex-1 text-center space-y-6">
               <h4 className="text-xl font-medium tracking-wide">Legal & Trust</h4>
               <ul className="space-y-4 text-slate-300 text-sm md:text-base">
@@ -55,6 +32,29 @@ const Footer = () => {
                 <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
                 <li><Link href="/FAQ" className="hover:text-white transition-colors">FAQs</Link></li>
               </ul>
+            </div>
+          </div>
+
+          {/* Right Section: Legal & Trust with Vertical Divider */}
+          <div className="md:col-span-4 flex">
+            {/* Vertical Divider - Matches the height and color in image */}
+            <div className="hidden md:block w-[1.5px] bg-white/20 h-3/4 my-auto mx-8 lg:mx-14"></div>
+            <div className="space-y-6">
+              <h4 className="text-xl font-medium tracking-wide">Contact</h4>
+              <div className="space-y-4 text-slate-300 text-sm md:text-base">
+                <p className="hover:text-white transition-colors cursor-pointer">Address</p>
+                <p className="hover:text-white transition-colors cursor-pointer">e-mail</p>
+                <p className="hover:text-white transition-colors cursor-pointer">phone number</p>
+              </div>
+            
+
+            <div className="space-y-3">
+              <h4 className="text-lg font-medium tracking-wide">Legal Identifiers</h4>
+              <div className="space-y-1 text-slate-400 text-[11px] md:text-xs uppercase tracking-wider">
+                <p>CIN: To be updated</p>
+                <p>LEI: 3358004BDYJ73J4DJE20</p>
+              </div>
+            </div>
             </div>
           </div>
         </div>

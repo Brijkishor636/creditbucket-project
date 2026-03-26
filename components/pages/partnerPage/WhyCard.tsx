@@ -24,7 +24,7 @@ export const WhyCard = ({
       hover:shadow-[0_14px_45px_rgba(0,0,0,0.45)]
     "
     >
-      {/* 🔥 HALF CIRCLE GLOW (TOP RIGHT) */}
+    
       <div
         className="
         absolute -top-10 -right-10
@@ -44,7 +44,7 @@ export const WhyCard = ({
       <div
         className="
         relative z-10
-        flex-shrink-0 w-12 h-12 
+        shrink-0 w-12 h-12 
         flex items-center justify-center 
         rounded-lg 
 
