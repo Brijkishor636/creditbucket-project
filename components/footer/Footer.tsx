@@ -23,7 +23,7 @@ const Footer = () => {
             <h4 className="text-xl font-bold md:text-2xl">Legal & Trust</h4>
             <ul className="space-y-4 text-slate-300 text-sm md:text-base">
               <li><Link href="/terms" className="hover:text-blue-600 transition-colors">Terms & Conditions</Link></li>
-              <li><Link href="/privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/PrivacyPolicy" className="hover:text-blue-600 transition-colors">Privacy Policy</Link></li>
               <li><Link href="/CodeOfConduct" className="hover:text-blue-600 transition-colors">Code of Conduct</Link></li>
               <li className="md:hidden lg:block"><Link href="/lsp" className="hover:text-blue-600 transition-colors">RBI-aligned LSP</Link></li>
               <li><Link href="/fund-flow" className="hover:text-blue-600 transition-colors">Bank-to-customer Fund Flow</Link></li>
@@ -56,7 +56,7 @@ const Footer = () => {
               <h4 className="text-xl font-bold md:text-2xl md:mb-6">Resources</h4>
               <ul className="space-y-4 text-slate-300 text-sm md:text-base">
                 <li><Link href="/careers" className="hover:text-blue-600 transition-colors">Careers</Link></li>
-                <li><Link href="/faqs" className="hover:text-blue-600 transition-colors">FAQs</Link></li>
+                <li><Link href="/FAQ" className="hover:text-blue-600 transition-colors">FAQs</Link></li>
               </ul>
             </div>
           </div>

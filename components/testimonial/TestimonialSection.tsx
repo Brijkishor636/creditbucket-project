@@ -8,12 +8,8 @@ import Button from "../common/Button";
 
 const TestimonialSection: React.FC = () => {
   return (
-    <section className="w-full py-16 px-6">
-<<<<<<< HEAD
-      <div className="m-10 mx-auto rounded-3xl bg-gradient-to-br from-[#55a1db] to-[#5198cf] p-10 text-white relative overflow-hidden">
-=======
-      <div className="m-10 mx-auto rounded-3xl bg-gradient-to-br from-[#1d69a4] to-[#2088d7] p-10 text-white relative overflow-hidden">
->>>>>>> bd4c8d6540bf03d51576ba4a2aa12519477629d5
+<section className="w-full py-16 px-6">
+  <div className="m-10 mx-auto rounded-3xl bg-gradient-to-br from-[#1d69a4] to-[#2088d7] p-10 text-white relative overflow-hidden">
 
         <div className="text-center space-y-4 mb-12">
           <SectionTag text="Solution" />
@@ -72,8 +68,4 @@ const TestimonialSection: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default TestimonialSection;
-=======
-export default TestimonialSection;
->>>>>>> bd4c8d6540bf03d51576ba4a2aa12519477629d5
