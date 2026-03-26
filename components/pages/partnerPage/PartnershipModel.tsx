@@ -1,55 +1,36 @@
 "use client";
 import React from "react";
+import { CheckCircle, Building2, Users } from "lucide-react";
 
 const PartnershipModel = () => {
   return (
-    <section className="w-full py-20 px-4 bg-[#EEF3F7]">
+    <section className="w-full py-14 px-4">
       <div className="max-w-6xl mx-auto text-center">
 
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+        <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
           Partnership Model
         </h2>
 
-        <p className="mt-4 text-gray-600 text-base max-w-2xl mx-auto">
-          Our partnerships operate through clearly defined role separation
-          and structured operational accountability.
+        <p className="mt-3 text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
+          Our partnerships operate through clearly defined role separation and structured operational accountability.
         </p>
 
-        {/* MAIN CARD */}
-        <div className="
-          mt-12 
-          rounded-[28px] 
-          bg-[#F5F7FA]
-          border-l-[6px] border-r-[6px] border-[#0C82DD]
-          shadow-[0_20px_50px_rgba(0,0,0,0.08)]
-          overflow-hidden
-        ">
+        <div className="mt-10 rounded-2xl overflow-hidden bg-white border-l-4 border-r-4 border-blue-500">
           <div className="grid grid-cols-1 md:grid-cols-2 relative">
 
-            {/* CENTER DIVIDER */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[4px] bg-[#0C82DD]"></div>
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-blue-500"></div>
 
-            {/* LEFT */}
-            <div className="p-10 md:pr-12 text-left">
-              <div className="flex items-center gap-4 mb-8">
-
-                {/* 🔥 ICON BADGE (use your logo here) */}
-                <div className="
-                  w-14 h-14 
-                  flex items-center justify-center 
-                  rounded-full 
-                  bg-gradient-to-br from-blue-200 to-blue-400
-                ">
-                  {/* Replace with your logo */}
-                  <img src="/icons/creditbucket.svg" className="w-7 h-7" />
+            <div className="p-6 sm:p-8 md:pr-10 text-left">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                  <Users size={18} />
                 </div>
-
-                <h3 className="text-[28px] font-semibold text-gray-900">
+                <h3 className="font-semibold text-gray-900">
                   Creditbucket Responsibilities
                 </h3>
               </div>
 
-              <ul className="space-y-5 text-[15px] text-gray-700">
+              <ul className="space-y-3 text-sm text-gray-600">
                 {[
                   "Assisted borrower sourcing",
                   "Guided digital onboarding & KYC coordination",
@@ -57,43 +38,25 @@ const PartnershipModel = () => {
                   "Application facilitation & process support",
                   "Structured communication between borrower and lender systems",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    
-                    {/* 🔥 CUSTOM BULLET */}
-                    <span className="
-                      w-6 h-6 flex items-center justify-center 
-                      rounded-full bg-gray-200 text-[#0C82DD] text-xs font-bold
-                    ">
-                      ✓
-                    </span>
-
+                  <li key={i} className="flex items-start gap-2">
+                    <CheckCircle size={16} className="text-blue-500 mt-0.5" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* RIGHT */}
-            <div className="p-10 md:pl-12 text-left">
-              <div className="flex items-center gap-4 mb-8">
-
-                {/* 🔥 ICON BADGE (use your logo here) */}
-                <div className="
-                  w-14 h-14 
-                  flex items-center justify-center 
-                  rounded-full 
-                  bg-gradient-to-br from-blue-200 to-blue-400
-                ">
-                  {/* Replace with your logo */}
-                  <img src="/icons/lender.svg" className="w-7 h-7" />
+            <div className="p-6 sm:p-8 md:pl-10 text-left border-t md:border-t-0 md:border-l border-blue-200">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                  <Building2 size={18} />
                 </div>
-
-                <h3 className="text-[28px] font-semibold text-gray-900">
+                <h3 className="font-semibold text-gray-900">
                   Lender Responsibilities
                 </h3>
               </div>
 
-              <ul className="space-y-5 text-[15px] text-black-700">
+              <ul className="space-y-3 text-sm text-gray-600">
                 {[
                   "Credit underwriting & eligibility assessment",
                   "Risk evaluation & approval decisions",
@@ -101,16 +64,8 @@ const PartnershipModel = () => {
                   "Disbursal & repayment management",
                   "Regulatory compliance & portfolio governance",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-
-                    {/* 🔥 CUSTOM BULLET */}
-                    <span className="
-                      w-6 h-6 flex items-center justify-center 
-                      rounded-full bg-gray-200 text-[#0C82DD] text-xs font-bold
-                    ">
-                      ✓
-                    </span>
-
+                  <li key={i} className="flex items-start gap-2">
+                    <CheckCircle size={16} className="text-blue-500 mt-0.5" />
                     {item}
                   </li>
                 ))}

@@ -36,45 +36,36 @@ const TrustGovernanceSection = () => {
 
           </div>
 
-          <div className="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
-            
-            {/* 1. Main Shield Box (Center) */}
+          <div className="relative flex items-center justify-center w-full max-w-md">
+
             <div className="
-              relative z-20
-              w-48 h-48 sm:w-60 sm:h-60
-              bg-[#1B84E7]
-              rounded-[2.5rem] 
+              w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56
+              bg-gradient-to-br from-blue-500 to-blue-700
+              rounded-2xl 
               flex items-center justify-center
-              shadow-[0_30px_60px_-12px_rgba(0,0,0,0.5),0_15px_30px_-10px_rgba(27,132,231,0.3)]
-              border border-white/20
+              shadow-[0_10px_40px_rgba(0,0,0,0.4)]
             ">
-              <ShieldCheck size={100} strokeWidth={1.2} className="text-white opacity-90" />
+              <ShieldCheck size={60} className="text-white" />
             </div>
 
-            {/* 2. Lock Box (Top Right) */}
             <div className="
-              absolute -top-6 -right-6 z-30
-              w-20 h-20 sm:w-28 sm:h-28
-              bg-[#1B84E7]
-              rounded-[1.8rem] flex items-center justify-center
-              shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)]
-              border border-white/20
-              transition-transform duration-500 hover:scale-105
+              absolute -top-4 right-6 sm:right-10
+              w-12 h-12 sm:w-14 sm:h-14
+              bg-gradient-to-br from-blue-500 to-blue-700
+              rounded-xl flex items-center justify-center
+              shadow-lg
             ">
-              <Lock size={45} strokeWidth={1.2} className="text-white opacity-90" />
+              <Lock size={20} className="text-white" />
             </div>
 
-            {/* 3. Eye Box (Bottom Left) */}
             <div className="
-              absolute -bottom-6 -left-6 z-30
-              w-24 h-24 sm:w-32 sm:h-32
-              bg-[#1B84E7]
-              rounded-[2rem] flex items-center justify-center
-              shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)]
-              border border-white/20
-              transition-transform duration-500 hover:scale-105
+              absolute bottom-0 left-6 sm:left-10
+              w-12 h-12 sm:w-14 sm:h-14
+              bg-gradient-to-br from-blue-500 to-blue-700
+              rounded-xl flex items-center justify-center
+              shadow-lg
             ">
-              <Eye size={50} strokeWidth={1.2} className="text-white opacity-90" />
+              <Eye size={20} className="text-white" />
             </div>
 
           </div>

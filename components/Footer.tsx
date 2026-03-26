@@ -33,12 +33,12 @@ const Footer = () => {
             <h4 className="text-xl font-bold">Legal & Trust</h4>
             <ul className="space-y-4 text-slate-300">
               <li><Link href="/terms" className="hover:text-primary-blue hover:translate-x-1 inline-block transition-all">Terms & Conditions</Link></li>
-              <li><Link href="/PrivacyPolicy" className="hover:text-primary-blue hover:translate-x-1 inline-block transition-all">Privacy Policy</Link></li>
+              <li><Link href="#" className="hover:text-primary-blue hover:translate-x-1 inline-block transition-all">Privacy Policy</Link></li>
               <li><Link href="/code-of-conduct" className="hover:text-primary-blue hover:translate-x-1 inline-block transition-all">Code of Conduct</Link></li>
               <li><Link href="#" className="hover:text-primary-blue hover:translate-x-1 inline-block transition-all">RBI-aligned LSP</Link></li>
               <li><Link href="/fund-flow" className="hover:text-primary-blue hover:translate-x-1 inline-block transition-all">Bank-to-customer Fund Flow</Link></li>
               <li><Link href="#" className="hover:text-primary-blue hover:translate-x-1 inline-block transition-all">Careers</Link></li>
-              <li><Link href="/FAQ" className="hover:text-primary-blue hover:translate-x-1 inline-block transition-all">FAQs</Link></li>
+              <li><Link href="#" className="hover:text-primary-blue hover:translate-x-1 inline-block transition-all">FAQs</Link></li>
             </ul>
           </div>
         </div>

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { LucideIcon } from "lucide-react";
 
@@ -18,41 +17,27 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
   statLabel,
 }) => {
   return (
-    <div className="group relative bg-[#f8fafc] rounded-[32px] p-8 md:p-10 min-h-[320px] flex flex-col justify-between border border-transparent transition-all duration-500 hover:bg-white hover:border-blue-100 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 cursor-pointer">
-      
-      {/* Top Section: Icon and Stats */}
-      <div className="flex justify-between items-start w-full">
-        {/* Icon Container: Gray to Blue transition */}
-        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-200 text-slate-600 transition-all duration-500 group-hover:bg-[#1B84E7] group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-400/30">
-          <Icon size={22} />
+    <div className="bg-white rounded-2xl p-6 md:p-8 relative shadow-sm">
+      <div className="w-10 h-10 flex items-center justify-center rounded-md bg-gray-300 mb-4">
+        <Icon size={20} className="text-gray-700" />
+      </div>
+
+      {stat && (
+        <div className="absolute top-6 right-6 text-right">
+          <p className="text-blue-600 font-semibold">{stat}</p>
+          <p className="text-xs text-gray-500">{statLabel}</p>
         </div>
+      )}
 
-        {/* Stats Area: Clean alignment as seen in video */}
-        {stat && (
-          <div className="text-right">
-            <p className="text-[#1B84E7] text-2xl font-bold tracking-tight leading-none">
-              {stat}
-            </p>
-            <p className="text-[13px] font-medium text-slate-500 mt-1 uppercase tracking-tight">
-              {statLabel}
-            </p>
-          </div>
-        )}
-      </div>
+      <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+        {title}
+      </h3>
 
-      {/* Bottom Section: Title and Description */}
-      <div className="mt-auto">
-        <h3 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight tracking-tight mb-4 transition-colors duration-300 group-hover:text-[#1B84E7]">
-          {title}
-        </h3>
-
-        <p className="text-slate-500 text-base md:text-[17px] leading-relaxed max-w-[95%]">
-          {desc}
-        </p>
-      </div>
-      
+      <p className="text-gray-600 mt-2 text-sm leading-relaxed">
+        {desc}
+      </p>
     </div>
   );
 };
 
-export default PartnerCard; 
+export default PartnerCard;

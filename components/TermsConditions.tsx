@@ -2,8 +2,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import Navbar from "@/components/layout/Navbar";
-
-import bgImg from "@/assets/images/physital-bg.png";
+import Footer from "@/components/footer/Footer";
 
 const TermsConditions = () => {
   const sections = [
@@ -196,15 +195,12 @@ const TermsConditions = () => {
 
       <main className="flex-grow ">
         {/* Hero Section */}
-        <section className="w-full rounded-2xl overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgImg.src})` }}
-    >
-      <div className="w-full h-full bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70 px-4 sm:px-6 py-16">
-          <div className="section-padding relative z-10 text-white flex flex-col items-center max-w-5xl mx-auto">
+        <section className="bg-primary-blue py-24 px-4 relative overflow-hidden text-center">
+          <div className="section-padding relative z-10 text-white">
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="inline-block px-4 py-1 border border-white/30 rounded-full text-white/90 text-[10px] font-bold uppercase tracking-[0.2em] mb-6 backdrop-blur-md"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="inline-block px-4 py-1 bg-white/10 rounded-full text-white/80 text-xs font-bold uppercase tracking-widest mb-6"
             >
               Legal
             </motion.div>
@@ -229,11 +225,10 @@ const TermsConditions = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="max-w-3xl mx-auto text-blue-100  leading-loose"
+              className="max-w-3xl mx-auto text-blue-100 leading-relaxed"
             >
-              These Terms & Conditions govern access to and use of the Creditbucket website and <br/> related services. By accessing this website, users agree to comply with the terms <br/>outlined below.
+              These Terms & Conditions govern access to and use of the Creditbucket website and related services. By accessing this website, users agree to comply with the terms outlined below.
             </motion.p>
-          </div>
           </div>
         </section>
 
@@ -272,7 +267,7 @@ const TermsConditions = () => {
         </section>
       </main>
 
-
+      <Footer />
     </div>
   );
 };

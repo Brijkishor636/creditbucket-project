@@ -1,37 +1,28 @@
 "use client";
 import React from "react";
-// 1. Import LucideIcon type
 import {
   Landmark,
   Cpu,
   Users,
   UserCircle,
-  LucideIcon,
 } from "lucide-react";
-import Button from "../common/Button";
+import ArrowRightButton from "../common/ArrowRightButton"
 
-// 2. Update Props to accept the Icon component reference
 type StepCardProps = {
-  icon: LucideIcon; 
+  icon: React.ReactNode;
   title: string;
   text: string;
 };
 
-const StepCard: React.FC<StepCardProps> = ({ icon: Icon, title, text }) => (
-  <div className="group relative z-10 rounded-2xl bg-white/90 px-6 py-8 text-center backdrop-blur-sm hover:shadow-2xl cursor-pointer">
+const StepCard: React.FC<StepCardProps> = ({ icon, title, text }) => (
+  <div className="relative z-10 rounded-2xl bg-[#FFFFFFE5] px-6 py-8 text-center backdrop-blur-sm">
     
-    {/* Icon Container */}
-    <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-blue-200 bg-white text-[#1B84E7] transition-all duration-500 group-hover:bg-[#1B84E7] group-hover:text-white group-hover:border-[#1B84E7] group-hover:shadow-lg group-hover:shadow-blue-400/40">
-      {/* 3. Render the Icon component directly */}
-      <Icon size={24} />
+    <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-blue-300 bg-white">
+      <div className="text-blue-600">{icon}</div>
     </div>
 
-    <h4 className="text-base font-bold text-[#0B1B2B] transition-colors duration-300 group-hover:text-[#1B84E7]">
-      {title}
-    </h4>
-    <p className="mt-3 text-xs text-gray-600 leading-relaxed font-medium">
-      {text}
-    </p>
+    <h4 className="text-sm font-semibold text-[#0B1B2B]">{title}</h4>
+    <p className="mt-2 text-xs text-gray-600 leading-relaxed">{text}</p>
   </div>
 );
 
@@ -41,67 +32,64 @@ type HighlightProps = {
 };
 
 const Highlight: React.FC<HighlightProps> = ({ title, text }) => (
-  <div className="group rounded-2xl bg-white/90 px-6 py-8 text-center backdrop-blur-sm cursor-default border border-transparent hover:border-blue-300">
-    <h5 className="text-sm font-bold text-[#1B84E7] tracking-wider">
-      {title}
-    </h5>
-    <p className="mt-2 text-xs text-gray-600 ">
-      {text}
-    </p>
+  <div className="rounded-2xl bg-[#FFFFFFE5] px-6 py-6 text-center backdrop-blur-sm">
+    <h5 className="text-sm font-semibold text-blue-600">{title}</h5>
+    <p className="mt-2 text-xs text-gray-600">{text}</p>
   </div>
 );
 
 const Solution: React.FC = () => {
   return (
-    <section className="w-full bg-[#EAF2FF] py-20">
-      <div className="mx-auto max-w-[1400px] px-6">
+    <section className="w-full bg-[#EAF2FF] py-12">
+      <div className="mx-auto max-w-[1400px] px-4">
 
         {/* MAIN BOX */}
-        <div className="relative rounded-[40px] bg-[#0C82DD] px-6 py-20 md:px-12 shadow-2xl overflow-hidden">
-          
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[100px] rounded-full -mr-20 -mt-20" />
+        <div className="relative rounded-[28px] bg-[#0C82DD] px-6 py-16 md:px-12">
 
           {/* HEADER */}
-          <div className="relative z-10 text-center max-w-3xl mx-auto">
-            <div className="inline-block rounded-full bg-[#EBF5FF] px-6 py-2 text-sm font-medium text-[#1e293b] mb-8 shadow-sm">
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-block rounded-full bg-white px-5 py-1 text-sm font-medium text-blue-600 mb-6">
               Solution
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-              Phygital Infrastructure for <br /> Inclusive Lending
+            <h2 className="text-2xl md:text-4xl font-semibold text-white">
+              Phygital Infrastructure for Inclusive Lending
             </h2>
 
-            <p className="mt-6 text-blue-50 text-base md:text-lg max-w-2xl mx-auto opacity-90 font-medium">
+            <p className="mt-4 text-white/80 text-sm md:text-base">
               A phygital distribution model combining local trust with institutional-grade
               technology and compliance.
             </p>
           </div>
 
           {/* STEPS */}
-          <div className="relative mt-20">
-            <div className="hidden lg:flex absolute top-[40px] left-10 right-10 items-center -z-0">
-              <div className="flex-1 h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+          <div className="relative mt-14">
+
+            <div className="hidden lg:flex absolute top-[60px] left-[-30px] right-[-30px] items-center">
+              <span className="w-2 h-2 bg-white rounded-full"></span>
+              <div className="flex-1 h-[1px] bg-white"></div>
+              <div className="w-6 h-[1px] bg-white"></div>
+              <div className="w-0 h-0 border-t-[6px] border-b-[6px] border-l-[10px] border-t-transparent border-b-transparent border-l-white"></div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
-              {/* 4. PASS ICON REFERENCES (No brackets) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10 md:px-6 lg:px-12">
               <StepCard
-                icon={Landmark}
+                icon={<Landmark className="h-5 w-5" />}
                 title="Banks & NBFCs"
                 text="Regulated lending partners provide capital and compliance framework"
               />
               <StepCard
-                icon={Cpu}
+                icon={<Cpu className="h-5 w-5" />}
                 title="Creditbucket Tech"
                 text="Our in-platform handles sourcing, screening, and workflow orchestration"
               />
               <StepCard
-                icon={Users}
+                icon={<Users className="h-5 w-5" />}
                 title="Samriddh Saathi"
-                text="1600+ local facilitators who assist with onboarding and trust-building."
+                text="1600+ local facilitators who assist with onboarding, training, and trust-building."
               />
               <StepCard
-                icon={UserCircle}
+                icon={<UserCircle className="h-5 w-5" />}
                 title="End Customer"
                 text="Underserved borrowers receive formal credit with full transparency"
               />
@@ -109,7 +97,7 @@ const Solution: React.FC = () => {
           </div>
 
           {/* HIGHLIGHTS */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:px-6 lg:px-12">
             <Highlight
               title="Compliance-First"
               text="RBI-aligned processes with complete audit trails and transparent fund flows."
@@ -125,11 +113,9 @@ const Solution: React.FC = () => {
           </div>
 
         </div>
-
-        {/* CTA Button */}
-        <div className="flex justify-center items-center pt-16">
-          <Button name="Learn More " variant="arrow" className="px-10 py-4 text-base" />
-        </div>
+      </div>
+      <div className="flex justify-center items-center pt-8">
+        <ArrowRightButton name="Learn More"/>
       </div>
     </section>
   );

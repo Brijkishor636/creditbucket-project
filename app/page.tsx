@@ -16,7 +16,7 @@ import ImpactSection from "@/components/ImpactSection/ImpactSection";
 import ScaleStatsSection from "@/components/ScaleStatsSection";
 import Problem from "@/components/challenge/Problem";
 import Solution from "@/components/solution/solution";
-import WhyPartner from "@/components/whyPartner/whypartner";
+import WhyPartner from "@/components/whypartner/whypartner";
 
 export default function Home() {
   const [showScroll, setShowScroll] = useState(false);

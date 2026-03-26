@@ -18,7 +18,7 @@ export default function OperationalFlow(){
             </p>
             
             <div className="relative">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 relative z-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
                 {[
                   { step: 1, title: 'Lender Integration', desc: 'Banks and NBFCs onboard as lending partners with defined mandates.', icon: Building2 },
                   { step: 2, title: 'Creditbucket Infrastructure Layer', desc: 'Technology, compliance, and operational systems are activated.', icon: Layers },
