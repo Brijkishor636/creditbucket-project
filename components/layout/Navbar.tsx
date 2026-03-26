@@ -17,8 +17,8 @@ const Navbar = ({ activeItem }: { activeItem: string }) => {
     { name: "Phygital Model", path: "/pages/phygital" },
     { name: "Trust & Governance", path: "/pages/trust" },
     { name: "Impact", path: "/pages/impact" },
-    { name: "About Us", path: "/about" },
-    { name: "Contact", path: "/contact" },
+    { name: "About Us", path: "/pages/about" },
+    { name: "Contact", path: "/pages/contact" },
   ];
 
   return (
