@@ -7,7 +7,7 @@ import BgImg from "../../assets/images/BgNational.jpeg";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative overflow-hidden pt-24 pb-20 min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden pt-35 pb-20 min-h-[90vh] flex items-center">
       
       {/* 1. The Main Background Image */}
       <div className="absolute inset-0 -z-20">
