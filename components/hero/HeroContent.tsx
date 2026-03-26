@@ -3,11 +3,11 @@
 import React from "react";
 import HeroBadge from "./HeroBadge";
 import Button from "../common/Button"; // Using the updated shared button
-
+import TaperedLabel from "./TaperedLabe";
 const HeroContent: React.FC = () => {
   return (
     <div className="max-w-xl space-y-6">
-      <HeroBadge text="Recognised by Government & Industry Institutions" />
+      <TaperedLabel text="Recognised by Government & Industry Institutions" />
 
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
         National Award Winner

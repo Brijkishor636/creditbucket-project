@@ -16,7 +16,7 @@ import codeBg from "@/assets/images/code.png";
 const CodeOfConduct = () => {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-[#F8FBFF]">
-      <Navbar activeItem="Code of Conduct" />
+      
 
       <main className="flex-grow">
         {/* --- 1. Hero Section (Vanishing Point Grid) --- */}

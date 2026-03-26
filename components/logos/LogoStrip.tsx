@@ -14,11 +14,15 @@ interface LogoStripProps {
 
 const LogoStrip: React.FC<LogoStripProps> = ({ logos }) => {
   return (
-    <section className="w-full bg-[#ffffff] py-12 px-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)]">
-      
+    <section 
+      className="w-full min-h-[25vh] bg-white py-12 px-4 
+      /* --- Custom Inset Shadow to match the image --- */
+      shadow-[inset_0_25px_50px_-25px_rgba(0,0,0,0.6)]"
+    >
       <div
         className="
           max-w-7xl mx-auto
+          max-h-16
           grid
           grid-cols-2
           sm:grid-cols-3
@@ -30,7 +34,6 @@ const LogoStrip: React.FC<LogoStripProps> = ({ logos }) => {
           <LogoItem key={index} src={logo.src} alt={logo.alt} />
         ))}
       </div>
-
     </section>
   );
 };

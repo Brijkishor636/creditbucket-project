@@ -20,7 +20,7 @@ export const ValueCard = ({
         group relative
         flex items-start gap-5 
         bg-white 
-        rounded-[24px] 
+        rounded-[12px] 
         p-6 sm:p-8
         border border-slate-100
         transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
@@ -45,7 +45,8 @@ export const ValueCard = ({
           flex-shrink-0 w-12 h-12 
           flex items-center justify-center 
           rounded-2xl 
-          bg-[#1B84E7]
+           bg-gradient-to-b from-[#0C82DD] to-[#022743]
+
           text-white
           transition-all duration-500
           shadow-lg shadow-blue-100
@@ -61,7 +62,7 @@ export const ValueCard = ({
       <div className="relative z-10 text-left">
         <h3
           className="
-            text-lg sm:text-xl 
+            text-[10px] md:text-[20px]
             font-bold 
             text-slate-900
             tracking-tight
@@ -74,7 +75,7 @@ export const ValueCard = ({
         <p
           className="
             mt-2 text-sm sm:text-[15px] 
-            text-slate-500 
+            text-black-600 
             leading-relaxed
             font-medium
           "
@@ -84,7 +85,7 @@ export const ValueCard = ({
       </div>
 
       {/* 4. Subtle Inset Border Glow */}
-      <div className="absolute inset-0 rounded-[24px] ring-1 ring-inset ring-black/[0.03] group-hover:ring-[#1B84E7]/20 transition-all duration-500" />
+      <div className="absolute inset-0 rounded-[10px] ring-1 ring-inset ring-black/[0.03] group-hover:ring-[#1B84E7]/20 transition-all duration-500" />
     </div>
   );
 };

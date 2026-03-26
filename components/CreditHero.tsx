@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { StarIcon } from '@heroicons/react/20/solid';
 import Button from "./common/Button"; // Path to your updated Button component
 import bgImg from "../assets/images/india-map.png";
 
@@ -80,8 +80,10 @@ const CreditHero: React.FC = () => {
           </div>
 
           {/* 6. Trust Footer */}
-          <div className="flex items-center gap-2 text-gray-400 text-sm pt-6 border-t border-white/5">
-            <Star size={16} className="text-yellow-500 fill-yellow-500" />
+          <div className="flex items-center gap-2  text-sm pt-6 border-t border-white/5">
+            <div className=" p-4 flex items-center justify-center">
+  <StarIcon className="h-4 w-4 text-white stroke-[1.5]" />
+</div>
             <span className="italic opacity-80">
               Trusted by on-ground networks across 1,600+ pincodes in India
             </span>

@@ -17,7 +17,7 @@ import Footer from "@/components/footer/Footer";
 const TrustGovernance = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar activeItem="Trust & Governance" />
+     
 
       <main className="flex-grow">
         {/* Hero Section */}

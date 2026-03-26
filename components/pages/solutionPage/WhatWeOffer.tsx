@@ -6,11 +6,11 @@ const WhatWeOffer = () => {
   return (
     <section className="w-full py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+        <h2 className="text-[30px] md:text-[40px] font-semibold text-gray-900">
           What We Offer
         </h2>
 
-        <p className="mt-3 text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
+        <p className="mt-3 text-black-600 text-sm md:text-base max-w-2xl mx-auto">
           Creditbucket enables structured, compliant access to underserved
           borrower segments through assisted distribution infrastructure.
         </p>

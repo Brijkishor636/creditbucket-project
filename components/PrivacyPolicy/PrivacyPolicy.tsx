@@ -88,7 +88,7 @@ export default function PrivacyPolicy() {
         </section>
 
       {/* Policy Content */}
-      <section className="py-24">
+      <section className="py-24 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {sections.map((section, i) => (

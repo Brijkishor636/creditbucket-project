@@ -34,7 +34,7 @@ const JoinForm = () => {
   if (submitted) {
     return (
       <div className="min-h-screen flex flex-col bg-ascent">
-        <Navbar activeItem="" />
+        
         <main className="flex-grow flex items-center justify-center p-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -63,7 +63,7 @@ const JoinForm = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-ascent">
-      <Navbar activeItem="" />
+      
       
       <main className="flex-grow py-20 px-4">
         <div className="max-w-2xl mx-auto">

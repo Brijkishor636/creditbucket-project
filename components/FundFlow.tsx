@@ -3,12 +3,11 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowDown, Search, FileCheck, BrainCircuit, MessageSquare, ShieldCheck, Landmark, UserCheck, Wallet, ClipboardCheck } from 'lucide-react';
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/footer/Footer";
 
 const FundFlow = () => {
   return (
     <div className="min-h-screen flex flex-col font-commissioner">
-      <Navbar activeItem="Governance" />
+     
 
       <main className="flex-grow">
         {/* Hero Section */}
@@ -297,7 +296,7 @@ const FundFlow = () => {
         </section>
       </main>
 
-      <Footer />
+
     </div>
   );
 };

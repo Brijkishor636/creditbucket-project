@@ -59,12 +59,12 @@ const WhyPartner: React.FC = () => {
     <section className="bg-[#F8FBFF] py-24 px-6 md:px-12">
       <div className="mx-auto max-w-[1200px]">
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-[#111827] md:text-4xl">
+          <h2 className="text-[30px] md:text-[42px] font-bold tracking-tight text-[#111827] md:text-4xl">
             Why Partner with Creditbucket
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-600">
-            Our phygital infrastructure delivers measurable outcomes for lending
-            partners while ensuring ethical, compliant service to borrowers.
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-black-600 font-bold ">
+            Our phygital infrastructure delivers measurable outcomes for <br/>lending
+            partners while ensuring ethical, compliant service to <br/> borrowers.
           </p>
         </div>
 

@@ -44,7 +44,7 @@ const ImpactSection: React.FC = () => {
     <section className="w-full py-12 md:py-20 px-4 md:px-8 bg-[#EBF5FF] overflow-hidden">
       
       {/* The "Island" Container: This matches the white rounded box in the image */}
-      <div className="max-w-9xl mx-auto bg-white rounded-[40px] md:rounded-[60px] p-8 md:p-16 lg:p-20 shadow-[0_4px_25px_rgba(0,0,0,0.03)] border border-slate-300">
+      <div className="max-w-9xl mx-auto bg-white rounded-[40px] md:rounded-[20px] p-8 md:p-16 lg:p-20 shadow-[0_4px_25px_rgba(0,0,0,0.03)] border border-slate-300">
         
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           

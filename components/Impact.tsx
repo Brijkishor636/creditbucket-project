@@ -17,7 +17,7 @@ import Footer from "@/components/footer/Footer";
 const Impact = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar activeItem="Impact" />
+     
 
       <main className="flex-grow">
         {/* Hero Section */}

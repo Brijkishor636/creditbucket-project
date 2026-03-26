@@ -1,6 +1,9 @@
 "use client";
 import { ShieldCheck, Lock, Eye } from "lucide-react";
 import bgImg from "@/assets/images/physital-bg.png";
+import { motion } from 'framer-motion';
+
+
 
 const TrustGovernanceSection = () => {
   return (
@@ -14,23 +17,27 @@ const TrustGovernanceSection = () => {
 
           <div className="text-white max-w-xl space-y-5 text-center lg:text-left">
 
-            <span className="inline-block bg-blue-500/80 text-xs px-3 py-1 rounded-full">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="inline-block px-4 py-1 border border-white/30 rounded-full bg-[#1B84E7] text-white/90 text-[10px] font-bold tracking-[0.2em] mb-6 backdrop-blur-md"
+            >
               TRUST & GOVERNANCE
-            </span>
+            </motion.div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
               Built on Defined Roles and Regulatory Discipline
             </h2>
 
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+            <p className="text-sm sm:text-base text-white leading-relaxed">
               Creditbucket operates as a structured lending infrastructure partner within clearly defined institutional boundaries.
             </p>
 
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+            <p className="text-sm sm:text-base text-white leading-relaxed">
               Our model is designed to support compliant credit distribution while ensuring that underwriting, pricing, and portfolio control remain fully governed by the partner financial institution.
             </p>
 
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+            <p className="text-sm sm:text-base text-white leading-relaxed">
               We prioritize transparency, documented processes, and operational accountability at every stage of the distribution lifecycle.
             </p>
 
@@ -45,8 +52,10 @@ const TrustGovernanceSection = () => {
               bg-[#1B84E7]
               rounded-[2.5rem] 
               flex items-center justify-center
-              shadow-[0_30px_60px_-12px_rgba(0,0,0,0.5),0_15px_30px_-10px_rgba(27,132,231,0.3)]
-              border border-white/20
+              shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
+  
+  
+           
             ">
               <ShieldCheck size={100} strokeWidth={1.2} className="text-white opacity-90" />
             </div>
@@ -57,9 +66,8 @@ const TrustGovernanceSection = () => {
               w-20 h-20 sm:w-28 sm:h-28
               bg-[#1B84E7]
               rounded-[1.8rem] flex items-center justify-center
-              shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)]
-              border border-white/20
-              transition-transform duration-500 hover:scale-105
+              shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
+  
             ">
               <Lock size={45} strokeWidth={1.2} className="text-white opacity-90" />
             </div>
@@ -70,9 +78,10 @@ const TrustGovernanceSection = () => {
               w-24 h-24 sm:w-32 sm:h-32
               bg-[#1B84E7]
               rounded-[2rem] flex items-center justify-center
-              shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)]
-              border border-white/20
-              transition-transform duration-500 hover:scale-105
+              shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
+  
+
+  
             ">
               <Eye size={50} strokeWidth={1.2} className="text-white opacity-90" />
             </div>

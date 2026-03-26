@@ -36,7 +36,7 @@ const LendingPartnersSection: React.FC = () => {
           responsible credit access across India.
         </p>
 
-        <div className="mt-15 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-14 gap-x-8 place-items-center">
+        <div className="mt-15 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-y-34 gap-x-34 place-items-center">
 
           {partners.map((logo, i) => (
             <div key={i} className="flex justify-center items-center w-full">

@@ -1,6 +1,7 @@
 "use client";
 import { CheckCircle } from "lucide-react";
 import bgImg from "@/assets/images/physital-bg.png"; 
+import { motion } from 'framer-motion';
 
 const PhygitalModelSection = () => {
   return (
@@ -13,9 +14,13 @@ const PhygitalModelSection = () => {
         <div className="max-w-7xl mx-auto">
 
           <div className="text-center text-white max-w-3xl mx-auto">
-            <span className="inline-block bg-blue-500/80 text-xs px-3 py-1 rounded-full">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="inline-block px-4 py-1 border border-white/30 rounded-full bg-[#1B84E7] text-white/90 text-[10px] font-bold tracking-[0.2em] mb-6 backdrop-blur-md"
+            >
               MODEL OVERVIEW
-            </span>
+            </motion.div>
 
             <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold">
               What Is the Phygital Model?
@@ -80,23 +85,24 @@ const LayerCard = ({
       rounded-xl 
       p-5 sm:p-6 
       w-full max-w-[260px]
+      min-h-[240px]
 
-      shadow-[0_8px_30px_rgba(0,0,0,0.3)]
-      backdrop-blur-md
-
-      transition-all duration-300
-      hover:-translate-y-1 
-      hover:shadow-[0_12px_40px_rgba(0,0,0,0.4)]
+     shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
+  
+  transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
+  
+  hover:-translate-y-2 
+  hover:shadow-[0_45px_70px_-15px_rgba(0,0,0,0.7),inset_0_4px_12px_rgba(0,0,0,0.3)]
     ">
 
-      <h3 className="text-sm sm:text-base font-semibold mb-4">
+      <h3 className="text-[20px] md:text-[24px] font-semibold mb-4">
         {title}
       </h3>
 
       <ul className="space-y-3 text-xs sm:text-sm">
         {items.map((item, i) => (
           <li key={i} className="flex items-start gap-2">
-            <CheckCircle size={16} className="mt-0.5 text-white" />
+            <CheckCircle size={16} className=" text-white " />
             {item}
           </li>
         ))}

@@ -13,7 +13,7 @@ export default function OperationalFlow(){
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">End-to-End Operational Flow</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto mb-20">
+            <p className="text-black-600 max-w-2xl mx-auto mb-20">
               A structured, linear process from lender integration to borrower disbursal.
             </p>
             
@@ -35,12 +35,12 @@ export default function OperationalFlow(){
                     whileHover={{ y: -10 }}
                     className="flex flex-col items-center group cursor-default"
                   >
-                    <div className="w-20 h-20 bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:border-primary-blue group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                    <div className="w-20 h-20 bg-white border border-slate-100 rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:border-primary-blue group-hover:shadow-xl group-hover:scale-110 ">
                       <item.icon className="w-8 h-8 text-primary-blue" />
                     </div>
                     <span className="text-xs font-bold text-primary-blue uppercase tracking-widest mb-2">Step {item.step}</span>
                     <h4 className="text-lg font-bold text-slate-800 mb-3 px-4">{item.title}</h4>
-                    <p className="text-sm text-slate-500 leading-relaxed px-4">{item.desc}</p>
+                    <p className="text-sm text-black-600 leading-relaxed px-4">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>

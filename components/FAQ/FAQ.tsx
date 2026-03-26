@@ -99,8 +99,8 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="bg-[#F8FBFF] min-h-screen flex flex-col font-sans">
-      <Navbar activeItem="FAQs" />
+    <div className="bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] min-h-screen flex flex-col font-sans">
+      
 
       <main className="flex-grow">
         {/* --- Hero Section (Matches Privacy Policy Styling) --- */}

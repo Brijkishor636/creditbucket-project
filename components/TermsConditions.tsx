@@ -192,7 +192,7 @@ const TermsConditions = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar activeItem="Terms & Conditions" />
+      
 
       <main className="flex-grow ">
         {/* Hero Section */}

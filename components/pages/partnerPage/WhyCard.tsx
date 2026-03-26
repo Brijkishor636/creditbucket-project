@@ -52,7 +52,7 @@ export const WhyCard = ({
 
         transition-all duration-400
 
-        /* 🔥 ICON FILL EFFECT */
+        
         group-hover:bg-[#1E73BE]
         group-hover:text-white
         group-hover:shadow-[0_8px_25px_rgba(255,255,255,0.4)]

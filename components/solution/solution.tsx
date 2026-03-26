@@ -53,7 +53,7 @@ const Highlight: React.FC<HighlightProps> = ({ title, text }) => (
 
 const Solution: React.FC = () => {
   return (
-    <section className="w-full bg-[#EAF2FF] py-20">
+    <section className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] py-20">
       <div className="mx-auto max-w-[1400px] px-6">
 
         {/* MAIN BOX */}
@@ -67,11 +67,11 @@ const Solution: React.FC = () => {
               Solution
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-              Phygital Infrastructure for <br /> Inclusive Lending
+            <h2 className="text-[30px] md:text-[30px] font-bold text-white leading-2.5">
+              Phygital Infrastructure for Inclusive Lending
             </h2>
 
-            <p className="mt-6 text-blue-50 text-base md:text-lg max-w-2xl mx-auto opacity-90 font-medium">
+            <p className="mt-6 text-white text-base md:text-lg max-w-2xl mx-auto opacity-90 font-medium">
               A phygital distribution model combining local trust with institutional-grade
               technology and compliance.
             </p>

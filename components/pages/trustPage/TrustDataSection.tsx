@@ -12,6 +12,8 @@ import { motion } from 'framer-motion';
 import creditbucketLogo from '@/assets/logo/logoCB.png';
 import lenderLogo from '@/assets/logo/logoCB.png';
 import Image from 'next/image';
+import bgImg from '@/assets/images/creditblack.png';
+import rupee from '@/assets/images/ruppee.png';
 
 export default function TrustDataSection() {
     return (
@@ -22,8 +24,8 @@ export default function TrustDataSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Our Role as a Lending Service Provider (LSP)
             </h2>
-            <p className="text-slate-600 max-w-3xl mx-auto">
-              Clear operational boundaries ensure accountability, compliance, and trust between all participants.
+            <p className="text-black-600 max-w-3xl mx-auto">
+              Clear operational boundaries ensure accountability, compliance, and <br/>trust between all participants.
             </p>
           </div>
 
@@ -38,7 +40,7 @@ export default function TrustDataSection() {
               <div className="flex items-center space-x-5 mb-10">
                 <div className="w-16 h-16 bg-[#E0F2FE] rounded-2xl flex items-center justify-center overflow-hidden p-2">
                   <Image 
-                    src={creditbucketLogo} 
+                    src={bgImg} 
                     alt="Creditbucket Logo" 
                     className="w-full h-full object-contain mix-blend-multiply" 
                   />
@@ -57,7 +59,7 @@ export default function TrustDataSection() {
                   'Process coordination between borrower and lender systems'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start space-x-4 text-[15px] text-slate-600 font-medium leading-snug">
-                    <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
+                    <CheckCircle2 className="w-6 h-6 text-[#1B84E7] shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -74,7 +76,7 @@ export default function TrustDataSection() {
               <div className="flex items-center space-x-5 mb-10">
                 <div className="w-16 h-16 bg-[#E0F2FE] rounded-2xl flex items-center justify-center overflow-hidden p-2">
                   <Image 
-                    src={lenderLogo} 
+                    src={rupee} 
                     alt="Lender Logo" 
                     className="w-full h-full object-contain mix-blend-multiply" 
                   />
@@ -103,15 +105,15 @@ export default function TrustDataSection() {
         </section>
 
         {/* 2. Data & Privacy Framework - UPDATED TEXT */}
-        <section className="max-w-7xl mx-auto px-4">
+        <section className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Data & Privacy Framework</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
-              Our infrastructure is designed with structured data governance principles aligned with institutional and regulatory expectations.
+            <h2 className="text-[30px] md:text-[44px] font-bold text-slate-900 mb-4">Data & Privacy Framework</h2>
+            <p className="text-black-600 max-w-2xl mx-auto">
+              Our infrastructure is designed with structured data governance principles aligned with <br/> institutional and regulatory expectations.
             </p>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
             {[
               { 
                 title: 'Data Minimization', 
@@ -134,12 +136,12 @@ export default function TrustDataSection() {
                 icon: FileText
               }
             ].map((item, i) => (
-              <div className="bg-white p-8 rounded-[2rem] border border-slate-100 flex flex-col items-center text-center shadow-sm h-full"
+              <div className="bg-white p-8 rounded-[1rem] border border-slate-100 flex flex-col items-center text-center shadow-sm h-full"
               >
                 <div className="w-12 h-12 bg-[#E0F2FE] rounded-xl flex items-center justify-center mb-6">
-                  <item.icon className="w-6 h-6 text-blue-600" />
+                  <item.icon className="w-6 h-6 text-[#1B84E7]" />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{item.title}</h4>
+                <h4 className="text-xl  text-slate-900 mb-4 leading-tight">{item.title}</h4>
                 <p className="text-sm text-slate-600 leading-relaxed font-medium">
                   {item.desc}
                 </p>

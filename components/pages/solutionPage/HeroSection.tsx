@@ -40,7 +40,7 @@ const HeroSection = () => {
           <h1 className="
             text-[20px] 
             sm:text-[30px] 
-            lg:text-[50px] 
+            lg:text-[40px] 
             font-bold 
             leading-[1.12]
             tracking-tight
@@ -58,7 +58,7 @@ const HeroSection = () => {
               We combine technology, local facilitation, and guided onboarding <br/>to make credit access more organized, transparent, and scalable.
             </p>
 
-            <p className="text-[13px] text-white/50 italic pt-2">
+            <p className="text-[13px] text-white italic pt-2">
               Credit decisions and loan ownership remain with our partner institutions.
             </p>
           </div>
@@ -91,21 +91,20 @@ const FlowCard = ({ title, subtitle }: { title: string; subtitle: string }) => {
       bg-[#0C82DD] 
       text-white 
       py-7
-      rounded-[22px] 
+      rounded-[12px] 
       w-full 
       max-w-[350px]   
       max-h-[100px]
       text-center
       border border-white/10
 
-      /* 🔥 UPDATED: MULTI-LAYERED REALISTIC SHADOW */
-      /* Layer 1: Deep black core | Layer 2: Wide blue ambient glow */
-      shadow-[0_30px_60px_-12px_rgba(0,0,0,0.45),0_15px_30px_-10px_rgba(27,132,231,0.3)]
-
-      transition-all duration-300 
-      /* Enhanced lift on hover */
-      hover:-translate-y-1
-      hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.55),0_20px_40px_-10px_rgba(27,132,231,0.4)]
+      
+     shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
+  
+  transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
+  
+  hover:-translate-y-2 
+  hover:shadow-[0_45px_70px_-15px_rgba(0,0,0,0.7),inset_0_4px_12px_rgba(0,0,0,0.3)]
     ">
       
       {/* 🔥 SOFT BOTTOM GLOW LAYER */}

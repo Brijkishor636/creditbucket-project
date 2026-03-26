@@ -1,23 +1,26 @@
 "use client";
 import React from "react";
+import cImg from "@/assets/images/creditblack.png";
+import bImg from "@/assets/images/bank.png";
 
 const PartnershipModel = () => {
   return (
-    <section className="w-full py-20 px-4 bg-[#EEF3F7]">
+    <section className="w-full py-20 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
       <div className="max-w-6xl mx-auto text-center">
 
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+        <h2 className="text-[30px] md:text-[40px] font-semibold text-gray-900">
           Partnership Model
         </h2>
 
-        <p className="mt-4 text-gray-600 text-base max-w-2xl mx-auto">
-          Our partnerships operate through clearly defined role separation
+        <p className="mt-4 text-black-600 text-base max-w-2xl mx-auto">
+          Our partnerships operate through clearly defined role separation <br/>
           and structured operational accountability.
         </p>
 
         {/* MAIN CARD */}
         <div className="
           mt-12 
+         
           rounded-[28px] 
           bg-[#F5F7FA]
           border-l-[6px] border-r-[6px] border-[#0C82DD]
@@ -33,15 +36,15 @@ const PartnershipModel = () => {
             <div className="p-10 md:pr-12 text-left">
               <div className="flex items-center gap-4 mb-8">
 
-                {/* 🔥 ICON BADGE (use your logo here) */}
+                {/* 🔥 ICON BADGE */}
                 <div className="
                   w-14 h-14 
                   flex items-center justify-center 
                   rounded-full 
                   bg-gradient-to-br from-blue-200 to-blue-400
                 ">
-                  {/* Replace with your logo */}
-                  <img src="/icons/creditbucket.svg" className="w-7 h-7" />
+                  {/* Fixed: Accessing .src property */}
+                  <img src={cImg.src} className="w-7 h-7" alt="Creditbucket" />
                 </div>
 
                 <h3 className="text-[28px] font-semibold text-gray-900">
@@ -58,15 +61,12 @@ const PartnershipModel = () => {
                   "Structured communication between borrower and lender systems",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    
-                    {/* 🔥 CUSTOM BULLET */}
                     <span className="
                       w-6 h-6 flex items-center justify-center 
                       rounded-full bg-gray-200 text-[#0C82DD] text-xs font-bold
                     ">
                       ✓
                     </span>
-
                     {item}
                   </li>
                 ))}
@@ -77,15 +77,15 @@ const PartnershipModel = () => {
             <div className="p-10 md:pl-12 text-left">
               <div className="flex items-center gap-4 mb-8">
 
-                {/* 🔥 ICON BADGE (use your logo here) */}
+                {/* 🔥 ICON BADGE */}
                 <div className="
                   w-14 h-14 
                   flex items-center justify-center 
                   rounded-full 
                   bg-gradient-to-br from-blue-200 to-blue-400
                 ">
-                  {/* Replace with your logo */}
-                  <img src="/icons/lender.svg" className="w-7 h-7" />
+                  {/* Fixed: Accessing .src property */}
+                  <img src={bImg.src} className="w-7 h-7" alt="Lender" />
                 </div>
 
                 <h3 className="text-[28px] font-semibold text-gray-900">
@@ -102,15 +102,12 @@ const PartnershipModel = () => {
                   "Regulatory compliance & portfolio governance",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-
-                    {/* 🔥 CUSTOM BULLET */}
                     <span className="
                       w-6 h-6 flex items-center justify-center 
                       rounded-full bg-gray-200 text-[#0C82DD] text-xs font-bold
                     ">
                       ✓
                     </span>
-
                     {item}
                   </li>
                 ))}
