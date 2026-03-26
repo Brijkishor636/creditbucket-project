@@ -16,7 +16,6 @@ import ImpactSection from "@/components/ImpactSection/ImpactSection";
 import ScaleStatsSection from "@/components/ScaleStatsSection";
 import Problem from "@/components/challenge/Problem";
 import Solution from "@/components/solution/solution";
-import WhyPartner from "@/components/whypartner/whypartner";
 
 export default function Home() {
   const [showScroll, setShowScroll] = useState(false);
@@ -45,7 +44,7 @@ export default function Home() {
       </div>
       <Problem />
       <Solution />
-      <WhyPartner />
+     
 
       <div className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
       

@@ -4,7 +4,7 @@ import PartnerCard from "./PartnerCard";
 
 const PartnerWithSection = () => {
   return (
-    <section className="relative w-full min-h-[90vh] md:min-h-[80vh] rounded-2xl overflow-hidden">
+    <section className="relative w-full min-h-[90vh] md:min-h-[80vh] rounded-2xl overflow-hidden ">
       <video
         autoPlay
         loop
@@ -15,14 +15,14 @@ const PartnerWithSection = () => {
         <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70"></div>
+      <div className="absolute inset-0 b"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-14 text-center text-white">
-        <h2 className="text-2xl md:text-4xl font-semibold">
+        <h2 className="text-[30px] md:text-[40px] font-semibold">
           Who We Partner With
         </h2>
 
-        <p className="mt-3 text-sm md:text-base text-white/80 max-w-2xl mx-auto">
+        <p className="mt-3 text-sm md:text-base text-white max-w-2xl mx-auto">
           Creditbucket collaborates with regulated financial institutions
           committed to structured, responsible credit distribution in underserved markets.
         </p>

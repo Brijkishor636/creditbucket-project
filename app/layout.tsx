@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar activeItem="Home"/>
+        <Navbar />
         {children}
         <div className="p-5 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
           <Footer/>

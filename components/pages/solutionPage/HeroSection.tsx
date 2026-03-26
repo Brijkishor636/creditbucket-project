@@ -1,78 +1,82 @@
 "use client";
-
+import { ArrowDown } from "lucide-react";
+import { motion } from 'framer-motion';
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[90vh] md:min-h-[80vh] rounded-2xl overflow-hidden">
+    <section className="relative w-full min-h-[85vh] overflow-hidden bg-[#0A192F]">
+      
+      {/* Background */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover opacity-50"
       >
         <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70"></div>
+      <div className="absolute inset-0 "></div>
 
       <div className="
         relative z-10 
-        max-w-7xl mx-auto 
-        px-4 sm:px-6 
-        min-h-[90vh] md:min-h-[80vh]
-        flex flex-col lg:flex-row 
+        max-w-[1300px] mx-auto 
+        px-6 md:px-10 lg:px-14
+        min-h-[85vh]
+        grid lg:grid-cols-12 
         items-center 
-        justify-center lg:justify-between 
-        gap-10 lg:gap-16
-        py-10 lg:py-0
+        gap-10 lg:gap-14
       ">
 
-        <div className="
-          max-w-xl text-white 
-          space-y-5 
-          text-center lg:text-left
-        ">
-          
-          <span className="bg-blue-500/80 px-3 py-1 text-xs rounded-full inline-block">
-            SOLUTION
-          </span>
+        {/* LEFT */}
+        <div className="lg:col-span-7  text-white space-y-7"><motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="inline-block px-4 py-1 border border-white/30 rounded-full bg-[#1B84E7] text-white/90 text-[10px] font-bold tracking-[0.2em] mb-6 backdrop-blur-md"
+            >
+              Solution
+            </motion.div>
 
           <h1 className="
-            text-2xl 
-            sm:text-3xl 
-            md:text-4xl 
-            lg:text-5xl 
-            font-semibold 
-            leading-tight
+            text-[20px] 
+            sm:text-[30px] 
+            lg:text-[40px] 
+            font-bold 
+            leading-[1.12]
+            tracking-tight
           ">
-            Lending Infrastructure for Assisted Credit Distribution
+            Lending Infrastructure for <br />
+            Assisted Credit Distribution
           </h1>
 
-          <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-            Creditbucket operates as a lending infrastructure partner for banks and NBFCs seeking structured access to underserved and semi-formal borrower segments.
-          </p>
+          <div className="space-y-5 max-w-[560px]">
+            <p className="text-[16px] md:text-[18px] text-white/85 leading-relaxed">
+              Creditbucket operates as a lending infrastructure partner for <br/>banks and NBFCs seeking structured access to underserved and <br/>semi-formal borrower segments.
+            </p>
 
-          <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-            We combine technology, local facilitation, and guided onboarding to make credit access more organized, transparent, and scalable.
-          </p>
+            <p className="text-[16px] md:text-[18px] text-white/85 leading-relaxed">
+              We combine technology, local facilitation, and guided onboarding <br/>to make credit access more organized, transparent, and scalable.
+            </p>
 
-          <p className="text-xs text-white/60">
-            Credit decisions and loan ownership remain with our partner institutions.
-          </p>
+            <p className="text-[13px] text-white italic pt-2">
+              Credit decisions and loan ownership remain with our partner institutions.
+            </p>
+          </div>
         </div>
 
+        {/* RIGHT */}
         <div className="
+          lg:col-span-5
           flex flex-col items-center 
-          space-y-3 
-          w-full sm:w-auto
+          justify-center
+          space-y-5
+          mt-6 lg:mt-0
         ">
-          
           <FlowCard title="Banks / NBFC" subtitle="Lending Partner" />
           <Arrow />
           <FlowCard title="Creditbucket" subtitle="Infrastructure Layer" />
           <Arrow />
           <FlowCard title="Borrower" subtitle="Infrastructure Layer" />
-
         </div>
 
       </div>
@@ -83,19 +87,38 @@ const HeroSection = () => {
 const FlowCard = ({ title, subtitle }: { title: string; subtitle: string }) => {
   return (
     <div className="
-      bg-gradient-to-r from-blue-500 to-blue-600 
+      relative
+      bg-[#0C82DD] 
       text-white 
-      px-5 sm:px-7 py-4 sm:py-5 
-      rounded-xl shadow-xl 
+      py-7
+      rounded-[12px] 
       w-full 
-      max-w-[240px] sm:max-w-[260px] md:max-w-[280px] lg:w-[260px]
+      max-w-[350px]   
+      max-h-[100px]
       text-center
-      transition-transform duration-300 hover:scale-105
+      border border-white/10
+
+      
+     shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
+  
+  transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
+  
+  hover:-translate-y-2 
+  hover:shadow-[0_45px_70px_-15px_rgba(0,0,0,0.7),inset_0_4px_12px_rgba(0,0,0,0.3)]
     ">
-      <h3 className="text-sm sm:text-base lg:text-lg font-semibold">
+      
+      {/* 🔥 SOFT BOTTOM GLOW LAYER */}
+      <div className="
+        absolute inset-0 rounded-[22px] 
+        bg-gradient-to-b from-transparent via-transparent to-white/10
+        opacity-20 blur-xl
+      "></div>
+
+      <h3 className="relative text-[22px] sm:text-[28px] font-semibold tracking-tight">
         {title}
       </h3>
-      <p className="text-[10px] sm:text-xs text-white/80 mt-1">
+
+      <p className="relative text-[12px] sm:text-[14px] text-white/80 mt-1 tracking-wide">
         {subtitle}
       </p>
     </div>
@@ -104,8 +127,8 @@ const FlowCard = ({ title, subtitle }: { title: string; subtitle: string }) => {
 
 const Arrow = () => {
   return (
-    <div className="text-white text-base sm:text-lg md:text-xl opacity-80 animate-pulse">
-      ↓
+    <div className="text-white/30">
+      <ArrowDown size={20} strokeWidth={1} />
     </div>
   );
 };

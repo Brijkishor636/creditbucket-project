@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link';
-
+import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy';
 const Footer = () => {
   return (
     <footer className="w-full bg-[#022743] text-white rounded-2xl py-12 px-6 md:px-16 lg:px-24">

@@ -1,6 +1,9 @@
 "use client";
 import { ShieldCheck, Lock, Eye } from "lucide-react";
 import bgImg from "@/assets/images/physital-bg.png";
+import { motion } from 'framer-motion';
+
+
 
 const TrustGovernanceSection = () => {
   return (
@@ -14,58 +17,73 @@ const TrustGovernanceSection = () => {
 
           <div className="text-white max-w-xl space-y-5 text-center lg:text-left">
 
-            <span className="inline-block bg-blue-500/80 text-xs px-3 py-1 rounded-full">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="inline-block px-4 py-1 border border-white/30 rounded-full bg-[#1B84E7] text-white/90 text-[10px] font-bold tracking-[0.2em] mb-6 backdrop-blur-md"
+            >
               TRUST & GOVERNANCE
-            </span>
+            </motion.div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
               Built on Defined Roles and Regulatory Discipline
             </h2>
 
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+            <p className="text-sm sm:text-base text-white leading-relaxed">
               Creditbucket operates as a structured lending infrastructure partner within clearly defined institutional boundaries.
             </p>
 
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+            <p className="text-sm sm:text-base text-white leading-relaxed">
               Our model is designed to support compliant credit distribution while ensuring that underwriting, pricing, and portfolio control remain fully governed by the partner financial institution.
             </p>
 
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+            <p className="text-sm sm:text-base text-white leading-relaxed">
               We prioritize transparency, documented processes, and operational accountability at every stage of the distribution lifecycle.
             </p>
 
           </div>
 
-          <div className="relative flex items-center justify-center w-full max-w-md">
-
+          <div className="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
+            
+            {/* 1. Main Shield Box (Center) */}
             <div className="
-              w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56
-              bg-gradient-to-br from-blue-500 to-blue-700
-              rounded-2xl 
+              relative z-20
+              w-48 h-48 sm:w-60 sm:h-60
+              bg-[#1B84E7]
+              rounded-[2.5rem] 
               flex items-center justify-center
-              shadow-[0_10px_40px_rgba(0,0,0,0.4)]
+              shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
+  
+  
+           
             ">
-              <ShieldCheck size={60} className="text-white" />
+              <ShieldCheck size={100} strokeWidth={1.2} className="text-white opacity-90" />
             </div>
 
+            {/* 2. Lock Box (Top Right) */}
             <div className="
-              absolute -top-4 right-6 sm:right-10
-              w-12 h-12 sm:w-14 sm:h-14
-              bg-gradient-to-br from-blue-500 to-blue-700
-              rounded-xl flex items-center justify-center
-              shadow-lg
+              absolute -top-6 -right-6 z-30
+              w-20 h-20 sm:w-28 sm:h-28
+              bg-[#1B84E7]
+              rounded-[1.8rem] flex items-center justify-center
+              shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
+  
             ">
-              <Lock size={20} className="text-white" />
+              <Lock size={45} strokeWidth={1.2} className="text-white opacity-90" />
             </div>
 
+            {/* 3. Eye Box (Bottom Left) */}
             <div className="
-              absolute bottom-0 left-6 sm:left-10
-              w-12 h-12 sm:w-14 sm:h-14
-              bg-gradient-to-br from-blue-500 to-blue-700
-              rounded-xl flex items-center justify-center
-              shadow-lg
+              absolute -bottom-6 -left-6 z-30
+              w-24 h-24 sm:w-32 sm:h-32
+              bg-[#1B84E7]
+              rounded-[2rem] flex items-center justify-center
+              shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
+  
+
+  
             ">
-              <Eye size={20} className="text-white" />
+              <Eye size={50} strokeWidth={1.2} className="text-white opacity-90" />
             </div>
 
           </div>

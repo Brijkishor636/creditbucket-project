@@ -1,8 +1,13 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { User, MapPin, Users, IndianRupee } from "lucide-react";
+import { 
+  UserIcon, 
+  MapPinIcon, 
+  UsersIcon, 
+  CurrencyRupeeIcon 
+} from "@heroicons/react/24/outline";
 
-// --- Internal Counter Component ---
+// --- Sub-component: Animated Counter ---
 const Counter = ({ 
   endValue, 
   duration = 2000, 
@@ -16,7 +21,8 @@ const Counter = ({
   const [isVisible, setIsVisible] = useState(false);
   const countRef = useRef<HTMLHeadingElement>(null);
 
-  const numericEndValue = parseInt(endValue.replace(/[^0-9]/g, ""));
+  // Extract only numbers (handles "1,600+" -> 1600)
+  const numericEndValue = parseInt(endValue.replace(/[^0-9]/g, "")) || 0;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,20 +39,26 @@ const Counter = ({
   useEffect(() => {
     if (!isVisible) return;
 
-    let start = 0;
-    const increment = numericEndValue / (duration / 16);
+    let startTime: number | null = null;
+    let animationFrame: number;
 
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= numericEndValue) {
-        setCount(numericEndValue);
-        clearInterval(timer);
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const percentage = Math.min(progress / duration, 1);
+      
+      const currentCount = Math.floor(percentage * numericEndValue);
+      setCount(currentCount);
+
+      if (progress < duration) {
+        animationFrame = requestAnimationFrame(animate);
       } else {
-        setCount(Math.floor(start));
+        setCount(numericEndValue);
       }
-    }, 16);
+    };
 
-    return () => clearInterval(timer);
+    animationFrame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrame);
   }, [isVisible, numericEndValue, duration]);
 
   return (
@@ -58,84 +70,76 @@ const Counter = ({
   );
 };
 
+// --- Main Section Component ---
 const ScaleStatsSection: React.FC = () => {
+  const stats = [
+    {
+      icon: UserIcon,
+      value: "400+",
+      label: <>Samriddh <br className="hidden lg:block"/> Sathis</>,
+    },
+    {
+      icon: MapPinIcon,
+      value: "1,600+",
+      label: <>Pin codes <br className="hidden lg:block"/> Covered</>,
+    },
+    {
+      icon: UsersIcon,
+      value: "9,000+",
+      label: <>People <br className="hidden lg:block"/> Impacted</>,
+    },
+    {
+      icon: CurrencyRupeeIcon,
+      value: "0",
+      label: <>Total Impact <br className="hidden lg:block"/> Created</>,
+      isCurrency: true,
+    },
+  ];
+
   return (
     <section className="w-full">
       {/* Label Area */}
-      <div className="text-center py-8">
-        <p className="text-black uppercase text-base sm:text-xl md:text-3xl font-bold">
-          Operational Score Indicators
+      <div className="text-center py-12">
+        <p className="text-slate-600 font-medium tracking-widest text-xl uppercase">
+          Operating at scale across India
         </p>
       </div>
 
       {/* Top Gradient Divider */}
-      <div className="h-[2px] w-full bg-gradient-to-r from-blue-200 via-blue-700 to-blue-200 opacity-80" />
-
+      <div className="h-[1.5px] w-full bg-linear-to-r from-transparent via-blue-500 to-transparent opacity-30" />
+      
       {/* Main Stats Content */}
-      <div className="bg-white py-12">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center relative gap-y-16">
+      <div className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6 relative">
           
           {/* Tall Vertical Dividers (Hidden on mobile/tablet) */}
-          <div className="hidden lg:block absolute left-1/4 top-1/2 -translate-y-1/2 h-32 w-[1.5px] bg-blue-500" />
-          <div className="hidden lg:block absolute left-2/4 top-1/2 -translate-y-1/2 h-32 w-[1.5px] bg-blue-500" />
-          <div className="hidden lg:block absolute left-3/4 top-1/2 -translate-y-1/2 h-32 w-[1.5px] bg-blue-500" />
+          <div className="hidden lg:block absolute left-1/4 top-1/2 -translate-y-1/2 h-24 w-px bg-slate-200" />
+          <div className="hidden lg:block absolute left-2/4 top-1/2 -translate-y-1/2 h-24 w-px bg-slate-200" />
+          <div className="hidden lg:block absolute left-3/4 top-1/2 -translate-y-1/2 h-24 w-px bg-slate-200" />
 
-          {/* Stat Item 1 */}
-          <div className="flex flex-col items-center space-y-6">
-            <div className="w-16 h-16 rounded-full border-2 border-[#1B84E7] flex items-center justify-center text-[#1B84E7]">
-              <User size={32} strokeWidth={2.5} />
-            </div>
-            <div className="space-y-2">
-              <Counter endValue="400+" />
-              <p className="text-xl font-bold text-slate-800 leading-tight">
-                Samriddh <br className="hidden lg:block"/> Sathis
-              </p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 text-center">
+            {stats.map((stat, index) => (
+              <div key={index} className="flex flex-col items-center space-y-6">
+                <div className="w-16 h-16 flex items-center justify-center text-[#1E73BE]">
+                  <stat.icon className="w-10 h-10 " strokeWidth={1.5} />
+                </div>
+                <div className="space-y-2">
+                  <Counter endValue={stat.value} isCurrency={stat.isCurrency} />
+                  <p className="text-lg font-semibold text-slate-600 leading-tight">
+                    {stat.label}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-
-          {/* Stat Item 2 */}
-          <div className="flex flex-col items-center space-y-6">
-            <div className="w-16 h-16 rounded-full border-2 border-[#1B84E7] flex items-center justify-center text-[#1B84E7]">
-              <MapPin size={32} strokeWidth={2.5} />
-            </div>
-            <div className="space-y-2">
-              <Counter endValue="1,600+" />
-              <p className="text-xl font-bold text-slate-800 leading-tight">
-                Pin codes <br className="hidden lg:block"/> Covered
-              </p>
-            </div>
-          </div>
-
-          {/* Stat Item 3 */}
-          <div className="flex flex-col items-center space-y-6">
-            <div className="w-16 h-16 rounded-full border-2 border-[#1B84E7] flex items-center justify-center text-[#1B84E7]">
-              <Users size={32} strokeWidth={2.5} />
-            </div>
-            <div className="space-y-2">
-              <Counter endValue="9,000+" />
-              <p className="text-xl font-bold text-slate-800 leading-tight">
-                People <br className="hidden lg:block"/> Impacted
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center space-y-6">
-            <div className="w-16 h-16 rounded-full border-2 border-[#1B84E7] flex items-center justify-center text-[#1B84E7]">
-              <IndianRupee size={32} strokeWidth={2.5} />
-            </div>
-            <div className="space-y-2">
-              <Counter endValue="0" isCurrency={true} />
-              <p className="text-xl font-bold text-slate-800 leading-tight">
-                Total Impact <br className="hidden lg:block"/> Created
-              </p>
-            </div>
-          </div>
-
         </div>
       </div>
 
-      <div className="h-[2px] w-full bg-gradient-to-r from-blue-200 via-blue-700 to-blue-200 opacity-80" />
-      <div className="bg-[#E6F3FF]/50 h-10" />
+      {/* Bottom Gradient Divider */}
+      <div className="h-[1.5px] w-full bg-linear-to-r from-transparent via-blue-500 to-transparent opacity-30" />
+
+      {/* Bottom Visual Spacer */}
+      <div className="bg-slate-50 h-12" />
     </section>
   );
 };

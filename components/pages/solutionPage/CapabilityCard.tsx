@@ -15,13 +15,12 @@ export const CapabilityCard = ({
       text-center 
       border border-gray-200
 
-      transition-all duration-300 ease-in-out
-      hover:-translate-y-2 
+      
       hover:shadow-xl
       hover:border-blue-400
     ">
 
-      <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-blue-100 text-blue-600">
+      <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-blue-100 text-[#0C82DD]">
         {icon}
       </div>
 
@@ -29,7 +28,7 @@ export const CapabilityCard = ({
         {title}
       </h3>
 
-      <p className="mt-3 text-xs md:text-sm text-gray-600 leading-relaxed">
+      <p className="mt-3 text-xs md:text-sm text-black-600 leading-relaxed">
         {text}
       </p>
     </div>

@@ -1,36 +1,58 @@
 "use client";
 import React from "react";
-import { CheckCircle, Building2, Users } from "lucide-react";
+import cImg from "@/assets/images/creditblack.png";
+import bImg from "@/assets/images/bank.png";
 
 const PartnershipModel = () => {
   return (
-    <section className="w-full py-14 px-4">
+    <section className="w-full py-20 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
       <div className="max-w-6xl mx-auto text-center">
 
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+        <h2 className="text-[30px] md:text-[40px] font-semibold text-gray-900">
           Partnership Model
         </h2>
 
-        <p className="mt-3 text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
-          Our partnerships operate through clearly defined role separation and structured operational accountability.
+        <p className="mt-4 text-black-600 text-base max-w-2xl mx-auto">
+          Our partnerships operate through clearly defined role separation <br/>
+          and structured operational accountability.
         </p>
 
-        <div className="mt-10 rounded-2xl overflow-hidden bg-white border-l-4 border-r-4 border-blue-500">
+        {/* MAIN CARD */}
+        <div className="
+          mt-12 
+         
+          rounded-[28px] 
+          bg-[#F5F7FA]
+          border-l-[6px] border-r-[6px] border-[#0C82DD]
+          shadow-[0_20px_50px_rgba(0,0,0,0.08)]
+          overflow-hidden
+        ">
           <div className="grid grid-cols-1 md:grid-cols-2 relative">
 
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-blue-500"></div>
+            {/* CENTER DIVIDER */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[4px] bg-[#0C82DD]"></div>
 
-            <div className="p-6 sm:p-8 md:pr-10 text-left">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
-                  <Users size={18} />
+            {/* LEFT */}
+            <div className="p-10 md:pr-12 text-left">
+              <div className="flex items-center gap-4 mb-8">
+
+                {/* 🔥 ICON BADGE */}
+                <div className="
+                  w-14 h-14 
+                  flex items-center justify-center 
+                  rounded-full 
+                  bg-gradient-to-br from-blue-200 to-blue-400
+                ">
+                  {/* Fixed: Accessing .src property */}
+                  <img src={cImg.src} className="w-7 h-7" alt="Creditbucket" />
                 </div>
-                <h3 className="font-semibold text-gray-900">
+
+                <h3 className="text-[28px] font-semibold text-gray-900">
                   Creditbucket Responsibilities
                 </h3>
               </div>
 
-              <ul className="space-y-3 text-sm text-gray-600">
+              <ul className="space-y-5 text-[15px] text-gray-700">
                 {[
                   "Assisted borrower sourcing",
                   "Guided digital onboarding & KYC coordination",
@@ -38,25 +60,40 @@ const PartnershipModel = () => {
                   "Application facilitation & process support",
                   "Structured communication between borrower and lender systems",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <CheckCircle size={16} className="text-blue-500 mt-0.5" />
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="
+                      w-6 h-6 flex items-center justify-center 
+                      rounded-full bg-gray-200 text-[#0C82DD] text-xs font-bold
+                    ">
+                      ✓
+                    </span>
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="p-6 sm:p-8 md:pl-10 text-left border-t md:border-t-0 md:border-l border-blue-200">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
-                  <Building2 size={18} />
+            {/* RIGHT */}
+            <div className="p-10 md:pl-12 text-left">
+              <div className="flex items-center gap-4 mb-8">
+
+                {/* 🔥 ICON BADGE */}
+                <div className="
+                  w-14 h-14 
+                  flex items-center justify-center 
+                  rounded-full 
+                  bg-gradient-to-br from-blue-200 to-blue-400
+                ">
+                  {/* Fixed: Accessing .src property */}
+                  <img src={bImg.src} className="w-7 h-7" alt="Lender" />
                 </div>
-                <h3 className="font-semibold text-gray-900">
+
+                <h3 className="text-[28px] font-semibold text-gray-900">
                   Lender Responsibilities
                 </h3>
               </div>
 
-              <ul className="space-y-3 text-sm text-gray-600">
+              <ul className="space-y-5 text-[15px] text-black-700">
                 {[
                   "Credit underwriting & eligibility assessment",
                   "Risk evaluation & approval decisions",
@@ -64,8 +101,13 @@ const PartnershipModel = () => {
                   "Disbursal & repayment management",
                   "Regulatory compliance & portfolio governance",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <CheckCircle size={16} className="text-blue-500 mt-0.5" />
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="
+                      w-6 h-6 flex items-center justify-center 
+                      rounded-full bg-gray-200 text-[#0C82DD] text-xs font-bold
+                    ">
+                      ✓
+                    </span>
                     {item}
                   </li>
                 ))}

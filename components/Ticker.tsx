@@ -9,15 +9,20 @@ const Ticker: React.FC = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden border-y border-blue-300 bg-white">
-      <div className="ticker-track">
-        {[...items, ...items].map((text, i) => (
+    // Added 'inner-shadow' class and adjusted height/border color
+    <div className="w-full overflow-hidden border-y border-slate-200 bg-white shadow-[inset_0_10px_15px_-3px_rgba(0,0,0,0.1)] py-6">
+      <div className="ticker-track flex items-center">
+        {/* We loop 4 times to ensure no gaps on large screens */}
+        {[...items, ...items, ...items, ...items].map((text, i) => (
           <div
             key={i}
-            className="flex items-center gap-6 px-6 py-4 text-blue-800 font-medium whitespace-nowrap"
+            className="flex items-center gap-8 px-4 whitespace-nowrap"
           >
-            <span>{text}</span>
-            <span>•</span>
+            {/* Updated text color, size (text-xl), and spacing */}
+            <span className="text-[#005696] text-xl font-bold tracking-wider">
+              {text}
+            </span>
+            <span className="text-[#005696] text-2xl font-bold opacity-80">•</span>
           </div>
         ))}
       </div>
@@ -26,7 +31,8 @@ const Ticker: React.FC = () => {
         .ticker-track {
           display: flex;
           width: max-content;
-          animation: scroll 25s linear infinite;
+          /* Increased duration to 30s for a smooth, readable scroll */
+          animation: scroll 30s linear infinite;
         }
 
         @keyframes scroll {
