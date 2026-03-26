@@ -20,14 +20,14 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   statLabel,
 }) => (
   <div className="group relative">
-    <div className="absolute -inset-6 z-[-1] rounded-[3rem] bg-blue-500/10 blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out" />
+    <div className="absolute -inset-6 z-[-1] rounded-[1rem] bg-blue-500/10 blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out" />
 
-    <div className="relative z-10 h-full overflow-hidden rounded-[2.5rem] bg-white px-10 py-12 shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-slate-100 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[0_40px_80px_rgba(27,132,231,0.12)]">
+    <div className="relative z-10  overflow-hidden rounded-[1.5rem] bg-white px-10 py-12 shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-slate-100 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[0_40px_80px_rgba(27,132,231,0.12)]">
       
-      <div className="absolute -top-12 -right-12 h-24 w-48 rounded-full bg-[#E3F2FF]/70 opacity-0 scale-90 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-110" />
+      <div className="absolute -top-12 -right-12 h-48 w-48 rounded-full bg-[#E3F2FF]/70 opacity-0 scale-90 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-110" />
 
       <div className="relative z-20 mb-10 flex items-start justify-between">
-        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-100 text-slate-500 transition-colors duration-300 group-hover:bg-[#1B84E7] group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-100">
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-100 text-black-600 transition-colors duration-300 group-hover:bg-[#1B84E7] group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-100">
           {/* 2. Render Icon directly as a component */}
           <Icon size={24} strokeWidth={2} />
         </div>
