@@ -107,7 +107,7 @@ const ScaleStatsSection: React.FC = () => {
 
       {/* Top Gradient Divider */}
       <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-30" />
-
+      
       {/* Main Stats Content */}
       <div className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 relative">
@@ -120,8 +120,8 @@ const ScaleStatsSection: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 text-center">
             {stats.map((stat, index) => (
               <div key={index} className="flex flex-col items-center space-y-6">
-                <div className="w-16 h-16 flex items-center justify-center text-blue-600">
-                  <stat.icon className="w-10 h-10" strokeWidth={1.5} />
+                <div className="w-16 h-16 flex items-center justify-center text-[#1E73BE]">
+                  <stat.icon className="w-10 h-10 " strokeWidth={1.5} />
                 </div>
                 <div className="space-y-2">
                   <Counter endValue={stat.value} isCurrency={stat.isCurrency} />
