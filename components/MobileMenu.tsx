@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { usePathname, useRouter } from 'next/navigation';
