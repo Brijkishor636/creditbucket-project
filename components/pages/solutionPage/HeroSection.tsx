@@ -3,9 +3,7 @@ import { ArrowDown } from "lucide-react";
 import { motion } from 'framer-motion';
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[85vh] overflow-hidden bg-[#0A192F]">
-      
-      {/* Background */}
+    <section className="relative w-full min-h-[85vh] rounded-2xl overflow-hidden bg-[#0A192F]">
       <video
         autoPlay
         loop
@@ -28,7 +26,6 @@ const HeroSection = () => {
         gap-10 lg:gap-14
       ">
 
-        {/* LEFT */}
         <div className="lg:col-span-7  text-white space-y-7"><motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}

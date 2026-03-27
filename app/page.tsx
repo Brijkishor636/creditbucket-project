@@ -35,26 +35,22 @@ export default function Home() {
 
   return (
     <div className="relative">
+
       <Hero />
       <Ticker />
       <CreditHero />
       <div className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
         <ScaleStatsSection />
-       
-      </div>
       <Problem />
       <Solution />
-     
-
-      <div className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
       
         <ImpactSection />
         <LendingPartnersSection />
-      </div>
-
       <LogoStrip logos={logos} />
       <InfoStrip />
+      </div>
       <TrustSection />
+
    
       <button
   onClick={scrollToTop}

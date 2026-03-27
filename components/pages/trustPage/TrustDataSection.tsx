@@ -1,24 +1,19 @@
 'use client';
 import { 
-  ShieldCheck, 
   Lock,   
   CheckCircle2, 
   Search, 
   Layers, 
   FileText,
-  IndianRupee
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import creditbucketLogo from '@/assets/logo/logoCB.png';
-import lenderLogo from '@/assets/logo/logoCB.png';
 import Image from 'next/image';
 import bgImg from '@/assets/images/creditblack.png';
 import rupee from '@/assets/images/ruppee.png';
 
 export default function TrustDataSection() {
     return (
-      <div className="bg-[#f8fafc] py-16">
-        {/* 1. Responsibilities Section */}
+      <div className="py-16">
         <section className="max-w-7xl mx-auto px-4 mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">

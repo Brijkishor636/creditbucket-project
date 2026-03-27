@@ -41,7 +41,7 @@ const Counter = ({ end, duration = 2000 }: { end: string; duration?: number }) =
 const ImpactSection: React.FC = () => {
   return (
     // Changed: Section now has the light blue background seen in the image edges
-    <section className="w-full py-12 md:py-20 px-4 md:px-8 bg-[#EBF5FF] overflow-hidden">
+    <section className="w-full py-10 md:py-16 px-4 md:px-6 overflow-hidden">
       
       {/* The "Island" Container: This matches the white rounded box in the image */}
       <div className="max-w-9xl mx-auto bg-white rounded-[40px] md:rounded-[20px] p-8 md:p-16 lg:p-20 shadow-[0_4px_25px_rgba(0,0,0,0.03)] border border-slate-300">

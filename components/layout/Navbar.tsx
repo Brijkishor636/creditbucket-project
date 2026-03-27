@@ -58,21 +58,20 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out border-b
         ${isScrolled 
-          ? "bg-white/40 backdrop-blur-3xl border-blue-200/30 py-1 shadow-sm" // 50% heavy blur effect
+          ? "bg-white/40 backdrop-blur-3xl border-blue-200/30 py-1 shadow-sm"
           : "bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] border-transparent py-0" 
         }`}
     >
       <div className="w-full px-8 lg:px-10">
         
-        {/* --- Top Row --- */}
-        <div className="flex justify-between items-center h-14">
+        <div className="flex justify-between items-center h-12">
           <Link href="/" className="flex items-center h-full">
             <Logo />
           </Link>
 
           <div className="hidden lg:flex items-center space-x-8 text-sm font-semibold">
             <Link
-              href="/retailer"
+              href="#!"
               className={`transition-colors duration-200 ${
                 pathname.includes('/retailer') ? brandBlue : "text-slate-500 hover:text-[#1B84E7]"
               }`}
@@ -81,7 +80,7 @@ const Navbar = () => {
             </Link>
 
             <Link 
-              href="/corporate" 
+              href="/" 
               className={`transition-colors duration-200 ${
                 pathname.includes('/corporate') || pathname === '/' ? brandBlue : "text-[#1B84E7] "
               }`}

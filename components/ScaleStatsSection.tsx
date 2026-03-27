@@ -99,23 +99,23 @@ const ScaleStatsSection: React.FC = () => {
   return (
     <section className="w-full">
       {/* Label Area */}
-      <div className="text-center py-12">
-        <p className="text-slate-600 font-medium tracking-widest text-xl uppercase">
+      <div className="text-center py-8 pt-15">
+        <p className="font-[var(--font-commissioner)] font-medium text-[24px] leading-[120%] tracking-normal text-black text-center">
           Operating at scale across India
-        </p>
+      </p>
       </div>
 
       {/* Top Gradient Divider */}
-      <div className="h-[1.5px] w-full bg-linear-to-r from-transparent via-blue-500 to-transparent opacity-30" />
+      <div className="h-[2px] w-full bg-linear-to-r from-transparent via-blue-500 to-transparent opacity-30" />
       
       {/* Main Stats Content */}
-      <div className="bg-white py-20">
+      <div className="bg-white py-14">
         <div className="max-w-7xl mx-auto px-6 relative">
           
           {/* Tall Vertical Dividers (Hidden on mobile/tablet) */}
-          <div className="hidden lg:block absolute left-1/4 top-1/2 -translate-y-1/2 h-24 w-px bg-slate-200" />
-          <div className="hidden lg:block absolute left-2/4 top-1/2 -translate-y-1/2 h-24 w-px bg-slate-200" />
-          <div className="hidden lg:block absolute left-3/4 top-1/2 -translate-y-1/2 h-24 w-px bg-slate-200" />
+          <div className="hidden lg:block absolute left-1/4 top-1/2 -translate-y-1/2 h-45 w-px bg-blue-600" />
+          <div className="hidden lg:block absolute left-2/4 top-1/2 -translate-y-1/2 h-45 w-px bg-blue-600" />
+          <div className="hidden lg:block absolute left-3/4 top-1/2 -translate-y-1/2 h-45 w-px bg-blue-600" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 text-center">
             {stats.map((stat, index) => (
@@ -125,7 +125,7 @@ const ScaleStatsSection: React.FC = () => {
                 </div>
                 <div className="space-y-2">
                   <Counter endValue={stat.value} isCurrency={stat.isCurrency} />
-                  <p className="text-lg font-semibold text-slate-600 leading-tight">
+                  <p className="text-lg font-semibold text-slate-800 leading-tight">
                     {stat.label}
                   </p>
                 </div>
@@ -136,10 +136,7 @@ const ScaleStatsSection: React.FC = () => {
       </div>
 
       {/* Bottom Gradient Divider */}
-      <div className="h-[1.5px] w-full bg-linear-to-r from-transparent via-blue-500 to-transparent opacity-30" />
-
-      {/* Bottom Visual Spacer */}
-      <div className="bg-slate-50 h-12" />
+      <div className="h-[2px] w-full bg-linear-to-r from-transparent via-blue-500 to-transparent opacity-30" />
     </section>
   );
 };

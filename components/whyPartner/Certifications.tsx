@@ -1,10 +1,7 @@
 "use client";
 
-import React from 'react';
 import { ShieldCheckIcon, ChartBarIcon, LockClosedIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/footer/Footer";
 
 const Certifications = () => {
   return (
