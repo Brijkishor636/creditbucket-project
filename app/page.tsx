@@ -16,6 +16,8 @@ import ImpactSection from "@/components/ImpactSection/ImpactSection";
 import ScaleStatsSection from "@/components/ScaleStatsSection";
 import Problem from "@/components/challenge/Problem";
 import Solution from "@/components/solution/solution";
+import WhyPartnerSection from "@/components/whyPartner/WhyPartnerSection";
+import CertificationBanner from "@/components/IsoSection/CertificationBanner";
 
 export default function Home() {
   const [showScroll, setShowScroll] = useState(false);
@@ -43,7 +45,8 @@ export default function Home() {
         <ScaleStatsSection />
       <Problem />
       <Solution />
-      
+      <WhyPartnerSection/>
+      <CertificationBanner/>
         <ImpactSection />
         <LendingPartnersSection />
       <LogoStrip logos={logos} />

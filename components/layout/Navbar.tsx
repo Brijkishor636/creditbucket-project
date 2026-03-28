@@ -12,10 +12,7 @@ interface NavItem {
   name: string;
   path: string;
 }
-interface NavItem {
-  name: string;
-  path: string;
-}
+
 const Navbar = () => {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,10 +22,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Toggle glassy state after 20px scroll
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -90,8 +85,9 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center space-x-2 relative" ref={dropdownRef}>
+            {/* --- Hidden on Mobile (hidden md:block) --- */}
             <div 
-              className="cursor-pointer active:scale-95 transition-transform"
+              className="hidden md:block cursor-pointer active:scale-95 transition-transform"
               onClick={() => setIsJoinOpen(!isJoinOpen)}
             >
               <Button name="Join Now" />
@@ -103,23 +99,24 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="absolute top-full right-0 mt-4 w-72 overflow-hidden rounded-[1.5rem] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-blue-100 z-[60]"
+                  /* --- Shortened Width (w-60 instead of w-72) --- */
+                  className="absolute top-full right-0 mt-4 w-60 overflow-hidden rounded-[1rem] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-blue-100 z-[60]"
                 >
                   <div className="flex flex-col">
-                    {/* Option 1: Blue Background with Darker Blue Hover */}
                     <Link
                       href="/join-saathis"
                       onClick={() => setIsJoinOpen(false)}
-                      className="bg-[#1B84E7] px-8 py-6 text-white text-lg font-bold transition-colors duration-300 hover:bg-[#1669b8] text-center"
+                      /* --- Shortened Padding (py-3) and Text Size (text-sm) --- */
+                      className="bg-[#1B84E7] px-6 py-3 text-white text-sm font-bold transition-colors duration-300 hover:bg-[#1669b8] text-center"
                     >
                       Join Samriddh Saathis
                     </Link>
 
-                    {/* Option 2: White Background with Soft Blue Hover */}
                     <Link
                       href="/join-pariwar"
                       onClick={() => setIsJoinOpen(false)}
-                      className="bg-white px-8 py-6 text-slate-900 text-lg font-bold transition-colors duration-300 hover:bg-[#F0F7FF] text-center border-t border-blue-50"
+                      /* --- Shortened Padding (py-3) and Text Size (text-sm) --- */
+                      className="bg-white px-6 py-3 text-slate-900 text-sm font-bold transition-colors duration-300 hover:bg-[#F0F7FF] text-center border-t border-blue-50"
                     >
                       Join as Samriddh Pariwar
                     </Link>
@@ -134,12 +131,10 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* --- Bottom Row --- */}
         <div className={`hidden md:flex justify-center items-center transition-all duration-300 ${isScrolled ? 'h-10' : 'h-12'}`}>
           <div className="flex items-center space-x-8 lg:space-x-10">
             {navItems.map((item) => {
               const isActive = pathname === item.path;
-
               return (
                 <Link
                   key={item.name}
@@ -148,7 +143,6 @@ const Navbar = () => {
                   ${isActive ? brandBlue : "text-slate-600 hover:text-[#1B84E7]"}`}
                 >
                   {item.name}
-                  {/* Underline span removed as requested */}
                 </Link>
               );
             })}

@@ -112,7 +112,7 @@ const ImpactSection: React.FC = () => {
 
           {/* RIGHT: Image (Span 5) */}
           <div className="lg:col-span-5">
-            <div className="rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100">
+            <div className="rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-gray-500">
               <Image
                 src={shopImg}
                 alt="Samriddh Saathi Digital Kendra"
