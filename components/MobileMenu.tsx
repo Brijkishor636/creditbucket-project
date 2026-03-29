@@ -1,5 +1,5 @@
 'use client';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 import { motion } from 'motion/react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -20,19 +20,20 @@ const MobileMenu = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] font-sans p-8 flex flex-col">
-      {/* Back Arrow */}
-      <div className="mb-4">
+    <div className="min-h-screen bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] font-sans p-6 pt-18 sm:pt-26 flex flex-col">
+      
+      {/* Top Bar with Close Icon */}
+      <div className="flex justify-end">
         <button 
           onClick={() => router.back()}
-          className="text-slate-800 hover:text-primary-blue transition-colors"
+          className="text-slate-800 hover:text-primary-blue transition-colors cursor-pointer"
         >
-          <ArrowLeft size={32} strokeWidth={1.5} />
+          <X size={32} strokeWidth={1.5} />
         </button>
       </div>
 
       {/* Menu Items */}
-      <div className="flex-grow flex flex-col items-center justify-center space-y-10 py-12">
+      <div className="flex-grow flex flex-col items-center justify-center space-y-10 py-8">
         {menuItems.map((item, index) => (
           <motion.div
             key={item.name}
@@ -54,6 +55,7 @@ const MobileMenu = () => {
 
       {/* Action Buttons */}
       <div className="flex flex-col space-y-5 max-w-md mx-auto w-full pb-10">
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -95,6 +97,7 @@ const MobileMenu = () => {
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={24} />
           </Link>
         </motion.div>
+
       </div>
     </div>
   );

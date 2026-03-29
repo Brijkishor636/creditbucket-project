@@ -109,13 +109,12 @@ const ScaleStatsSection: React.FC = () => {
         </p>
       </div>
 
-      <div className="h-[2px] w-full bg-linear-to-r from-transparent via-blue-500 to-transparent opacity-30" />
+      {/* --- UPPER LINE: Darker Blue and higher opacity --- */}
+      <div className="h-[2px] w-full bg-linear-to-r from-transparent via-[#034091] to-transparent opacity-60" />
       
       <div className="bg-white py-14">
         <div className="max-w-7xl mx-auto px-6 relative">
           
-          {/* --- Updated Vertical Dividers --- */}
-          {/* Changed w-px to w-[2px] for increased thickness */}
           <div className="hidden lg:block absolute left-1/4 top-1/2 -translate-y-1/2 h-40 w-[2px] bg-blue-600/40" />
           <div className="hidden lg:block absolute left-2/4 top-1/2 -translate-y-1/2 h-40 w-[2px] bg-blue-600/40" />
           <div className="hidden lg:block absolute left-3/4 top-1/2 -translate-y-1/2 h-40 w-[2px] bg-blue-600/40" />
@@ -142,7 +141,8 @@ const ScaleStatsSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="h-[2px] w-full bg-linear-to-r from-transparent via-blue-500 to-transparent opacity-30" />
+      {/* --- LOWER LINE: Darker Blue and higher opacity --- */}
+      <div className="h-[2px] w-full bg-linear-to-r from-transparent via-[#034091] to-transparent opacity-60" />
     </section>
   );
 };

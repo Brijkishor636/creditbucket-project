@@ -2,7 +2,7 @@
 
 const CodeOfConduct = () => {
   return (
-    <section className="relative w-full max-h-[82vh] md:min-h-[80vh] rounded-2xl overflow-hidden text-white">
+    <section className="relative w-full max-h-[82vh] md:min-h-[80vh] rounded-2xl overflow-hidden text-white py-5">
         
         <video
           autoPlay
