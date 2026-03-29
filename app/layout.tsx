@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Commissioner } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/footer/Footer";
@@ -14,24 +14,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const commissioner = Commissioner({
+  subsets: ["latin"],
+  weight: ["600"],
+  variable: "--font-commissioner",
+});
+
 export const metadata: Metadata = {
-  title: "Credit Bucket"
+  title: "Credit Bucket",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${commissioner.variable} antialiased`}
       >
         <Navbar />
+        
         {children}
+
         <div className="p-5 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
-          <Footer/>
+          <Footer />
         </div>
       </body>
     </html>

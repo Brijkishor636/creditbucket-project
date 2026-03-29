@@ -6,22 +6,21 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    
-    <section className="relative w-full h-auto min-h-[80vh] lg:min-h-[80vh] rounded-[2rem] lg:rounded-[3rem] overflow-hidden ">
+    <section className="relative w-full h-auto min-h-[80vh] rounded-[2rem] lg:rounded-[3rem] overflow-hidden">
       
-      
+      {/* 1. Background Video Layer */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover scale-130" // Slight scale prevents sub-pixel gaps
+          className="absolute inset-0 w-full h-full object-cover scale-[1.3]" 
         >
           <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
         </video>
         {/* Darkening Overlay for text contrast */}
-        <div className="absolute inset-0" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* 2. Main Content Container */}
@@ -89,6 +88,8 @@ const HeroSection = () => {
   );
 };
 
+/* --- Helper Components --- */
+
 const FlowCard = ({ title, subtitle, delay }: { title: string; subtitle: string; delay: number }) => {
   return (
     <motion.div 
@@ -102,11 +103,9 @@ const FlowCard = ({ title, subtitle, delay }: { title: string; subtitle: string;
         rounded-[1.5rem] w-full max-w-[360px]
         text-center border border-white/20
         shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
-  
-  transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
-  
-  hover:-translate-y-2 
-  hover:shadow-[0_45px_70px_-15px_rgba(0,0,0,0.7),inset_0_4px_12px_rgba(0,0,0,0.3)]
+        transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
+        hover:-translate-y-2 
+        hover:shadow-[0_45px_70px_-15px_rgba(0,0,0,0.7),inset_0_4px_12px_rgba(0,0,0,0.3)]
       "
     >
       <h3 className="text-[22px] sm:text-[28px] font-bold tracking-tight">{title}</h3>

@@ -1,18 +1,12 @@
 "use client";
 
-import React from 'react';
 import { ShieldCheckIcon, ChartBarIcon, LockClosedIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/footer/Footer";
 
 const Certifications = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-     
-
       <main className="flex-grow">
-        {/* --- Hero Section --- */}
         <section className="bg-gradient-to-b from-[#0C4A6E] to-[#1B84E7] pt-32 pb-20 px-6 text-center text-white">
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="inline-flex flex-col items-center mb-4">
@@ -32,18 +26,15 @@ const Certifications = () => {
           </div>
         </section>
 
-        {/* --- ISO Badges Section (Matches Image) --- */}
         <section className="py-24 px-6 bg-[#F8FBFF] -mt-10">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-10">
               
-              {/* ISO 22301 Card */}
               <motion.div 
                 whileHover={{ y: -5 }}
                 className="bg-white rounded-[2.5rem] p-10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.08)] border border-blue-50 flex flex-col md:flex-row items-center gap-8"
               >
                 <div className="w-40 h-40 flex-shrink-0 flex items-center justify-center border-r-0 md:border-r border-slate-100 md:pr-8">
-                  {/* Swap this div with your actual ISO 22301 SVG/Image */}
                   <div className="text-center">
                     <ChartBarIcon className="w-16 h-16 text-[#1B84E7] mx-auto mb-2" />
                     <span className="text-2xl font-black text-slate-800 tracking-tighter">ISO</span>
@@ -58,13 +49,11 @@ const Certifications = () => {
                 </div>
               </motion.div>
 
-              {/* ISO 27001 Card */}
               <motion.div 
                 whileHover={{ y: -5 }}
                 className="bg-white rounded-[2.5rem] p-10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.08)] border border-blue-50 flex flex-col md:flex-row items-center gap-8"
               >
                 <div className="w-40 h-40 flex-shrink-0 flex items-center justify-center border-r-0 md:border-r border-slate-100 md:pr-8">
-                  {/* Swap this div with your actual ISO 27001 SVG/Image */}
                   <div className="text-center">
                     <LockClosedIcon className="w-16 h-16 text-slate-900 mx-auto mb-2" />
                     <span className="text-2xl font-black text-slate-800 tracking-tighter">ISO</span>
@@ -83,7 +72,6 @@ const Certifications = () => {
           </div>
         </section>
 
-        {/* --- Bottom Commitment --- */}
         <section className="py-20 px-6 text-center">
           <div className="max-w-3xl mx-auto space-y-6">
             <ShieldCheckIcon className="w-16 h-16 text-[#1B84E7] mx-auto opacity-20" />
@@ -94,8 +82,6 @@ const Certifications = () => {
           </div>
         </section>
       </main>
-
- 
     </div>
   );
 };
