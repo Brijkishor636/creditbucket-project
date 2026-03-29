@@ -40,11 +40,11 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
       </div>
 
       <div className="relative z-10 mt-6">
-        <h3 className="text-xl md:text-2xl font-bold text-slate-900 leading-tight tracking-tight mb-3 transition-colors duration-300 group-hover:text-[#1B84E7]">
+        <h3 className="text-xl md:text-2xl text-center md:text-left font-bold text-slate-900 leading-tight tracking-tight mb-3 transition-colors duration-300 group-hover:text-[#1B84E7]">
           {title}
         </h3>
 
-        <p className="text-slate-500 text-sm md:text-base leading-relaxed max-w-[95%]">
+        <p className="text-slate-500 text-center md:text-left text-sm md:text-base leading-relaxed max-w-[95%]">
           {desc}
         </p>
       </div>

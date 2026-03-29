@@ -22,10 +22,10 @@ const Card: React.FC<{
     <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-[#F88A8A] group-hover:text-white transition-colors duration-300">
       <Icon size={20} />
     </div>
-    <h3 className="text-[24px] font-bold leading-snug text-slate-900 transition-colors duration-300 ">
+    <h3 className="text-[24px] font-bold leading-snug text-slate-900 text-center md:text-left transition-colors duration-300 ">
       {title}
     </h3>
-    <p className="mt-3 text-sm leading-relaxed text-slate-600">
+    <p className="mt-3 text-sm leading-relaxed text-slate-600 text-center md:text-left">
       {description}
     </p>
   </div>
@@ -58,19 +58,19 @@ const Problem: React.FC = () => {
       <div className="mx-auto grid max-w-[1200px] items-start gap-16 lg:grid-cols-2">
         
         {/* LEFT CONTENT */}
-        <div className="flex flex-col items-start lg:sticky lg:top-32">
+        <div className="flex flex-col items-center md:items-start lg:sticky lg:top-32">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-[#F88A8A] border border-red-350 px-4 py-1.5 text-rose-350 animate-pulse">
             <AlertCircle className="h-4 w-4" />
             <span className="text-sm font-bold uppercase tracking-wider">The Challenge</span>
           </div>
 
-          <p className="max-w-xl  text-[40px] md:text-[52px]font-black leading-[1.1] tracking-tight text-slate-900 md:text-5xl">
+          <p className="max-w-xl  text-[40px] md:text-[52px]font-black text-center md:text-left leading-[1.1] tracking-tight text-slate-900 md:text-5xl">
             Why Reaching Credit- <br />
             Invisible India Remains a <br />
             Major Challenge
           </p>
 
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-slate-600">
+          <p className="mt-8 max-w-xl text-lg leading-relaxed text-slate-600 text-center md:text-left">
             India faces a significant rural credit gap. Traditional banking
             infrastructure cannot reach the underserved profitably.
           </p>
