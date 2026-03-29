@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { usePathname, useRouter } from 'next/navigation';
@@ -11,7 +10,7 @@ const MobileMenu = () => {
   
   const menuItems = [
     { name: 'Home', path: '/', active: currentPath === '/' },
-     { name: 'Solutions', path: '/pages/solutions', active: currentPath === '/pages/solutions' },
+    { name: 'Solutions', path: '/pages/solutions', active: currentPath === '/pages/solutions' },
     { name: 'Partners', path: '/pages/partners', active: currentPath === '/pages/partners' },
     { name: 'Phygital Model', path: '/pages/phygital', active: currentPath === '/pages/phygital' },
     { name: 'Trust & Governance', path: '/pages/trust', active: currentPath === '/pages/trust' },

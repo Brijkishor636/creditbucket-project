@@ -5,7 +5,7 @@ import PartnerCard from "./PartnerCard";
 
 const WhyPartnerSection: React.FC = () => {
   return (
-    <section className="w-full py-16 px-6 mb-10">
+    <section className="w-full py-14 px-6 ">
       <div className="max-w-7xl mx-auto">
 
         <div className="text-center max-w-2xl mx-auto mb-12">
