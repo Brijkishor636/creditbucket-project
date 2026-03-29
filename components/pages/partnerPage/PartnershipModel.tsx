@@ -44,7 +44,7 @@ const PartnershipModel = () => {
                   bg-gradient-to-br from-blue-200 to-blue-400
                 ">
                   {/* Fixed: Accessing .src property */}
-                  <img src={cImg.src} className="w-7 h-7" alt="Creditbucket" />
+                  <img src={cImg.src} className="w-6 h-6" alt="Creditbucket" />
                 </div>
 
                 <h3 className="text-[28px] font-semibold text-gray-900">

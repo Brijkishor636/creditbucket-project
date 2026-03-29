@@ -64,42 +64,45 @@ const FAQGroup: React.FC<{ title: string; description: string; items: { q: strin
 
 export default function FAQ() {
   const sections = [
-    {
-      title: "FAQs for Samriddh Sathis",
-      description: "Guidance for local facilitators supporting borrower onboarding and documentation.",
-      items: [
-        { q: "Who are Samriddh Sathis?", a: "Samriddh Sathis are local facilitators who assist borrowers in their credit journey through guidance and documentation support." },
-        { q: "Do Samriddh Sathis approve loans?", a: "No, Samriddh Sathis only facilitate the application process. Loan approval is solely the discretion of the lending bank or NBFC." },
-        { q: "Can Samriddh Sathis collect loan disbursal or repayment money?", a: "No, Samriddh Sathis are strictly prohibited from handling any cash transactions related to loan disbursal or repayment." },
-        { q: "What is the role of a Samriddh Sathi in the loan process?", a: "Their role is to help borrowers understand the process, complete documentation, and ensure applications are submitted correctly." },
-        { q: "How do Samriddh Sathis earn income?", a: "Samriddh Sathis earn through a transparent facilitation fee structure for their services in assisting borrowers." },
-        { q: "Are Samriddh Sathis employees of the bank?", a: "No, they are independent facilitators or part of the Creditbucket network, not bank employees." }
-      ]
-    },
-    {
-      title: "FAQs for Corporate & Lending Partners",
-      description: "Operational and infrastructure-related questions from banks, NBFCs, and institutional stakeholders.",
-      items: [
-        { q: "What role does Creditbucket play in the lending ecosystem?", a: "Creditbucket provides the infrastructure and facilitator network to help lenders reach underserved markets efficiently." },
-        { q: "Does Creditbucket provide loans directly?", a: "No, Creditbucket is a technology and infrastructure provider, not a lender." },
-        { q: "Who handles loan disbursal and repayment?", a: "Disbursal and repayment are handled directly between the lender and the borrower through formal banking channels." },
-        { q: "Is Creditbucket aligned with Lending Service Provider (LSP) frameworks?", a: "Yes, our operations are designed to be compliant with relevant regulatory frameworks for LSPs." }
-      ]
-    },
-    {
-      title: "FAQs for Borrowers",
-      description: "Information for individuals seeking guidance on loan application and onboarding support.",
-      items: [
-        { q: "Does Creditbucket help borrowers?", a: "We provide local support through Samriddh Sathis to help you understand and complete the loan application process." },
-        { q: "Who decides whether my loan is approved?", a: "The final decision is always made by the bank or NBFC based on their credit policies." },
-        { q: "Where will the loan money be sent?", a: "The loan amount is sent directly to your verified bank account by the lender." },
-        { q: "How do I repay the loan?", a: "Repayments are made directly to the bank through the agreed formal channels (like NACH or bank transfer)." }
-      ]
-    }
-  ];
+  {
+    title: "FAQs for Samriddh Sathis",
+    description: "Guidance for local facilitators supporting borrower onboarding and documentation.",
+    items: [
+      { q: "Who are Samriddh Sathis?", a: "Samriddh Sathis are local facilitators who assist borrowers with the loan application process. They help with documentation, guide borrowers through onboarding, and act as the on-ground support layer in Creditbucket's phygital infrastructure model. They are not employees of any bank or lending institution." },
+      { q: "Do Samriddh Sathis approve loans?", a: "No, Samriddh Sathis do not have any authority to approve or reject loan applications. All credit decisions, underwriting, and approval processes are handled exclusively by the regulated lending partner (bank or NBFC)." },
+      { q: "Can Samriddh Sathis collect loan disbursal or repayment money?", a: "No, Samriddh Sathis are strictly prohibited from collecting, handling, or routing any loan disbursal or repayment funds. All fund transfers occur directly between the lending institution and the borrower's designated bank account." },
+      { q: "What is the role of a Samriddh Sathi in the loan process?", a: "A Samriddh Sathi assists borrowers with application preparation, document collection, KYC coordination, and process explanation. They serve as a facilitation bridge between the borrower and the digital infrastructure, ensuring applications are complete and correctly submitted." },
+      { q: "How do Samriddh Sathis earn income?", a: "Samriddh Sathis earn through structured facilitation incentives defined by Creditbucket. Their compensation is tied to successful application facilitation and borrower onboarding support—not to loan approval or disbursal outcomes." },
+      { q: "Are Samriddh Sathis employees of the bank?", a: "No, Samriddh Sathis are not employees of any bank, NBFC, or lending institution. They operate as independent facilitators within Creditbucket's distribution infrastructure and do not represent any financial institution." }
+    ]
+  },
+  {
+    title: "FAQs for Corporate & Lending Partners",
+    description: "Operational and infrastructure-related questions from banks, NBFCs, and institutional stakeholders.",
+    items: [
+      { q: "What role does Creditbucket play in the lending ecosystem?", a: "Creditbucket operates as a lending infrastructure partner. It provides assisted borrower sourcing, digital onboarding support, KYC coordination, and structured communication between borrowers and regulated lending institutions. Creditbucket does not lend, underwrite, or hold credit risk." },
+      { q: "Does Creditbucket provide loans directly?", a: "No, Creditbucket does not provide loans directly. All loans are originated, underwritten, and disbursed exclusively by regulated financial institutions (banks and NBFCs) that partner with Creditbucket." },
+      { q: "Who handles loan disbursal and repayment?", a: "Loan disbursal and repayment are handled entirely by the partner lending institution. Funds are transferred directly from the lender to the borrower's bank account, and repayments are made by the borrower through approved banking channels. Creditbucket does not intermediate, hold, or process any loan funds." },
+      { q: "Does Creditbucket take credit risk?", a: "No. Creditbucket does not take any credit risk. All credit authority, risk ownership, balance sheet exposure, and financial liability remain exclusively with the partner lending institution." },
+      { q: "How does Creditbucket support lenders?", a: "Creditbucket supports lenders through assisted borrower sourcing, guided digital onboarding, KYC coordination, AI-driven engagement and financial literacy modules, application facilitation, and structured communication between borrower and lender systems." },
+      { q: "Is Creditbucket aligned with Lending Service Provider (LSP) frameworks?", a: "Yes, Creditbucket's operational model is designed to align with Lending Service Provider (LSP) frameworks as outlined by regulatory guidelines. The model maintains clear role separation between infrastructure support and regulated lending functions." }
+    ]
+  },
+  {
+    title: "FAQs for Borrowers",
+    description: "Information for individuals seeking guidance on loan application and onboarding support.",
+    items: [
+      { q: "Does Creditbucket help borrowers?", a: "Creditbucket helps borrowers by providing guided support through the loan application process. This includes assistance with documentation, KYC coordination, application submission, and process explanation - making it easier to apply for credit from formal financial institutions." },
+      { q: "Who decides whether my loan is approved?", a: "The lending institution (bank or NBFC) makes all decisions regarding loan approval. Creditbucket does not influence, approve, or reject any loan application. All credit assessment, underwriting, and eligibility determination are conducted exclusively by the regulated financial institution." },
+      { q: "Where will the loan money be sent?", a: "Upon approval, the loan amount is disbursed directly from the lending institution to your designated bank account. Creditbucket does not receive, hold, route, or process any loan funds at any stage." },
+      { q: "How do I repay the loan?", a: "Loan repayments are made directly to the lending institution through approved banking channels as defined in your loan agreement. Creditbucket does not collect or process any repayment amounts." },
+      { q: "Can I contact Creditbucket for help with my application?", a: "Yes. You can reach out to Creditbucket for guidance and support related to your application process, documentation, or onboarding. However, for loan-specific queries such as approval status, interest rates, or repayment terms, you will need to contact the respective lending institution directly." }
+    ]
+  }
+];
 
   return (
-    <div className="bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] min-h-screen flex flex-col font-sans">
+    <div className="bg-[#E6F3FF] min-h-screen flex flex-col font-sans">
       
 
       <main className="flex-grow">
@@ -114,21 +117,21 @@ export default function FAQ() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover scale-130"
         >
           <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
         </video>
 
         {/* Darker overlay to ensure text pops against the grid video */}
-        <div className="absolute inset-0 bg-[#1B84E7] bg-opacity-60"></div>
+        <div className="absolute inset-0  bg-opacity-60"></div>
 
         {/* Centered Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
+        <div className="relative z-10 max-w-8xl mx-auto px-6 py-2 flex flex-col items-center text-center">
           
             
             
 
-            <div className="max-w-5xl mx-auto relative z-10 text-white flex flex-col items-center pt-20">
+            <div className="max-w-8xl mx-auto relative z-10 text-white flex flex-col items-center pt-20">
               <motion.div 
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}

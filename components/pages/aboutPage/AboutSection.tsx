@@ -15,11 +15,10 @@ const AboutSection = () => {
           <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
         </video>
 
-        {/* Darker overlay to ensure text pops against the grid video */}
-        <div className="absolute inset-0 "></div>
+        <div className="absolute inset-0  "></div>
 
-        {/* Centered Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
+      
+        <div className="relative z-10 max-w-5xl mx-auto px-6 p-2 flex flex-col items-center text-center">
           
           {/* ABOUT Badge */}
           <span className="inline-block px-4 py-1 text-[10px] tracking-widest bg-[#0C82DD] rounded-full mb-10 uppercase">

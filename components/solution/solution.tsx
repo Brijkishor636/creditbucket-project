@@ -53,7 +53,7 @@ const Highlight: React.FC<HighlightProps> = ({ title, text }) => (
 
 const Solution: React.FC = () => {
   return (
-    <section className="w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] py-20">
+    <section className="w-full bg-[#E6F3FF]">
       <div className="mx-auto max-w-[1400px] px-6">
 
         {/* MAIN BOX */}

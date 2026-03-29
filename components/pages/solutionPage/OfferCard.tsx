@@ -1,4 +1,3 @@
-
 export const OfferCard = ({
   icon,
   title,
@@ -9,10 +8,11 @@ export const OfferCard = ({
   text: string;
 }) => {
   return (
-    <div className="bg-white border border-gray-300 rounded-2xl p-6 sm:p-4 text-left border-slate-400  hover:shadow-md ">
-      <div className="w-9 h-9 flex items-center justify-center rounded-md bg-gray-200 text-gray-700 mb-4 transition-all duration-300 hover:bg-[#1B84E7] hover:text-white ">
-  {icon}
-</div>
+    /* Added "group" here */
+    <div className="group bg-white border border-gray-300 rounded-2xl p-6 sm:p-4 text-left border-slate-400 hover:shadow-md">
+      <div className="w-9 h-9 flex items-center justify-center rounded-md bg-gray-200 text-gray-700 mb-4 transition-all duration-300 group-hover:bg-[#1B84E7] group-hover:text-white">
+        {icon}
+      </div>
 
       <h3 className="text-base sm:text-lg font-semibold text-gray-900">
         {title}

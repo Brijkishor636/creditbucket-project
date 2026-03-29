@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
     },
     {
       title: "9. Contact for Privacy Matters",
-      content: "For questions regarding this Privacy Policy or data-related inquiries, please contact:\nCreditbucket Technologies Private Limited\nSamriddh Kendra\n2nd Floor, A-Wing, BSFC Building\nFrazer Road, Patna, Bihar – 800001\nEmail: [To be confirmed]\nNumber: [To be confirmed]"
+      content: "For questions regarding this Privacy Policy or data-related inquiries, please contact:\nCreditbucket Technologies Private Limited\nSamriddh Kendra\n2nd Floor, A-Wing, BSFC Building\nFrazer Road, Patna, Bihar – 800001\nEmail: Contact@creditbucket.in\nNumber: 1800 313 1998"
     }
   ];
 
