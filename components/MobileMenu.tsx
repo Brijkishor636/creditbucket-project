@@ -11,17 +11,17 @@ const MobileMenu = () => {
   
   const menuItems = [
     { name: 'Home', path: '/', active: currentPath === '/' },
-    { name: 'Solutions', path: '/solutions', active: currentPath === '/solutions' },
-    { name: 'Partners', path: '/partners', active: currentPath === '/partners' },
-    { name: 'Phygital Model', path: '/phygital', active: currentPath === '/phygital' },
-    { name: 'Trust & Governance', path: '/trust', active: currentPath === '/trust' },
-    { name: 'Impact', path: '/impact', active: currentPath === '/impact' },
-    { name: 'About Us', path: '#' },
-    { name: 'Contact', path: '#' },
+     { name: 'Solutions', path: '/pages/solutions', active: currentPath === '/pages/solutions' },
+    { name: 'Partners', path: '/pages/partners', active: currentPath === '/pages/partners' },
+    { name: 'Phygital Model', path: '/pages/phygital', active: currentPath === '/pages/phygital' },
+    { name: 'Trust & Governance', path: '/pages/trust', active: currentPath === '/pages/trust' },
+    { name: 'Impact', path: '/pages/impact', active: currentPath === '/pages/impact' },
+    { name: 'About Us', path: '/pages/about', active: currentPath === '/pages/about' },
+    { name: 'Contact', path: '/pages/contact', active: currentPath === '/pages/contact' },
   ];
 
   return (
-    <div className="min-h-screen bg-secondary-blue font-sans p-8 flex flex-col">
+    <div className="min-h-screen bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] font-sans p-8 flex flex-col">
       {/* Back Arrow */}
       <div className="mb-4">
         <button 

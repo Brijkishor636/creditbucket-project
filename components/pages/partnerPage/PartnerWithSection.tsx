@@ -4,13 +4,13 @@ import PartnerCard from "./PartnerCard";
 
 const PartnerWithSection = () => {
   return (
-    <section className="relative w-full min-h-[90vh] md:min-h-[80vh] rounded-2xl overflow-hidden ">
+    <section className="relative w-full max-h-[82vh] md:min-h-[80vh] rounded-2xl overflow-hidden ">
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover scale-130"
       >
         <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
       </video>

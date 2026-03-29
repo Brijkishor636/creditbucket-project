@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const TrustGovernanceSection = () => {
   return (
     <section
-      className="w-full rounded-2xl overflow-hidden bg-cover bg-center"
+      className="w-full rounded-2xl overflow-hidden max-h-[90vh] bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImg.src})` }}
     >
       <div className="w-full h-full bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70 px-4 sm:px-6 py-16">
@@ -20,7 +20,7 @@ const TrustGovernanceSection = () => {
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="inline-block px-4 py-1 border border-white/30 rounded-full bg-[#1B84E7] text-white/90 text-[10px] font-bold tracking-[0.2em] mb-6 backdrop-blur-md"
+              className="inline-block px-4 py-1 border border-white/30 rounded-full bg-[#1B84E7] text-white/90 text-[10px] tracking-[0.2em] mb-6 backdrop-blur-md"
             >
               TRUST & GOVERNANCE
             </motion.div>
@@ -96,3 +96,4 @@ const TrustGovernanceSection = () => {
 };
 
 export default TrustGovernanceSection;
+

@@ -17,7 +17,7 @@ import rupee from '@/assets/images/ruppee.png';
 
 export default function TrustDataSection() {
     return (
-      <div className="bg-[#f8fafc] py-16">
+      <div className="bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] py-16">
         {/* 1. Responsibilities Section */}
         <section className="max-w-7xl mx-auto px-4 mb-20">
           <div className="text-center mb-12">

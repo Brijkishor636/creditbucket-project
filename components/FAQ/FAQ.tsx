@@ -105,28 +105,34 @@ export default function FAQ() {
       <main className="flex-grow">
         {/* --- Hero Section (Matches Privacy Policy Styling) --- */}
         <section 
-          className="relative w-full min-h-[600px] overflow-hidden bg-cover bg-center rounded-b-[4rem] shadow-2xl"
-          style={{ backgroundImage: `url(${bgImg.src})` }}
+          className="relative w-full flex max-h[130vh] justify-center overflow-hidden text-white rounded-2xl">
+      
+        
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         >
-          {/* Gradient Overlay covering full height */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0C4A6E]/95 via-[#0C4A6E]/90 to-[#0C82DD]/85 flex flex-col items-center justify-center text-center px-4">
+          <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
+        </video>
+
+        {/* Darker overlay to ensure text pops against the grid video */}
+        <div className="absolute inset-0 bg-[#1B84E7] bg-opacity-60"></div>
+
+        {/* Centered Content */}
+        <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
+          
             
-            {/* Perspective Blueprint Grid (Top & Bottom focus) */}
-            <div 
-              className="absolute inset-0 opacity-20 pointer-events-none" 
-              style={{ 
-                backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`, 
-                backgroundSize: '60px 60px',
-                maskImage: 'radial-gradient(ellipse at center, transparent 20%, black 100%)', // Creates the "vanishing point" effect in your image
-                WebkitMaskImage: 'radial-gradient(ellipse at center, transparent 20%, black 100%)'
-              }} 
-            />
+            
 
             <div className="max-w-5xl mx-auto relative z-10 text-white flex flex-col items-center pt-20">
               <motion.div 
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="inline-block px-5 py-1.5 border border-white/30 rounded-full text-white/90 text-[11px] font-bold uppercase tracking-[0.25em] mb-8 backdrop-blur-xl bg-white/5"
+                className="inline-block px-5 py-1.5 border border-white/30 rounded-full text-white/90 text-[11px]  uppercase tracking-[0.25em] mb-8 backdrop-blur-xl bg-white/5"
               >
                 Support
               </motion.div>
@@ -160,6 +166,7 @@ export default function FAQ() {
              
             </div>
           </div>
+        
         </section>
 
         {/* --- FAQ Group Section --- */}

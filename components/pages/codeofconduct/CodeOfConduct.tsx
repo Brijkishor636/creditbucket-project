@@ -2,20 +2,19 @@
 
 const CodeOfConduct = () => {
   return (
-    <section className="relative w-full flex justify-center overflow-hidden text-white rounded-2xl">
-      <div className="relative w-full min-h-[700px] lg:h-[800px] flex items-center justify-center">
+    <section className="relative w-full max-h-[82vh] md:min-h-[80vh] rounded-2xl overflow-hidden text-white">
         
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover scale-130"
         >
           <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-[#001B3D]/70"></div>
+        <div className="absolute inset-0 "></div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
           
@@ -44,7 +43,7 @@ const CodeOfConduct = () => {
             </p>
           </div>
         </div>
-      </div>
+      
     </section>
   );
 };
