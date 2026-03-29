@@ -1,7 +1,10 @@
 "use client";
 import { MapPin, Mail, Clock } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function ContactForm() {
+  const router = useRouter();
+
   return (
     <section className="w-full py-16 px-4 md:px-10 font-sans">
       <div className="max-w-6xl mx-auto">
@@ -62,7 +65,13 @@ export default function ContactForm() {
           <div className="lg:w-3/5 p-8 md:p-12 bg-white">
             <h3 className="text-3xl font-bold text-[#0C82DD] mb-8">Contact Form</h3>
             
-            <form className="space-y-6">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault(); // ✅ prevent reload
+                router.push("/PrivacyPolicy"); // ✅ navigate
+              }}
+              className="space-y-6"
+            >
               <div>
                 <label className="block text-sm font-bold text-gray-800 mb-2">Full name</label>
                 <input

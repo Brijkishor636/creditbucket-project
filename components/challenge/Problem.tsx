@@ -54,7 +54,7 @@ const Problem: React.FC = () => {
   }, [quotes.length]);
 
   return (
-    <section id="solutions" className=" px-6 py-24 md:px-12 relative overflow-hidden bg-[#E6F3FF] ">
+    <section id="solutions" className=" px-6 py-24 md:px-12 relative overflow-hidden">
       <div className="mx-auto grid max-w-[1200px] items-start gap-16 lg:grid-cols-2">
         
         {/* LEFT CONTENT */}

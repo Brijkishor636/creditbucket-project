@@ -2,10 +2,10 @@
 import BiharCard from "./BiharCard";
 import StateCard from "./StateCard";
 
-import bihar from "../../../assets/impact/bihar_map.png";
+import bihar from "../../../assets/impact/biharmap(1) 1.png";
 import jharkhand from "../../../assets/impact/jharkhand_map.png";
 import odisha from "../../../assets/impact/odisha_map.png";
-import westbengal from "../../../assets/impact/bihar_map.png"; 
+import westbengal from "../../../assets/impact/west bengal map.png"; 
 import assam from "../../../assets/impact/asam_map.png";
 
 const RegionalPresence = () => {
