@@ -5,7 +5,7 @@ const GetInTouch: React.FC = () => {
     <section className="w-full py-15 px-6 flex flex-col items-center justify-center text-center">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         
-        <span className="bg-[#0C82DD] text-white text-[11px] md:text-xs font-bold uppercase tracking-widest px-6 py-2 rounded-full mb-8 shadow-sm">
+        <span className="bg-[#0C82DD] text-white text-[11px] md:text-xs  uppercase tracking-widest px-6 py-2 rounded-full mb-8 shadow-sm">
           CONTACT
         </span>
 

@@ -28,7 +28,7 @@ const CodeOfConduct = () => {
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="inline-block px-4 py-1 border border-white/30 rounded-full text-white/90 text-[10px] font-bold uppercase tracking-[0.2em] mb-6 backdrop-blur-md"
+              className="inline-block px-4 py-1 border border-white/30 rounded-full text-white/90 text-[10px]  uppercase tracking-[0.2em] mb-6 backdrop-blur-md"
             >
               Governance
             </motion.div>

@@ -17,7 +17,7 @@ const FundFlow = () => {
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="inline-block px-4 py-1 bg-white/10 rounded-full text-white/80 text-xs font-bold uppercase tracking-widest mb-6"
+                className="inline-block px-4 py-1 bg-white/10 rounded-full text-white/80 text-xs  uppercase tracking-widest mb-6"
               >
                 Governance
               </motion.div>

@@ -20,7 +20,7 @@ const MobileMenu = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-secondary-blue font-sans p-8 flex flex-col">
+    <div className="min-h-screen bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] font-sans p-8 flex flex-col">
       {/* Back Arrow */}
       <div className="mb-4">
         <button 

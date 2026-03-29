@@ -2,8 +2,7 @@
 
 const AboutSection = () => {
   return (
-    <section className="relative w-full flex justify-center overflow-hidden text-white rounded-2xl">
-      <div className="relative w-full min-h-[700px] lg:h-[800px] flex items-center justify-center">
+    <section className="relative w-full max-h-[82vh] md:min-h-[80vh] rounded-2xl overflow-hidden text-white">
         
         {/* Video Background */}
         <video
@@ -11,19 +10,19 @@ const AboutSection = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover scale-130"
         >
           <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
         </video>
 
         {/* Darker overlay to ensure text pops against the grid video */}
-        <div className="absolute inset-0 bg-blue-900/40 bg-opacity-60"></div>
+        <div className="absolute inset-0 "></div>
 
         {/* Centered Content */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
           
           {/* ABOUT Badge */}
-          <span className="inline-block px-4 py-1 text-[10px] font-bold tracking-widest bg-[#0C82DD] rounded-full mb-10 uppercase">
+          <span className="inline-block px-4 py-1 text-[10px] tracking-widest bg-[#0C82DD] rounded-full mb-10 uppercase">
             ABOUT
           </span>
 
@@ -53,7 +52,7 @@ const AboutSection = () => {
             </p>
           </div>
         </div>
-      </div>
+      
     </section>
   );
 };
