@@ -102,13 +102,13 @@ export default function FAQ() {
 ];
 
   return (
-    <div className="bg-[#E6F3FF] min-h-screen flex flex-col font-sans">
+    <div className="bg-[#E6F3FF] px-4 py-4 min-h-screen flex flex-col font-sans">
       
 
       <main className="flex-grow">
         {/* --- Hero Section (Matches Privacy Policy Styling) --- */}
         <section 
-          className="relative w-full flex max-h[130vh] justify-center overflow-hidden text-white rounded-2xl">
+          className="relative w-full px-10 py-4 flex max-h[130vh] justify-center overflow-hidden text-white rounded-2xl">
       
         
         {/* Video Background */}
@@ -117,7 +117,7 @@ export default function FAQ() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover scale-130"
+          className="absolute inset-0 w-full h-full   object-cover scale-130"
         >
           <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
         </video>

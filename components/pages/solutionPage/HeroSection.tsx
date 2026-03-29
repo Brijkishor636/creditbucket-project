@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const HeroSection = () => {
   return (
     
-    <section className="relative w-full h-auto min-h-[80vh] lg:min-h-[80vh] rounded-[2rem] lg:rounded-[3rem] overflow-hidden ">
+    <section className="relative w-full h-auto min-h-[80vh] lg:min-h-[80vh] rounded-[2rem] lg:rounded-[3rem] px-4 py-4 overflow-hidden ">
       
       
       <div className="absolute inset-0 z-0">
@@ -71,7 +71,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* RIGHT CONTENT (FLOW CARDS) */}
+        
         <div className="
           lg:col-span-5
           w-full flex flex-col items-center 

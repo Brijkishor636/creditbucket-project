@@ -6,7 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 
 const FundFlow = () => {
   return (
-    <div className="min-h-screen flex flex-col font-commissioner">
+    <div className="min-h-screen px-4 py-4 flex flex-col font-commissioner">
      
 
       <main className="flex-grow">

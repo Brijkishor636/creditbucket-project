@@ -44,12 +44,12 @@ export default function PrivacyPolicy() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="px-4 py-4 bg-[#E6F3FF]">
       {/* Hero Section */}
-      <section className="w-full rounded-2xl overflow-hidden bg-cover bg-center"
+      <section className="  w-full max-h-[82vh] rounded-2xl overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImg.src})` }}
     >
-      <div className="w-full h-full bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70 px-4 sm:px-6 py-16">
+      <div className=" w-full h-full bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70 px-4 sm:px-6 py-16">
           <div className="section-padding relative z-10 text-white flex flex-col items-center max-w-5xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
@@ -88,7 +88,7 @@ export default function PrivacyPolicy() {
         </section>
 
       {/* Policy Content */}
-      <section className="py-24 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
+      <section className="py-24 bg-[#E6F3FF]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {sections.map((section, i) => (

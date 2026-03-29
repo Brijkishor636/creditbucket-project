@@ -196,7 +196,7 @@ const TermsConditions = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen px-4 py-4  bg-[#E6F3FF] flex flex-col">
       
 
       <main className="flex-grow ">
@@ -206,7 +206,7 @@ const TermsConditions = () => {
   style={{ backgroundImage: `url(${bgImg.src})` }}
 >
   {/* Added justify-center and increased py for better vertical centering */}
-  <div className="w-full h-full min-h-[82vh] bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70 px-4 sm:px-6 py-20 flex flex-col items-center justify-center">
+  <div className="w-full h-full min-h-[82vh] bg-[gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70] px-4 sm:px-6 py-20 flex flex-col items-center justify-center">
     
     {/* Container now has text-center to ensure all text lines align to middle */}
     <div className="relative z-10 text-white flex flex-col items-center text-center max-w-4xl mx-auto">
@@ -257,7 +257,7 @@ const TermsConditions = () => {
 </section>
 
         {/* Content Section */}
-        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
+        <section className="py-24 px-4 bg-[#E6F3FF]">
           <div className="section-padding max-w-4xl mx-auto">
             <div className="space-y-16">
               {sections.map((section, index) => (
