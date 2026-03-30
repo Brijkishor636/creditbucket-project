@@ -20,7 +20,7 @@ export const CapabilityCard = ({
       hover:border-blue-400
     ">
 
-      <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-blue-100 text-[#0C82DD]">
+      <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-md bg-blue-100 text-[#0C82DD]">
         {icon}
       </div>
 

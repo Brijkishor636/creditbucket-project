@@ -17,15 +17,15 @@ const OurApproachSection = () => {
         {/* Top Content: Heading and Description */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16">
           <div className="flex flex-col justify-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl text-center sm:text-left md:text-5xl font-bold mb-6">
               Our Approach
             </h2>
-            <p className="text-lg md:text-xl font-medium max-w-md leading-snug">
+            <p className="text-lg md:text-xl text-center sm:text-left font-medium max-w-md leading-snug">
               Combining technology with local support to make credit more accessible.
             </p>
           </div>
 
-          <div className="flex flex-col justify-center space-y-5 text-blue-50/90 text-sm md:text-base leading-relaxed">
+          <div className="flex flex-col justify-center space-y-5 text-center sm:text-left text-blue-50/90 text-sm md:text-base leading-relaxed">
             <p>
               Access to credit is not just about digital platforms — many borrowers need guidance, 
               support, and clarity throughout the process.

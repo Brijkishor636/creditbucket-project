@@ -19,7 +19,7 @@ const Card: React.FC<{
 }> = ({ icon: Icon, title, description }) => ( // Rename 'icon' to 'Icon' (capitalized) to render as component
   <div className="group rounded-2xl bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.06)] ring-1 ring-black/[0.03] hover:shadow-[0_25px_60px_rgba(225,29,72,0.1)]">
     {/* Icon Container: Simply render the Icon component here */}
-    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-[#F88A8A] group-hover:text-white transition-colors duration-300">
+    <div className="mb-6 flex h-12 w-12 items-center justify-center mx-auto md:mx-0 rounded-xl bg-slate-100 text-slate-700 group-hover:bg-[#F88A8A] group-hover:text-white transition-colors duration-300">
       <Icon size={20} />
     </div>
     <h3 className="text-[24px] font-bold leading-snug text-slate-900 text-center md:text-left transition-colors duration-300 ">

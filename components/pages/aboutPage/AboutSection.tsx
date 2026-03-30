@@ -2,7 +2,7 @@
 
 const AboutSection = () => {
   return (
-    <section className="relative w-full max-h-[82vh] md:min-h-[80vh] rounded-2xl overflow-hidden py-5 text-white">
+    <section className="relative w-full max-h-[130vh] md:min-h-[80vh] rounded-2xl overflow-hidden py-5 text-white">
         
         {/* Video Background */}
         <video

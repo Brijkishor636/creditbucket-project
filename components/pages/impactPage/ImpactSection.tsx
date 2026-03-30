@@ -6,7 +6,7 @@ const ImpactPageSection = () => {
   return (
     <section className="relative w-full flex justify-center overflow-hidden text-white rounded-2xl">
       
-      <div className="relative w-full max-h-[82vh] md:min-h-[80vh] rounded-2xl overflow-hidden"
+      <div className="relative w-full max-h-[130vh] md:min-h-[80vh] rounded-2xl overflow-hidden"
       >
 
         <video

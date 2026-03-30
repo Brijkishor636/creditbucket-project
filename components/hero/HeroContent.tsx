@@ -22,7 +22,7 @@ const HeroContent: React.FC = () => {
         model.
       </p>
 
-      <div className="pt-2">
+      <div className="pt-2 items-center flex justify-center">
         <Button 
           name="Partner With Creditbucket" 
           variant="arrow" 

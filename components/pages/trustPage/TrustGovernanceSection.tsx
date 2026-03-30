@@ -3,12 +3,10 @@ import { ShieldCheck, Lock, Eye } from "lucide-react";
 import bgImg from "@/assets/images/physital-bg.png";
 import { motion } from 'framer-motion';
 
-
-
 const TrustGovernanceSection = () => {
   return (
     <section
-      className="w-full rounded-2xl overflow-hidden max-h-[90vh] bg-cover bg-center"
+      className="w-full rounded-2xl overflow-hidden max-h-[130vh] bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImg.src})` }}
     >
       <div className="w-full h-full bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70 px-4 sm:px-6 py-16">
@@ -45,7 +43,7 @@ const TrustGovernanceSection = () => {
 
           <div className="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
             
-            {/* 1. Main Shield Box (Center) */}
+            {/* 1. Main Shield Box */}
             <div className="
               relative z-20
               w-48 h-48 sm:w-60 sm:h-60
@@ -53,35 +51,32 @@ const TrustGovernanceSection = () => {
               rounded-[2.5rem] 
               flex items-center justify-center
               shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
-  
-  
-           
             ">
               <ShieldCheck size={100} strokeWidth={1.2} className="text-white opacity-90" />
             </div>
 
             {/* 2. Lock Box (Top Right) */}
             <div className="
-              absolute -top-6 -right-6 z-30
+              absolute top-0 right-0 sm:-top-6 sm:-right-6 z-30
+              translate-x-[-30%] translate-y-[30%]
+              sm:translate-x-0 sm:translate-y-0
               w-20 h-20 sm:w-28 sm:h-28
               bg-[#1B84E7]
               rounded-[1.8rem] flex items-center justify-center
               shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
-  
             ">
               <Lock size={45} strokeWidth={1.2} className="text-white opacity-90" />
             </div>
 
             {/* 3. Eye Box (Bottom Left) */}
             <div className="
-              absolute -bottom-6 -left-6 z-30
+              absolute bottom-0 left-0 sm:-bottom-6 sm:-left-6 z-30
+              translate-x-[25%] translate-y-[-25%]
+              sm:translate-x-0 sm:translate-y-0
               w-24 h-24 sm:w-32 sm:h-32
               bg-[#1B84E7]
               rounded-[2rem] flex items-center justify-center
               shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5),inset_0_4px_12px_rgba(0,0,0,0.3),inset_0_-1px_1px_rgba(255,255,255,0.15)]
-  
-
-  
             ">
               <Eye size={50} strokeWidth={1.2} className="text-white opacity-90" />
             </div>
@@ -96,4 +91,3 @@ const TrustGovernanceSection = () => {
 };
 
 export default TrustGovernanceSection;
-

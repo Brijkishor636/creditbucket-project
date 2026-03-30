@@ -1,8 +1,5 @@
 'use client';
-import React from 'react';
 import { motion } from 'motion/react';
-import Navbar from "@/components/layout/Navbar";
-
 import bgImg from "@/assets/images/physital-bg.png";
 
 const TermsConditions = () => {
@@ -184,7 +181,7 @@ const TermsConditions = () => {
             <p>2nd Floor, A-Wing, BSFC Building</p>
             <p>Frazer Road, Patna, Bihar – 800001</p>
           </div>
-          <p className="mt-4">Email: [unknown]</p>
+          <p className="mt-4">Email: Contact@creditbucket.in</p>
         </div>
       )
     }
@@ -199,7 +196,7 @@ const TermsConditions = () => {
         <section className="w-full rounded-2xl overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImg.src})` }}
     >
-      <div className="w-full h-full bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70 px-4 sm:px-6 py-16">
+      <div className="w-full h-full bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70 px-4 sm:px-6 py-16 text-center sm:text-left">
           <div className="section-padding relative z-10 text-white flex flex-col items-center max-w-5xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}

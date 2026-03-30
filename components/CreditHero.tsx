@@ -12,15 +12,15 @@ const CreditHero: React.FC = () => {
       {/* Background Image + Blue Overlay */}
       <div className="absolute inset-0 -z-20">
         <Image
-  src={bgImg}
-  alt="Credit Hero Background"
-  fill
-  priority
-  className="object-cover object-[80%_center] md:object-center"
-/>
+          src={bgImg}
+          alt="Credit Hero Background"
+          fill
+          priority
+          className="object-cover object-[80%_center] md:object-center"
+        />
 
-        {/* Blue overlay */}
-        <div className="absolute inset-0" />
+        {/* ✅ Responsive Blue overlay (FIXED) */}
+        <div className="absolute inset-0 bg-[#022743]/60 sm:bg-transparent" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 md:px-12 w-full">
@@ -72,7 +72,7 @@ const CreditHero: React.FC = () => {
 
           {/* Footer Note */}
           <div className="flex items-center gap-2 text-sm pt-6 border-t border-white/10 justify-center md:justify-start">
-            <div className="p-2 flex items-center justify-center">
+            <div className="p-2">
               <StarIcon className="h-4 w-4 text-white stroke-[1.5]" />
             </div>
             <span className="italic opacity-90">

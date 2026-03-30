@@ -12,7 +12,7 @@ const BiharCard = ({ image }: BiharCardProps) => {
         <Image
           src={image}
           alt="Bihar Map"
-          className="object-contain opacity-20 w-[80%] h-[80%]"
+          className="object-contain opacity-40 w-[80%] h-[80%]"
         />
       </div>
 

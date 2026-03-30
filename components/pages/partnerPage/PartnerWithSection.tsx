@@ -4,7 +4,7 @@ import PartnerCard from "./PartnerCard";
 
 const PartnerWithSection = () => {
   return (
-    <section className="relative w-full max-h-[82vh] md:min-h-[80vh] rounded-2xl overflow-hidden ">
+    <section className="relative w-full max-h-[140vh] md:min-h-[95vh] rounded-2xl overflow-hidden ">
       <video
         autoPlay
         loop

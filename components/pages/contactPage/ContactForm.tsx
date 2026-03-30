@@ -65,13 +65,7 @@ export default function ContactForm() {
           <div className="lg:w-3/5 p-8 md:p-12 bg-white">
             <h3 className="text-3xl font-bold text-[#0C82DD] mb-8">Contact Form</h3>
             
-            <form
-              onSubmit={(e) => {
-                e.preventDefault(); // ✅ prevent reload
-                router.push("/PrivacyPolicy"); // ✅ navigate
-              }}
-              className="space-y-6"
-            >
+            <form className="space-y-6">
               <div>
                 <label className="block text-sm font-bold text-gray-800 mb-2">Full name</label>
                 <input
@@ -126,7 +120,9 @@ export default function ContactForm() {
                 />
                 <label htmlFor="confirm" className="text-[13px] text-gray-800 leading-snug cursor-pointer">
                   I confirm that the information provided is accurate and may be used for responding 
-                  to this inquiry in accordance with <span className="text-[#0C82DD] underline cursor-pointer">Creditbucket's Privacy Policy.</span>
+                  to this inquiry in accordance with <span onClick={()=>{
+                    router.push("/PrivacyPolicy")
+                  }} className="text-[#0C82DD] underline cursor-pointer">Creditbucket's Privacy Policy.</span>
                 </label>
               </div>
 

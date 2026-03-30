@@ -7,7 +7,7 @@ import {
   CurrencyRupeeIcon 
 } from "@heroicons/react/24/outline";
 
-// --- Sub-component: Animated Counter ---
+// --- Counter ---
 const Counter = ({ 
   startValue = "0", 
   endValue, 
@@ -74,7 +74,7 @@ const Counter = ({
   );
 };
 
-// --- Main Section Component ---
+// --- Main Section ---
 const ScaleStatsSection: React.FC = () => {
   const stats = [
     {
@@ -109,39 +109,43 @@ const ScaleStatsSection: React.FC = () => {
         </p>
       </div>
 
-      {/* --- UPPER LINE: Darker Blue and higher opacity --- */}
       <div className="h-[2px] w-full bg-linear-to-r from-transparent via-[#034091] to-transparent opacity-60" />
       
       <div className="bg-white py-14">
         <div className="max-w-7xl mx-auto px-6 relative">
           
+          {/* Desktop dividers (unchanged) */}
           <div className="hidden lg:block absolute left-1/4 top-1/2 -translate-y-1/2 h-40 w-[2px] bg-blue-600/40" />
           <div className="hidden lg:block absolute left-2/4 top-1/2 -translate-y-1/2 h-40 w-[2px] bg-blue-600/40" />
           <div className="hidden lg:block absolute left-3/4 top-1/2 -translate-y-1/2 h-40 w-[2px] bg-blue-600/40" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 text-center">
+          {/* ✅ Updated Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-y-14 gap-x-6 sm:gap-x-10 text-center">
             {stats.map((stat, index) => (
-              <div key={index} className="flex flex-col items-center space-y-6">
-                <div className="w-16 h-16 flex items-center justify-center text-[#1E73BE]">
-                  <stat.icon className="w-10 h-10 " strokeWidth={1.5} />
+              <div key={index} className="flex flex-col items-center space-y-5">
+                
+                <div className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#1E73BE]">
+                  <stat.icon className="w-8 h-8 sm:w-10 sm:h-10" strokeWidth={1.5} />
                 </div>
+
                 <div className="space-y-2">
                   <Counter 
                     startValue={stat.startValue} 
                     endValue={stat.value} 
                     isCurrency={stat.isCurrency} 
                   />
-                  <p className="text-lg font-semibold text-slate-800 leading-tight">
+                  <p className="text-base sm:text-lg font-semibold text-slate-800 leading-tight">
                     {stat.label}
                   </p>
                 </div>
+
               </div>
             ))}
           </div>
+
         </div>
       </div>
 
-      {/* --- LOWER LINE: Darker Blue and higher opacity --- */}
       <div className="h-[2px] w-full bg-linear-to-r from-transparent via-[#034091] to-transparent opacity-60" />
     </section>
   );

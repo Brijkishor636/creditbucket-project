@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
     },
     {
       title: "9. Contact for Privacy Matters",
-      content: "For questions regarding this Privacy Policy or data-related inquiries, please contact:\nCreditbucket Technologies Private Limited\nSamriddh Kendra\n2nd Floor, A-Wing, BSFC Building\nFrazer Road, Patna, Bihar – 800001\nEmail: [To be confirmed]\nNumber: [To be confirmed]"
+      content: "For questions regarding this Privacy Policy or data-related inquiries, please contact:\nCreditbucket Technologies Private Limited\nSamriddh Kendra\n2nd Floor, A-Wing, BSFC Building\nFrazer Road, Patna, Bihar – 800001\nEmail: Contact@creditbucket.in\nNumber: 1800 313 1998"
     }
   ];
 
@@ -70,7 +70,7 @@ export default function PrivacyPolicy() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-xl md:text-2xl font-medium text-blue-50 mb-10"
+              className="text-xl md:text-2xl text-center sm:text-left font-medium text-blue-50 mb-10"
             >
               How Creditbucket Collects, Uses, and Protects Information
             </motion.h2>
@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="max-w-3xl mx-auto text-blue-100  leading-loose"
+              className="max-w-3xl mx-auto text-blue-100 text-center sm:text-left leading-loose"
             >
               Creditbucket Technologies Private Limited is committed to maintaining the privacy and security of information shared through its website and operational infrastructure. This Privacy Policy outlines how information may be collected, used, stored, and protected when users access the Creditbucket website or interact with our services.
             </motion.p>
