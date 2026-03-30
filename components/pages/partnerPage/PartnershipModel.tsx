@@ -5,7 +5,7 @@ import bImg from "@/assets/images/bank.png";
 
 const PartnershipModel = () => {
   return (
-    <section className="w-full py-20 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
+    <section className="w-full py-20 px-4 bg-[linear-gradient(#E6F3FF)]">
       <div className="max-w-6xl mx-auto text-center">
 
         <h2 className="text-[30px] md:text-[40px] font-semibold text-gray-900">

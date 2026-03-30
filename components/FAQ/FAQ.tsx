@@ -99,7 +99,7 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] min-h-screen flex flex-col font-sans">
+    <div className="bg-[linear-gradient(#E6F3FF)] min-h-screen flex flex-col font-sans">
       
 
       <main className="flex-grow">

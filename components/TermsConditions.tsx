@@ -235,7 +235,7 @@ const TermsConditions = () => {
         </section>
 
         {/* Content Section */}
-        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
+        <section className="py-24 px-4 bg-[linear-gradient(#E6F3FF)]">
           <div className="section-padding max-w-4xl mx-auto">
             <div className="space-y-16">
               {sections.map((section, index) => (

@@ -7,7 +7,7 @@ import JourneyTimeline from "@/components/pages/aboutPage/JourneyTimeline";
 import RegionalExpansion from "@/components/pages/aboutPage/RegionalExpansion";
 
 export default function page(){
-    return <div className="pt-26 w-full bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
+    return <div className="pt-26 w-full bg-[linear-gradient(#E6F3FF)]">
         <div className="p-4">
             <AboutSection/>
         </div>
