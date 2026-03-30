@@ -1,6 +1,6 @@
 "use client";
 import { MapPin, Mail, Clock } from "lucide-react";
-
+import Link from "next/link";
 export default function ContactForm() {
   return (
     <section className="w-full py-16 px-4 md:px-10 font-sans">
@@ -116,9 +116,16 @@ export default function ContactForm() {
                   className="mt-1 w-5 h-5 accent-[#0C82DD] rounded border-gray-400 cursor-pointer"
                 />
                 <label htmlFor="confirm" className="text-[13px] text-gray-800 leading-snug cursor-pointer">
-                  I confirm that the information provided is accurate and may be used for responding 
-                  to this inquiry in accordance with <span className="text-[#0C82DD] underline cursor-pointer">Creditbucket's Privacy Policy.</span>
-                </label>
+  I confirm that the information provided is accurate and may be used for responding 
+  to this inquiry in accordance with{" "}
+  <Link 
+    href="/PrivacyPolicy" 
+    className="text-[#0C82DD] underline cursor-pointer hover:text-[#0a6bb6] transition-colors"
+    onClick={(e) => e.stopPropagation()} // Prevents toggling the checkbox when clicking the link
+  >
+    Creditbucket's Privacy Policy.
+  </Link>
+</label>
               </div>
 
               <button
