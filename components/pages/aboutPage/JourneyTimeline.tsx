@@ -41,7 +41,7 @@ const JourneyTimeline: React.FC = () => {
   return (
     <section className="min-h-screen py-10 px-6 md:px-16 font-sans">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-12">
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-12 text-center md:text-left">
           Journey to Building Creditbucket
         </h2>
 

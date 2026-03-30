@@ -1,8 +1,5 @@
 'use client';
-import React from 'react';
 import { motion } from 'motion/react';
-import Navbar from "@/components/layout/Navbar";
-
 import bgImg from "@/assets/images/physital-bg.png";
 
 const TermsConditions = () => {
@@ -184,80 +181,61 @@ const TermsConditions = () => {
             <p>2nd Floor, A-Wing, BSFC Building</p>
             <p>Frazer Road, Patna, Bihar – 800001</p>
           </div>
-          <p className="mt-4">Email: <a
-                href="mailto:Contact@creditbucket.in"
-                className="text-[#0C82DD] hover:underline   "
-              >
-                Contact@creditbucket.in
-              </a></p>
+          <p className="mt-4">Email: Contact@creditbucket.in</p>
         </div>
       )
     }
   ];
 
   return (
-    <div className="min-h-screen px-4 py-4  bg-[#E6F3FF] flex flex-col">
+    <div className="min-h-screen flex flex-col">
       
 
       <main className="flex-grow ">
         {/* Hero Section */}
-        <section 
-  className="w-full   rounded-2xl overflow-hidden bg-cover bg-center"
-  style={{ backgroundImage: `url(${bgImg.src})` }}
->
-  {/* Added justify-center and increased py for better vertical centering */}
-  <div className="w-full h-full min-h-[82vh] bg-[gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70] px-4 sm:px-6 py-20 flex flex-col items-center justify-center">
-    
-    {/* Container now has text-center to ensure all text lines align to middle */}
-    <div className="relative z-10 text-white flex flex-col items-center text-center max-w-4xl mx-auto">
-      
-      {/* "LEGAL" Badge */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="inline-block px-3 py-0.5 border border-white/40 rounded-full text-white/90 text-[10px] uppercase tracking-[0.2em] mb-8 backdrop-blur-md"
-      >
-        Legal
-      </motion.div>
-
-      
-      <motion.h1 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"
-      >
-        Terms & Conditions
-      </motion.h1>
-
-      {/* Sub-heading */}
-      <motion.h2 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="text-xl md:text-2xl font-medium text-blue-50/90 mb-8"
-      >
-        Governing Use of the Creditbucket Website and Services
-      </motion.h2>
-      
-      {/* Description Paragraph - Added max-w-2xl to match the image's line breaks */}
-      <motion.p 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-        className="max-w-2xl mx-auto text-blue-100/80 leading-relaxed text-base md:text-lg"
-      >
-        These Terms & Conditions govern access to and use of the Creditbucket website and 
-        related services. By accessing this website, users agree to comply with the terms 
-        outlined below.
-      </motion.p>
-      
-    </div>
-  </div>
-</section>
+        <section className="w-full rounded-2xl overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: `url(${bgImg.src})` }}
+    >
+      <div className="w-full h-full bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70 px-4 sm:px-6 py-16 text-center sm:text-left">
+          <div className="section-padding relative z-10 text-white flex flex-col items-center max-w-5xl mx-auto">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="inline-block px-4 py-1 border border-white/30 rounded-full text-white/90 text-[10px]  uppercase tracking-[0.2em] mb-6 backdrop-blur-md"
+            >
+              Legal
+            </motion.div>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-bold mb-6"
+            >
+              Terms & Conditions
+            </motion.h1>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-xl md:text-2xl font-medium text-blue-50 mb-10"
+            >
+              Governing Use of the Creditbucket Website and Services
+            </motion.h2>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="max-w-3xl mx-auto text-blue-100  leading-loose"
+            >
+              These Terms & Conditions govern access to and use of the Creditbucket website and <br/> related services. By accessing this website, users agree to comply with the terms <br/>outlined below.
+            </motion.p>
+          </div>
+          </div>
+        </section>
 
         {/* Content Section */}
-        <section className="py-24 px-4 bg-[#E6F3FF]">
+        <section className="py-24 px-4 bg-[linear-gradient(#E6F3FF)]">
           <div className="section-padding max-w-4xl mx-auto">
             <div className="space-y-16">
               {sections.map((section, index) => (
@@ -285,7 +263,7 @@ const TermsConditions = () => {
         <section className="bg-primary-blue py-12 px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <p className="text-white text-lg md:text-xl font-medium leading-relaxed">
-              Creditbucket remains committed to building a compliant, transparent, and  <br/> accountable infrastructure layer within india's formal credit ecosystem.
+              Creditbucket remains committed to building a compliant, transparent, and accountable infrastructure layer.
             </p>
           </div>
         </section>

@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-// 1. Import the LucideIcon type
 import { TrendingDown, ShieldCheck, Building2, Map, LucideIcon } from "lucide-react";
 
 interface FeatureCardProps {
-  icon: LucideIcon; // Changed from ReactNode to LucideIcon
+  icon: LucideIcon;
   title: string;
   description: string;
   stat: string;
@@ -13,63 +12,85 @@ interface FeatureCardProps {
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({
-  icon: Icon, // Destructure as 'Icon' to render as a component
+  icon: Icon,
   title,
   description,
   stat,
   statLabel,
 }) => (
-  <div className="group relative">
-    <div className="absolute -inset-6 z-[-1] rounded-[1rem] bg-blue-500/10 blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out" />
-
-    <div className="relative z-10  overflow-hidden rounded-[1.5rem] bg-white px-10 py-12 shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-slate-100 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[0_40px_80px_rgba(27,132,231,0.12)]">
+  <div className="group relative h-full">
+    {/* MAIN CONTENT CONTAINER
+        - Sets bg-[#f8fafc] for a default light gray look.
+        - Changes to bg-white on hover.
+        - Default border-transparent changes to border-slate-200.
+        - shadow-blue-500/10 provides that distinctive blue tint.
+    */}
+    <div className="relative z-10 h-full overflow-hidden rounded-[2rem] p-8 md:p-10 flex flex-col justify-between 
+                    bg-[#f8fafc] border border-transparent 
+                    transition-all duration-500 
+                    hover:bg-white hover:border-blue-100 hover:-translate-y-1.5 
+                    hover:shadow-[0_25px_60px_-10px_rgba(27,132,231,0.12)]">
       
-      <div className="absolute -top-12 -right-12 h-48 w-48 rounded-full bg-[#E3F2FF]/70 opacity-0 scale-90 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:scale-110" />
+      {/* --- Right Half Circle (Blob) ---
+          - Placed inside the overflow-hidden container.
+          - Starts opacity-0 (invisible) and fades in (opacity-100) on hover.
+          - scale-90 to scale-100 provides the gentle expansion.
+      */}
+      <div className="absolute -top-12 -right-12 h-48 w-48 rounded-full bg-[#D6EBFF]/60 
+                      opacity-0 scale-90 transition-all duration-500 ease-out 
+                      group-hover:opacity-100 group-hover:scale-100 z-0" />
 
-      <div className="relative z-20 mb-10 flex items-start justify-between">
-        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-100 text-black-600 transition-colors duration-300 group-hover:bg-[#1B84E7] group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-100">
-          {/* 2. Render Icon directly as a component */}
-          <Icon size={24} strokeWidth={2} />
+      {/* --- Top Section: Icon and Stats (Z-indexed above blob) --- */}
+      <div className="relative z-20 flex justify-between items-start w-full mb-8">
+        
+        {/* Icon Container: Blue base */}
+        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1B84E7] text-white shadow-lg shadow-blue-200 shrink-0">
+          <Icon size={22} strokeWidth={2.5} />
         </div>
 
-        <div className="text-right">
-          <div className="text-[26px] font-bold tracking-tight text-[#1B84E7]">
+        {/* Stats Area */}
+        <div className="text-right ml-4">
+          <div className="text-[24px] md:text-[28px] font-bold tracking-tight text-[#1B84E7] leading-none">
             {stat}
           </div>
-          <div className="text-[14px] font-semibold text-slate-500 tracking-tight">
+          <div className="text-[12px] font-semibold text-slate-500 tracking-tight mt-1.5 uppercase">
             {statLabel}
           </div>
         </div>
       </div>
 
-      <div className="relative z-20">
-        <h3 className="text-[26px] font-bold leading-tight tracking-tight text-slate-900 transition-colors duration-300">
+      {/* --- Bottom Section: Title and Description (Z-indexed above blob) --- */}
+      <div className="relative z-20 mt-auto">
+        {/* Title: 26px */}
+        <h3 className="text-[22px] md:text-[26px] font-bold leading-tight tracking-tight text-slate-900 transition-colors duration-300 group-hover:text-[#1B84E7]">
           {title}
         </h3>
-        <p className="mt-5 text-[15px] leading-relaxed text-slate-500 font-medium max-w-[48ch]">
+
+        {/* Description: 15px font-medium */}
+        <p className="mt-4 text-[14px] md:text-[15px] leading-relaxed text-slate-500 font-medium max-w-[48ch]">
           {description}
         </p>
       </div>
+      
     </div>
   </div>
 );
 
 const WhyPartner: React.FC = () => {
   return (
-    <section className="bg-[#F8FBFF] py-24 px-6 md:px-12">
+    <section className="w-full bg-white py-20 px-6">
       <div className="mx-auto max-w-[1200px]">
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <h2 className="text-[30px] md:text-[42px] font-bold tracking-tight text-[#111827] md:text-4xl">
+          <h2 className="text-[32px] md:text-[42px] font-bold tracking-tight text-slate-900 leading-tight">
             Why Partner with Creditbucket
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-black-600 font-bold ">
-            Our phygital infrastructure delivers measurable outcomes for <br/>lending
-            partners while ensuring ethical, compliant service to <br/> borrowers.
+          <p className="mx-auto mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-slate-700 font-medium">
+            Our phygital infrastructure delivers measurable outcomes for lending
+            partners while ensuring ethical, compliant service to borrowers.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
-          {/* 3. Pass icon names directly (no brackets) */}
+        <div className="grid gap-6 md:grid-cols-2">
           <FeatureCard
             icon={TrendingDown}
             title="Lower Cost of Acquisition"

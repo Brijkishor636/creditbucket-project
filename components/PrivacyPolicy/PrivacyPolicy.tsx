@@ -44,12 +44,12 @@ export default function PrivacyPolicy() {
   ];
 
   return (
-    <div className="px-4 py-4 bg-[#E6F3FF]">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="  w-full max-h-[82vh] rounded-2xl overflow-hidden bg-cover bg-center"
+      <section className="w-full rounded-2xl overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImg.src})` }}
     >
-      <div className=" w-full h-full bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70 px-4 sm:px-6 py-16">
+      <div className="w-full h-full bg-gradient-to-r from-[#0C4A6E]/90 to-[#0C82DD]/70 px-4 sm:px-6 py-16">
           <div className="section-padding relative z-10 text-white flex flex-col items-center max-w-5xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
@@ -70,7 +70,7 @@ export default function PrivacyPolicy() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-xl md:text-2xl font-medium text-blue-50 mb-10"
+              className="text-xl md:text-2xl text-center sm:text-left font-medium text-blue-50 mb-10"
             >
               How Creditbucket Collects, Uses, and Protects Information
             </motion.h2>
@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="max-w-3xl mx-auto text-blue-100  leading-loose"
+              className="max-w-3xl mx-auto text-blue-100 text-center sm:text-left leading-loose"
             >
               Creditbucket Technologies Private Limited is committed to maintaining the privacy and security of information shared through its website and operational infrastructure. This Privacy Policy outlines how information may be collected, used, stored, and protected when users access the Creditbucket website or interact with our services.
             </motion.p>
@@ -88,7 +88,7 @@ export default function PrivacyPolicy() {
         </section>
 
       {/* Policy Content */}
-      <section className="py-24 bg-[#E6F3FF]">
+      <section className="py-24 bg-[linear-gradient(#E6F3FF)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {sections.map((section, i) => (

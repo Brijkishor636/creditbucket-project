@@ -5,7 +5,7 @@ import bImg from "@/assets/images/bank.png";
 
 const PartnershipModel = () => {
   return (
-    <section className="w-full py-20 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
+    <section className="w-full py-20 px-4 bg-[linear-gradient(#E6F3FF)]">
       <div className="max-w-6xl mx-auto text-center">
 
         <h2 className="text-[30px] md:text-[40px] font-semibold text-gray-900">
@@ -20,7 +20,6 @@ const PartnershipModel = () => {
         {/* MAIN CARD */}
         <div className="
           mt-12 
-         
           rounded-[28px] 
           bg-[#F5F7FA]
           border-l-[6px] border-r-[6px] border-[#0C82DD]
@@ -36,15 +35,19 @@ const PartnershipModel = () => {
             <div className="p-10 md:pr-12 text-left">
               <div className="flex items-center gap-4 mb-8">
 
-                {/* 🔥 ICON BADGE */}
+                {/* ICON FIXED */}
                 <div className="
                   w-14 h-14 
+                  min-w-[56px] min-h-[56px]
                   flex items-center justify-center 
                   rounded-full 
                   bg-gradient-to-br from-blue-200 to-blue-400
                 ">
-                  {/* Fixed: Accessing .src property */}
-                  <img src={cImg.src} className="w-6 h-6" alt="Creditbucket" />
+                  <img 
+                    src={cImg.src} 
+                    className="w-7 h-7 object-contain" 
+                    alt="Creditbucket" 
+                  />
                 </div>
 
                 <h3 className="text-[28px] font-semibold text-gray-900">
@@ -61,12 +64,17 @@ const PartnershipModel = () => {
                   "Structured communication between borrower and lender systems",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
+                    
+                    {/* CHECK FIXED */}
                     <span className="
-                      w-6 h-6 flex items-center justify-center 
+                      w-6 h-6 
+                      min-w-[24px] min-h-[24px]
+                      flex items-center justify-center 
                       rounded-full bg-gray-200 text-[#0C82DD] text-xs font-bold
                     ">
                       ✓
                     </span>
+
                     {item}
                   </li>
                 ))}
@@ -77,15 +85,19 @@ const PartnershipModel = () => {
             <div className="p-10 md:pl-12 text-left">
               <div className="flex items-center gap-4 mb-8">
 
-                {/* 🔥 ICON BADGE */}
+                {/* ICON FIXED */}
                 <div className="
                   w-14 h-14 
+                  min-w-[56px] min-h-[56px]
                   flex items-center justify-center 
                   rounded-full 
                   bg-gradient-to-br from-blue-200 to-blue-400
                 ">
-                  {/* Fixed: Accessing .src property */}
-                  <img src={bImg.src} className="w-7 h-7" alt="Lender" />
+                  <img 
+                    src={bImg.src} 
+                    className="w-7 h-7 object-contain" 
+                    alt="Lender" 
+                  />
                 </div>
 
                 <h3 className="text-[28px] font-semibold text-gray-900">
@@ -103,11 +115,14 @@ const PartnershipModel = () => {
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="
-                      w-6 h-6 flex items-center justify-center 
+                      w-6 h-6 
+                      min-w-[24px] min-h-[24px]
+                      flex items-center justify-center 
                       rounded-full bg-gray-200 text-[#0C82DD] text-xs font-bold
                     ">
                       ✓
                     </span>
+
                     {item}
                   </li>
                 ))}

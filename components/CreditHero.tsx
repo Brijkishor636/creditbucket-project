@@ -1,90 +1,81 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { StarIcon } from '@heroicons/react/20/solid';
-import Button from "./common/Button"; // Path to your updated Button component
+import { StarIcon } from "@heroicons/react/20/solid";
+import Button from "./common/Button";
 import bgImg from "../assets/images/india-map.png";
 
 const CreditHero: React.FC = () => {
   return (
     <section className="relative w-full min-h-[650px] flex items-center overflow-hidden">
       
-      {/* 1. Background Image with deep overlay for text contrast */}
+      {/* Background Image + Blue Overlay */}
       <div className="absolute inset-0 -z-20">
         <Image
           src={bgImg}
           alt="Credit Hero Background"
           fill
           priority
-          className="object-cover object-center "
+          className="object-cover object-[80%_center] md:object-center"
         />
-        <div className="absolute inset-0" />
+
+        {/* ✅ Responsive Blue overlay (FIXED) */}
+        <div className="absolute inset-0 bg-[#022743]/60 sm:bg-transparent" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 md:px-12 w-full">
-        <div className="max-w-2xl text-white space-y-8">
+        <div className="max-w-2xl text-white space-y-8 text-center md:text-left mx-auto md:mx-0">
 
-          {/* 2. RBI Badge with Pulse (Ping) Animation */}
-          <div className="group relative inline-flex items-center gap-3 bg-white/10 border border-[#1B84E7]/30 text-blue-50 px-4 py-2 rounded-full text-[13px] font-medium backdrop-blur-xl overflow-hidden shadow-[0_0_20px_rgba(27,132,231,0.15)]">
-  
-  {/* Lightning/Shimmer Sweep Effect */}
-  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_3s_infinite] pointer-events-none" />
+          {/* RBI Badge */}
+          <div className="group relative inline-flex items-center justify-center md:justify-start gap-3 bg-white/10 border border-white/20 text-blue-50 px-4 py-2 rounded-full text-[13px] font-medium backdrop-blur-xl overflow-hidden shadow-[0_0_20px_rgba(27,132,231,0.2)]">
+            
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_3s_infinite] pointer-events-none" />
 
-  {/* Glowing/Blinking Dot */}
-  <span className="relative flex h-2.5 w-2.5">
-    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1B84E7]  shadow-[0_0_20px_rgba(27,132,231,0.7)]"></span>
-  </span>
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-300 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]"></span>
+            </span>
 
-  <span className="relative z-10 tracking-wide">
-    RBI-Aligned Lending Service Provider (LSP)
-  </span>
+            <span className="relative z-10 tracking-wide">
+              RBI-Aligned Lending Service Provider (LSP)
+            </span>
 
-  <style jsx>{`
-    @keyframes shimmer {
-      0% { transform: translateX(-100%); }
-      30%, 100% { transform: translateX(100%); }
-    }
-  `}</style>
-</div>
+            <style jsx>{`
+              @keyframes shimmer {
+                0% { transform: translateX(-100%); }
+                30%, 100% { transform: translateX(100%); }
+              }
+            `}</style>
+          </div>
 
-          {/* 3. Main Heading */}
-          <h1 className="text-3xl sm:text-2xl md:text-4xl font-bold leading-[1.1] tracking-tight">
+          {/* Heading */}
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
             Bridging India’s <br />
             Underserved to Formal <br />
             Credit at Scale
           </h1>
 
-          {/* 4. Description */}
-          <p className="text-gray-300 text-lg md:text-xl max-w-lg leading-relaxed">
+          {/* Description */}
+          <p className="text-blue-100 text-base sm:text-lg md:text-xl max-w-lg leading-relaxed mx-auto md:mx-0">
             A phygital lending infrastructure enabling banks and NBFCs to
             reach credit-invisible India with trust, compliance, and efficiency.
           </p>
 
-          {/* 5. Button Group using the updated Button.tsx */}
-          <div className="flex flex-col sm:flex-row gap-5 pt-4">
-            
-            {/* Primary Blue Button with Arrow */}
-            <Button 
-              name="Partner With Us" 
-              variant="arrow" 
-              className="py-4 px-8 text-base" 
-            />
-
-            {/* Outline Button with Arrow (Customized via className) */}
-            <Button 
-              name="View Corporate Profile" 
-              variant="arrow" 
-              className="py-4 px-8 text-base !bg-transparent border-white/20 hover:!bg-white hover:!text-[#1B84E7]" 
+          {/* Button */}
+          <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center md:justify-start">
+            <Button
+              name="Partner With Us"
+              variant="arrow"
+              className="py-4 px-8 text-base"
             />
           </div>
 
-          {/* 6. Trust Footer */}
-          <div className="flex items-center gap-2  text-sm pt-6 border-t border-white/5">
-            <div className=" p-4 flex items-center justify-center">
-  <StarIcon className="h-4 w-4 text-white stroke-[1.5]" />
-</div>
-            <span className="italic opacity-80">
+          {/* Footer Note */}
+          <div className="flex items-center gap-2 text-sm pt-6 border-t border-white/10 justify-center md:justify-start">
+            <div className="p-2">
+              <StarIcon className="h-4 w-4 text-white stroke-[1.5]" />
+            </div>
+            <span className="italic opacity-90">
               Trusted by on-ground networks across 1,600+ pincodes in India
             </span>
           </div>

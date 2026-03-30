@@ -7,22 +7,24 @@ import {
   CurrencyRupeeIcon 
 } from "@heroicons/react/24/outline";
 
-// --- Sub-component: Animated Counter ---
+// --- Counter ---
 const Counter = ({ 
+  startValue = "0", 
   endValue, 
   duration = 2000, 
   isCurrency = false 
 }: { 
+  startValue?: string;
   endValue: string; 
   duration?: number; 
   isCurrency?: boolean 
 }) => {
-  const [count, setCount] = useState(0);
+  const numericStartValue = parseInt(startValue.replace(/[^0-9]/g, "")) || 0;
+  const numericEndValue = parseInt(endValue.replace(/[^0-9]/g, "")) || 0;
+  
+  const [count, setCount] = useState(numericStartValue);
   const [isVisible, setIsVisible] = useState(false);
   const countRef = useRef<HTMLHeadingElement>(null);
-
-  // Extract only numbers (handles "1,600+" -> 1600)
-  const numericEndValue = parseInt(endValue.replace(/[^0-9]/g, "")) || 0;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -47,7 +49,9 @@ const Counter = ({
       const progress = timestamp - startTime;
       const percentage = Math.min(progress / duration, 1);
       
-      const currentCount = Math.floor(percentage * numericEndValue);
+      const diff = numericEndValue - numericStartValue;
+      const currentCount = Math.floor(numericStartValue + (diff * percentage));
+      
       setCount(currentCount);
 
       if (progress < duration) {
@@ -59,7 +63,7 @@ const Counter = ({
 
     animationFrame = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animationFrame);
-  }, [isVisible, numericEndValue, duration]);
+  }, [isVisible, numericEndValue, numericStartValue, duration]);
 
   return (
     <h3 ref={countRef} className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
@@ -70,7 +74,7 @@ const Counter = ({
   );
 };
 
-// --- Main Section Component ---
+// --- Main Section ---
 const ScaleStatsSection: React.FC = () => {
   const stats = [
     {
@@ -90,6 +94,7 @@ const ScaleStatsSection: React.FC = () => {
     },
     {
       icon: CurrencyRupeeIcon,
+      startValue: "10000",
       value: "0",
       label: <>Total Impact <br className="hidden lg:block"/> Created</>,
       isCurrency: true,
@@ -98,48 +103,50 @@ const ScaleStatsSection: React.FC = () => {
 
   return (
     <section className="w-full">
-      {/* Label Area */}
-      <div className="text-center py-12">
-        <p className="text-black-600 font-medium tracking-widest text-xl uppercase">
+      <div className="text-center py-8 pt-15">
+        <p className="font-[var(--font-commissioner)] font-medium text-[24px] leading-[120%] tracking-normal text-black text-center">
           Operating at scale across India
         </p>
       </div>
 
-      {/* Top Gradient Divider */}
-      <div className="h-[2.5px] w-full bg-linear-to-r from-transparent via-[#1B84E7] to-transparent " />
+      <div className="h-[2px] w-full bg-linear-to-r from-transparent via-[#034091] to-transparent opacity-60" />
       
-      {/* Main Stats Content */}
-      <div className="bg-white py-20">
+      <div className="bg-white py-14">
         <div className="max-w-7xl mx-auto px-6 relative">
           
-          {/* Tall Vertical Dividers (Hidden on mobile/tablet) */}
-          <div className="hidden lg:block absolute left-1/4 top-1/2 -translate-y-1/2 h-24 w-px bg-[#1B84E7]" />
-          <div className="hidden lg:block absolute left-2/4 top-1/2 -translate-y-1/2 h-24 w-px bg-[#1B84E7]" />
-          <div className="hidden lg:block absolute left-3/4 top-1/2 -translate-y-1/2 h-24 w-px bg-[#1B84E7]" />
+          {/* Desktop dividers (unchanged) */}
+          <div className="hidden lg:block absolute left-1/4 top-1/2 -translate-y-1/2 h-40 w-[2px] bg-blue-600/40" />
+          <div className="hidden lg:block absolute left-2/4 top-1/2 -translate-y-1/2 h-40 w-[2px] bg-blue-600/40" />
+          <div className="hidden lg:block absolute left-3/4 top-1/2 -translate-y-1/2 h-40 w-[2px] bg-blue-600/40" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 text-center">
+          {/* ✅ Updated Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-y-14 gap-x-6 sm:gap-x-10 text-center">
             {stats.map((stat, index) => (
-              <div key={index} className="flex flex-col items-center space-y-6">
-                <div className="w-16 h-16 flex items-center justify-center text-[#1B84E7]">
-                  <stat.icon className="w-10 h-10 " strokeWidth={1.5} />
+              <div key={index} className="flex flex-col items-center space-y-5">
+                
+                <div className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-[#1E73BE]">
+                  <stat.icon className="w-8 h-8 sm:w-10 sm:h-10" strokeWidth={1.5} />
                 </div>
+
                 <div className="space-y-2">
-                  <Counter endValue={stat.value} isCurrency={stat.isCurrency} />
-                  <p className="text-lg font-semibold text-slate-600 leading-tight">
+                  <Counter 
+                    startValue={stat.startValue} 
+                    endValue={stat.value} 
+                    isCurrency={stat.isCurrency} 
+                  />
+                  <p className="text-base sm:text-lg font-semibold text-slate-800 leading-tight">
                     {stat.label}
                   </p>
                 </div>
+
               </div>
             ))}
           </div>
+
         </div>
       </div>
 
-      {/* Bottom Gradient Divider */}
-      <div className="h-[2.5px] w-full bg-linear-to-r from-transparent via-[#1B84E7] to-transparent " />
-
-      {/* Bottom Visual Spacer */}
-      <div className="bg-slate-50 h-12" />
+      <div className="h-[2px] w-full bg-linear-to-r from-transparent via-[#034091] to-transparent opacity-60" />
     </section>
   );
 };

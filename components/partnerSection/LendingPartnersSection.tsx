@@ -24,13 +24,13 @@ import jana from "@/assets/partners/jana.png";
 import sbi from "@/assets/partners/sbi.png";
 import hdfc from "@/assets/partners/hdfc.png";
 
-const bankPartners = [chola, lendingkart, piramal, ubisl, bajaj, shriram, smfg, aditya, lic];
-const nbfcPartners = [utkarsh, bandhan, bob, icici, axis, jana, sbi, hdfc];
+const nbfcPartners = [chola, lendingkart, piramal, ubisl, bajaj, shriram, smfg, aditya, lic];
+const bankPartners = [utkarsh, bandhan, bob, icici, axis, jana, sbi, hdfc];
 
 const LendingPartnersSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto-slide logic: Rotates every 5 seconds without manual controls
+  // 1. ALL HOOKS MUST GO HERE (Before the return)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev === 0 ? 1 : 0));
@@ -40,24 +40,14 @@ const LendingPartnersSection: React.FC = () => {
   }, []);
 
   const variants = {
-    enter: {
-      x: 1000,
-      opacity: 0,
-    },
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
-    },
-    exit: {
-      zIndex: 0,
-      x: -1000,
-      opacity: 0,
-    },
+    enter: { x: 1000, opacity: 0 },
+    center: { zIndex: 1, x: 0, opacity: 1 },
+    exit: { zIndex: 0, x: -1000, opacity: 0 },
   };
 
+  // 2. JSX STARTS HERE
   return (
-    <section className="w-full bg-[#E6F3FF] py-24 px-4 overflow-hidden relative min-h-[700px] flex items-center">
+    <section className="w-full bg-[#E6F3FF] py-24 px-4 overflow-hidden relative min-h-[750px] flex items-center">
       <div className="max-w-6xl mx-auto text-center w-full relative">
         
         <AnimatePresence mode="popLayout" initial={false}>
@@ -81,13 +71,13 @@ const LendingPartnersSection: React.FC = () => {
                 credit access across India.
               </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16 place-items-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 place-items-center">
                 {nbfcPartners.map((logo, i) => (
-                  <div key={`nbfc-${i}`} className="flex justify-center items-center w-full px-4">
+                  <div key={`nbfc-${i}`} className="flex justify-center items-center w-full h-16 md:h-24 px-4">
                     <Image
                       src={logo}
                       alt="partner"
-                      className="h-14 md:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                      className="max-h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
                     />
                   </div>
                 ))}
@@ -119,19 +109,17 @@ const LendingPartnersSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16 place-items-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 place-items-center">
                 {bankPartners.map((logo, i) => (
-                  <div key={`bank-${i}`} className="flex justify-center items-center w-full px-4">
+                  <div key={`bank-${i}`} className="flex justify-center items-center w-full h-16 md:h-24 px-4">
                     <Image
                       src={logo}
                       alt="bank partner"
-                      className="h-10 md:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                      className="max-h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
                     />
                   </div>
                 ))}
               </div>
-              
-              {/* Spacer to maintain visual balance during slide */}
               <div className="h-10 md:h-20" />
             </motion.div>
           )}

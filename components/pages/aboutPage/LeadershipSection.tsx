@@ -27,14 +27,14 @@ const LeadershipSection = () => {
           </div>
 
           <div className="flex-1">
-            <h3 className="text-2xl md:text-[32px] font-bold text-[#0C82DD] mb-1">
+            <h3 className="text-2xl md:text-[32px] text-center md:text-left font-bold text-[#0C82DD] mb-1">
               Suman Saurav
             </h3>
-            <p className="text-lg text-gray-500 font-medium mb-10">
+            <p className="text-lg text-gray-500 font-medium mb-10 text-center md:text-left">
               Founder & CEO
             </p>
 
-            <div className="space-y-7 text-[#334155] text-sm md:text-[15.5px] leading-relaxed max-w-2xl">
+            <div className="space-y-7 text-[#334155] text-sm md:text-[15.5px] text-center md:text-left leading-relaxed max-w-2xl">
               <p>
                 Suman Saurav brings deep on-ground experience in financial services distribution 
                 and merchant ecosystems across rural and semi-urban markets.

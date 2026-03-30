@@ -39,12 +39,6 @@ const Footer = () => {
                 <p className="hover:text-blue-600 transition-colors cursor-pointer">e-mail</p>
                 <p className="hover:text-blue-600 transition-colors cursor-pointer">phone number</p>
               </div>
-
-              <div className="pt-8 space-y-2 md:hidden">
-                <h4 className="text-xl font-bold">Legal Identifiers</h4>
-                <p className="text-xs text-slate-400">CIN: To be updated</p>
-                <p className="text-xs text-slate-400">LEI: 3358004BDYJ73J4DJE20</p>
-              </div>
             </div>
           </div>
 
