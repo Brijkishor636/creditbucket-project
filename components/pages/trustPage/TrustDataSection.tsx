@@ -9,7 +9,7 @@ import {
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import bgImg from '@/assets/images/creditblack.png';
-import rupee from '@/assets/images/ruppee.png';
+import rupee from '@/assets/images/Vector.png';
 
 export default function TrustDataSection() {
     return (
