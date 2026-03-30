@@ -17,115 +17,95 @@ import {
 
 const FundFlow = () => {
   return (
-    <div className="min-h-screen flex flex-col font-commissioner">
-      
-      <main className="flex-grow p-5">
-        
-        {/* --- HERO / GOVERNANCE SECTION --- */}
-        <section className="relative w-full min-h-[90vh] lg:rounded-2xl overflow-hidden flex items-center text-white pt-30">
-          
-          {/* Background Video */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover scale-110"
-          >
-            <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
-          </video>
-          
-          {/* Dark Overlay for Readability */}
-          <div className="absolute inset-0 bg-[#001D3D]/70 backdrop-blur-[2px]"></div>
+    <div className="min-h-screen px-4 py-4 flex flex-col font-commissioner">
+     
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full py-20 lg:py-0">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              
-              {/* Left Side: Text Infrastructure */}
-              <motion.div 
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="space-y-8"
-              >
-                <div>
-                  <span className="inline-block px-4 py-1.5 text-[11px] tracking-[0.2em] bg-[#0C82DD] rounded-full uppercase font-bold mb-8">
-                    GOVERNANCE
-                  </span>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6">
-                    Direct Bank-to-Customer <br /> Fund Flow
-                  </h1>
-                  <h2 className="text-xl md:text-2xl text-blue-100/90 font-medium tracking-wide">
-                    Clear Separation of Creditbucket and money flow
-                  </h2>
-                </div>
+      <main className="flex-grow">
+        {/* Hero Section */}
+<section className="relative w-full overflow-hidden text-white rounded-2xl min-h-[60vh] flex items-center">
+  
+  {/* Video Background */}
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover scale-130"
+  >
+    <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
+  </video>
 
-                <div className="space-y-6 max-w-xl text-blue-50/90 text-base md:text-lg leading-relaxed">
-                  <p>
-                    Creditbucket operates strictly as a lending infrastructure and distribution partner. 
-                    All loan disbursals and repayments occur directly between the regulated 
-                    financial institution and the borrower.
-                  </p>
-                  <p>
-                    Creditbucket does not intermediate, hold, route, or process loan funds at any stage.
-                  </p>
-                  <p className="text-sm opacity-60 italic pt-6 border-t border-white/10">
-                    Credit decisions and loan ownership remain with our partner institutions.
-                  </p>
-                </div>
-              </motion.div>
+  
+  <div className="absolute inset-0  bg-opacity-60"></div>
 
-              {/* Right Side: Flow Diagram */}
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="flex flex-col items-center w-full"
-              >
-                <div className="w-full lg:max-w-[420px] flex flex-col items-center">
-                  
-                  {/* Bank Card */}
-                  <div className="w-full py-10 px-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl text-center">
-                    <Landmark className="mx-auto mb-4 text-blue-300" size={32} />
-                    <h4 className="text-2xl md:text-3xl font-bold mb-1">Banks / NBFC</h4>
-                    <p className="text-sm text-blue-100/70 font-medium uppercase tracking-wider">Lending Partner</p>
-                  </div>
+  {/* Centered Content */}
+  <div className="section-padding flex flex-col lg:flex-row items-center gap-16 relative z-10 w-full py-24">
+    <div className="lg:w-1/2 py-4 text-white">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="inline-block px-4 py-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white/90 text-[11px] uppercase tracking-widest mb-6"
+      >
+        Governance
+      </motion.div>
+      <motion.h1 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className="text-4xl md:text-6xl font-bold mb-6 leading-tight tracking-tighter"
+      >
+        Direct Bank-to-Customer <br /> Fund Flow
+      </motion.h1>
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="text-2xl font-medium text-blue-50 mb-8"
+      >
+        Clear Separation of Creditbucket and money flow
+      </motion.h2>
+      <motion.p 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className="text-lg text-blue-100/90 leading-relaxed mb-8"
+      >
+        Creditbucket operates strictly as a lending infrastructure and distribution partner. All loan disbursals and repayments occur directly between the regulated financial institution and the borrower.
+      </motion.p>
+    </div>
 
-                  {/* Animated Connection */}
-                  <div className="flex flex-col items-center py-4">
-                    <div className="h-10 w-[1px] bg-white/30"></div>
-                    <div className="py-2 px-4 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-white/90 text-center">
-                      Direct Fund Transfer
-                    </div>
-                    <div className="relative h-14 w-[1px] bg-white/30">
-                      <motion.div 
-                        animate={{ y: [0, 10, 0] }}
-                        transition={{ repeat: Infinity, duration: 2 }}
-                        className="absolute -bottom-2 -left-3"
-                      >
-                        <ArrowDown className="text-blue-400" size={24} />
-                      </motion.div>
-                    </div>
-                  </div>
-
-                  {/* Borrower Card */}
-                  <div className="w-full py-10 px-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl text-center">
-                    <UserCheck className="mx-auto mb-4 text-blue-300" size={32} />
-                    <h4 className="text-2xl md:text-3xl font-bold mb-1">Borrower</h4>
-                    <p className="text-sm text-blue-100/70 font-medium uppercase tracking-wider">End Customer</p>
-                  </div>
-
-                </div>
-              </motion.div>
-            </div>
+    <div className="lg:w-1/2 w-full flex justify-center">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.3 }}
+        className="relative w-full max-w-md"
+      >
+        <div className="bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-8 flex flex-col items-center gap-8 shadow-2xl">
+          {/* Bank Box */}
+          <div className="w-full bg-white/10 border border-white/40 rounded-2xl p-6 text-center shadow-lg backdrop-blur-sm">
+            <h3 className="text-white font-bold text-xl mb-1">Banks / NBFC</h3>
+            <p className="text-white/70 text-sm">Lending Partner</p>
           </div>
-        </section>
 
-        {/* --- LOAN DISBURSAL PROCESS --- */}
-        <section className="py-24 px-4 bg-slate-50">
-          <div className="max-w-7xl mx-auto text-center">
+          {/* Flow Arrow */}
+          <div className="flex flex-col items-center gap-2">
+            <ArrowDown className="text-white animate-bounce" size={28} />
+          </div>
+
+          {/* Borrower Box */}
+          <div className="w-full bg-white/10 border border-white/40 rounded-2xl p-6 text-center shadow-lg backdrop-blur-sm">
+            <h3 className="text-white font-bold text-xl mb-1">Borrower</h3>
+            <p className="text-white/70 text-sm">End Customer</p>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  </div>
+</section>
+        {/* Loan Disbursal Process */}
+        <section className="py-24 px-4 bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)]">
+          <div className="section-padding text-center">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

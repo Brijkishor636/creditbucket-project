@@ -70,7 +70,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* RIGHT CONTENT (FLOW CARDS) */}
+        
         <div className="
           lg:col-span-5
           w-full flex flex-col items-center 

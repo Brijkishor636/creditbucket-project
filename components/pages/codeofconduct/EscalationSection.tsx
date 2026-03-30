@@ -4,7 +4,7 @@ import { UserGroupIcon } from "@heroicons/react/24/outline";
 
 const EscalationSection = () => {
   return (
-    <section className="w-full text-[#000000]">
+    <section className="w-full bg-[#E6F3FF] text-[#000000]">
       <div className="max-w-7xl mx-auto px-6 py-10 md:py-14 lg:py-16">
         
         <div className="mb-20 md:mb-24">
@@ -29,7 +29,7 @@ const EscalationSection = () => {
             </div>
             
             <div className="flex-shrink-0 flex items-center justify-center w-full md:w-auto mt-10 md:mt-0">
-              <UserGroupIcon className="lg:w-30 lg:h-30 h-20 w-20 text-blue-600" />
+              <UserGroupIcon className="lg:w-30 lg:h-30 h-20 w-20 text-[#0C82DD]" />
             </div>
           </div>
         </div>
@@ -47,7 +47,12 @@ const EscalationSection = () => {
             </p>
             <div className="pt-3 font-semibold text-[#0C82DD]">
               <p className="text-black">For reporting concerns:</p>
-              <p>[Official Email – To Be Confirmed]</p>
+              <p>[Official Email – <a
+                href="mailto:Contact@creditbucket.in"
+                className="text-[#0C82DD] hover:underline   "
+              >
+                Contact@creditbucket.in
+              </a>] </p>
             </div>
           </div>
         </div>

@@ -167,7 +167,12 @@ const CodeOfConduct = () => {
               </p>
               <div className="pt-4">
                 <p className="font-bold text-slate-900 uppercase tracking-widest text-xs mb-2">For reporting concerns:</p>
-                <p className="text-2xl font-bold text-[#1B84E7]">Official Email – To Be Confirmed</p>
+                <p className="text-2xl font-bold text-[#1B84E7]">Official Email – <a
+                href="mailto:Contact@creditbucket.in"
+                className="text-[#0C82DD] hover:underline   "
+              >
+                Contact@creditbucket.in
+              </a></p>
               </div>
             </div>
           </div>
