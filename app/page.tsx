@@ -41,7 +41,7 @@ export default function Home() {
       <Hero />
       <Ticker />
       <CreditHero />
-      <div className="w-full bg-#E6F3FF">
+      <div className="w-full bg-[linear-gradient(#E6F3FF)]">
         <ScaleStatsSection />
       <Problem />
       <Solution />
