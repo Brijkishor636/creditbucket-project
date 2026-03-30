@@ -17,7 +17,7 @@ const PartnerWithSection = () => {
 
       <div className="absolute inset-0 b"></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-8 text-center text-white">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-14 text-center text-white">
         <h2 className="text-[30px] md:text-[40px] font-semibold">
           Who We Partner With
         </h2>
