@@ -30,7 +30,6 @@ const bankPartners = [utkarsh, bandhan, bob, icici, axis, jana, sbi, hdfc];
 const LendingPartnersSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // 1. ALL HOOKS MUST GO HERE (Before the return)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev === 0 ? 1 : 0));
@@ -45,7 +44,6 @@ const LendingPartnersSection: React.FC = () => {
     exit: { zIndex: 0, x: -1000, opacity: 0 },
   };
 
-  // 2. JSX STARTS HERE
   return (
     <section className="w-full bg-[#E6F3FF] py-24 px-4 overflow-hidden relative min-h-[750px] flex items-center">
       <div className="max-w-6xl mx-auto text-center w-full relative">
@@ -110,16 +108,30 @@ const LendingPartnersSection: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 place-items-center">
-                {bankPartners.map((logo, i) => (
-                  <div key={`bank-${i}`} className="flex justify-center items-center w-full h-16 md:h-24 px-4">
-                    <Image
-                      src={logo}
-                      alt="bank partner"
-                      className="max-h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
-                    />
-                  </div>
-                ))}
+                {bankPartners.map((logo, i) => {
+                  const scaleMap = [
+                    "scale-105",  // utkarsh
+                    "scale-90",  // bandhan
+                    "scale-95",  // bob
+                    "scale-95", // icici
+                    "scale-80",  // axis
+                    "scale-90",  // jana
+                    "scale-60",  // sbi
+                    "scale-80",  // hdfc
+                  ];
+
+                  return (
+                    <div key={`bank-${i}`} className="flex justify-center items-center w-full h-16 md:h-24 px-4">
+                      <Image
+                        src={logo}
+                        alt="bank partner"
+                        className={`max-h-full w-auto object-contain transition-transform duration-300 hover:scale-105 ${scaleMap[i]}`}
+                      />
+                    </div>
+                  );
+                })}
               </div>
+
               <div className="h-10 md:h-20" />
             </motion.div>
           )}

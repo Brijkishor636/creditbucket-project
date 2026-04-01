@@ -104,7 +104,7 @@ const Navbar = () => {
                 >
                   <div className="flex flex-col">
                     <Link
-                      href="/join-saathis"
+                      href="/join"
                       onClick={() => setIsJoinOpen(false)}
                       /* --- Shortened Padding (py-3) and Text Size (text-sm) --- */
                       className="bg-[#1B84E7] px-6 py-3 text-white text-sm font-bold transition-colors duration-300 hover:bg-[#1669b8] text-center"
@@ -113,7 +113,7 @@ const Navbar = () => {
                     </Link>
 
                     <Link
-                      href="/join-pariwar"
+                      href="/join"
                       onClick={() => setIsJoinOpen(false)}
                       /* --- Shortened Padding (py-3) and Text Size (text-sm) --- */
                       className="bg-white px-6 py-3 text-slate-900 text-sm font-bold transition-colors duration-300 hover:bg-[#F0F7FF] text-center border-t border-blue-50"

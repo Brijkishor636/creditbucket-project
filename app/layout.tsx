@@ -38,7 +38,7 @@ export default function RootLayout({
         
         {children}
 
-        <div className="p-5 bg-[linear-gradient(#E6F3FF)]">
+        <div className="p-4 bg-[linear-gradient(#E6F3FF)]">
           <Footer />
         </div>
       </body>

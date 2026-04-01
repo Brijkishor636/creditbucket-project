@@ -33,7 +33,7 @@ const JoinForm = () => {
 
   if (submitted) {
     return (
-      <div className="min-h-screen flex flex-col bg-ascent">
+      <div className="min-h-screen flex flex-col bg-[linear-gradient(#E6F3FF)]">
         
         <main className="flex-grow flex items-center justify-center p-4">
           <motion.div 
@@ -62,7 +62,7 @@ const JoinForm = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-ascent">
+    <div className="min-h-screen flex flex-col bg-[linear-gradient(#E6F3FF)]">
       
       
       <main className="flex-grow py-20 px-4">
@@ -172,8 +172,6 @@ const JoinForm = () => {
           </motion.div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

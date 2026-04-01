@@ -3,9 +3,6 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/footer/Footer";
-import bgImg from "@/assets/images/physital-bg.png";
 
 // --- Accordion Item Component ---
 const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, answer }) => {
@@ -99,10 +96,10 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="bg-[linear-gradient(#E6F3FF)] min-h-screen flex flex-col font-sans">
+    <div className="bg-[linear-gradient(#E6F3FF)] min-h-screen flex flex-col font-sans pt-26">
       
 
-      <main className="flex-grow">
+      <main className="flex-grow px-4">
         {/* --- Hero Section (Matches Privacy Policy Styling) --- */}
         <section 
           className="relative w-full flex max-h[130vh] justify-center overflow-hidden text-white rounded-2xl">
@@ -170,7 +167,7 @@ export default function FAQ() {
         </section>
 
         {/* --- FAQ Group Section --- */}
-        <section className="py-24 px-6">
+        <section className="py-24">
           <div className="max-w-5xl mx-auto space-y-32">
             {sections.map((section, i) => (
               <motion.div

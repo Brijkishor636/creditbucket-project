@@ -1,12 +1,10 @@
 "use client";
-import React from "react";
 
 const CodeOfConduct = () => {
   return (
-    // Added pt-16 and px-6/md:px-12 to match the Hero margin style you requested
-    <div className="pt-16 pb-10 px-6 md:px-12 bg-[#E6F3FF]">
+    <div className="">
       
-      <section className="max-w-7xl mx-auto relative w-full min-h-[60vh] rounded-3xl overflow-hidden text-white flex items-center justify-center shadow-xl">
+      <section className="relative w-full min-h-[80vh] rounded-3xl overflow-hidden text-white flex items-center justify-center shadow-xl">
         
         {/* Video Background */}
         <video
@@ -14,13 +12,13 @@ const CodeOfConduct = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover scale-110" // Changed to scale-110 for safety
+          className="absolute inset-0 w-full h-full object-cover scale-130"
         >
           <source src="/videos/sol-bg-video.mp4" type="video/mp4" />
         </video>
 
-        {/* Dark Blue Overlay - Added bg-slate-900/60 to actually show the overlay */}
-        <div className="absolute inset-0 bg-slate-900/60 backdrop-brightness-75"></div>
+        {/* Overlay (kept empty to match Partner section) */}
+        <div className="absolute inset-0"></div>
 
         {/* Content Container */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 flex flex-col items-center text-center">

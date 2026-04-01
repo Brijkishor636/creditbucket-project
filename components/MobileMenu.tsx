@@ -20,7 +20,7 @@ const MobileMenu = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(135deg,#E6F3FF,#B9D9F6)] font-sans p-6 pt-18 sm:pt-26 flex flex-col">
+    <div className="min-h-screen bg-[linear-gradient(#E6F3FF)] font-sans p-6 pt-18 sm:pt-26 flex flex-col">
       
       {/* Top Bar with Close Icon */}
       <div className="flex justify-end">
