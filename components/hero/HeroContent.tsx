@@ -3,7 +3,9 @@
 import React from "react";
 import Button from "../common/Button";
 import TaperedLabel from "./TaperedLabe";
+import { useRouter } from "next/navigation";
 const HeroContent: React.FC = () => {
+  const router = useRouter();
   return (
     <div className="max-w-xl space-y-6">
       <TaperedLabel text="Recognised by Government & Industry Institutions" />
@@ -23,7 +25,9 @@ const HeroContent: React.FC = () => {
       </p>
 
       <div className="pt-2 items-center flex justify-center">
-        <Button 
+        <Button onClick={()=>{
+          router.push("/join")
+        }}
           name="Partner With Creditbucket" 
           variant="arrow" 
           className="py-3.5 px-7"

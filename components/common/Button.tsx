@@ -5,9 +5,10 @@ interface ButtonProps {
   name: string;
   variant?: "primary" | "arrow";
   className?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ name, variant = "primary", className = "" }) => {
+const Button: React.FC<ButtonProps> = ({ name, variant = "primary", className = "", onClick }) => {
   
   // Base styles to avoid "jumping" when the 2px border appears on hover
   const baseStyles = "rounded-lg font-semibold transition-all duration-300 cursor-pointer border-2 border-transparent";
@@ -32,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({ name, variant = "primary", className = 
   }
 
   return (
-    <button 
+    <button onClick={onClick}
       className={`
         ${baseStyles}
         group flex items-center justify-center gap-2 

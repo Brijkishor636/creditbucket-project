@@ -57,7 +57,7 @@ export default function Home() {
    
       <button
   onClick={scrollToTop}
-  className={`fixed bottom-6 right-6 z-50 flex items-center gap-1 px-3 py-1.5 bg-white/90 backdrop-blur border border-gray-300 rounded-full shadow-md hover:shadow-lg transition cursor-pointer text-sm font-medium text-blue-700 ${
+  className={`fixed bottom-6 right-6 z-50 flex items-center gap-1 px-3 py-1.5 bg-white/90 backdrop-blur border border-gray-300 rounded-full shadow-md hover:shadow-lg transition cursor-pointer text-sm font-medium text-[#1B84E7] ${
     showScroll
       ? "opacity-100 translate-y-0"
       : "opacity-0 translate-y-6 pointer-events-none"
@@ -67,12 +67,9 @@ export default function Home() {
 <span className="flex flex-col leading-none -space-y-2">
   <ChevronUp size={14} />
   <ChevronUp size={14} />
-</span>
-  
-  
+</span>  
 </button>
 
-      
     </div>
   );
 }

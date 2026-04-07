@@ -65,11 +65,11 @@ const JoinForm = () => {
     <div className="min-h-screen flex flex-col bg-[linear-gradient(#E6F3FF)]">
       
       
-      <main className="flex-grow py-20 px-4">
+      <main className="flex-grow py-20 md:py-26 px-4">
         <div className="max-w-2xl mx-auto">
           <button 
             onClick={() => router.back()}
-            className="flex items-center gap-2 text-slate-500 hover:text-primary-blue transition-colors mb-8 group"
+            className="flex items-center gap-2 text-slate-500 hover:text-primary-blue transition-colors mb-8 group cursor-pointer"
           >
             <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
             Back

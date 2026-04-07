@@ -4,8 +4,10 @@ import Image from "next/image";
 import { StarIcon } from "@heroicons/react/20/solid";
 import Button from "./common/Button";
 import bgImg from "../assets/images/india-map.png";
+import { useRouter } from "next/navigation";
 
 const CreditHero: React.FC = () => {
+  const router = useRouter();
   return (
     <section className="relative w-full min-h-[650px] flex items-center overflow-hidden">
       
@@ -63,7 +65,9 @@ const CreditHero: React.FC = () => {
 
           {/* Button */}
           <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center md:justify-start">
-            <Button
+            <Button onClick={()=>{
+              router.push("/join");
+            }}
               name="Partner With Us"
               variant="arrow"
               className="py-4 px-8 text-base"
